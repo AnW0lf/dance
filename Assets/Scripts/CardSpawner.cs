@@ -11,7 +11,6 @@ public class CardSpawner : MonoBehaviour
     [SerializeField] private RectTransform _rect = null;
     [SerializeField] private MinionController _minion = null;
     [SerializeField] private Dance[] _dances = null;
-    [SerializeField] private DanceStyleColor[] _colors = null;
 
     public bool Visible
     {
@@ -48,7 +47,7 @@ public class CardSpawner : MonoBehaviour
             Dance dance = dances[Random.Range(0, dances.Count)];
             dances.Remove(dance);
             Card card = Instantiate(_cardPrefab, transform).GetComponent<Card>();
-            card.SetCard(dance, GetColor(dance.Style));
+            card.SetCard(dance);
             card.SetAction(() =>
             {
                 _minion.SetDance(dance);
@@ -81,22 +80,5 @@ public class CardSpawner : MonoBehaviour
         else _rect.anchoredPosition = Vector2.down * 500f;
 
         Spawn(3);
-    }
-
-    private Color GetColor(DanceStyle style)
-    {
-        foreach(var pair in _colors)
-            if (pair.Style == style) return pair.Color;
-        return Color.white;
-    }
-
-    [Serializable]
-    class DanceStyleColor
-    {
-        [SerializeField] private DanceStyle _style = DanceStyle.CLASSIC;
-        [SerializeField] private Color _color = Color.white;
-
-        public DanceStyle Style => _style;
-        public Color Color => _color;
     }
 }

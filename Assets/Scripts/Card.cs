@@ -14,9 +14,9 @@ public class Card : MonoBehaviour
 
     public int AnimationID { get; private set; }
 
-    public void SetCard(Dance dance, Color color)
+    public void SetCard(Dance dance)
     {
-        _background.color = color;
+        _background.sprite = dance.BackgroundSprite;
         _label.text = dance.LabelText;
         _icon.sprite = dance.IconSprite;
         _icon.enabled = _icon.sprite != null;
