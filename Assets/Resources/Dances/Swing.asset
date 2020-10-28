@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Swing
   m_EditorClassIdentifier: 
   _animationId: 4
-  _lableText: Swing
+  _lableText: Let's go Swing
   _iconSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   _style: 1

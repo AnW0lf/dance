@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Hip-Hop
   m_EditorClassIdentifier: 
   _animationId: 6
-  _lableText: Hip-Hop
+  _lableText: Nonstop Hip Hop
   _iconSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   _style: 2

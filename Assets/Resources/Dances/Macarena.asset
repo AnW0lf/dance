@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Macarena
   m_EditorClassIdentifier: 
   _animationId: 1
-  _lableText: Macarena
+  _lableText: Maca- rena
   _iconSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   _style: 0
