@@ -7,7 +7,6 @@ public class CardSpawner : MonoBehaviour
     [SerializeField] private GameObject _cardPrefab = null;
     [SerializeField] private RectTransform _rect = null;
     [SerializeField] private MinionController _minion = null;
-    [SerializeField] private DanceProgressBar _danceProgress = null;
     [SerializeField] private Dance[] _dances = null;
 
     public bool Visible
@@ -53,7 +52,6 @@ public class CardSpawner : MonoBehaviour
         card.SetAction(() =>
         {
             _minion.SetDance(dance);
-            _danceProgress.Begin(_minion.CurrentAnimationDuration);
             Spawn(3);
         });
     }
