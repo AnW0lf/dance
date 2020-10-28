@@ -842,8 +842,21 @@ MonoBehaviour:
   _rect: {fileID: 526916873}
   _minion: {fileID: 980061870}
   _dances:
-  - {fileID: 11400000, guid: cbd3e865dcfcd52498fe29f5a30a3720, type: 2}
-  - {fileID: 11400000, guid: 6f6ca8fcd1b1fc849ad23bab70b26d99, type: 2}
+  - {fileID: 11400000, guid: 0c64d335c47b7c34ba512f507319e699, type: 2}
+  - {fileID: 11400000, guid: 77c6fcda17cbd4d4282dc994cbc0ee6e, type: 2}
+  - {fileID: 11400000, guid: 398b6127981cc5643ab00a3d17920fff, type: 2}
+  - {fileID: 11400000, guid: 7990b170c8d5e2b47a7849f2eed8f2de, type: 2}
+  - {fileID: 11400000, guid: 19c3e33b73b27c64a9878cfbe4e9d656, type: 2}
+  - {fileID: 11400000, guid: 66c1d2f06e552d3428f28478d6901e4f, type: 2}
+  - {fileID: 11400000, guid: be6ba8d3fe0f6f84aacddf7d273b9d74, type: 2}
+  - {fileID: 11400000, guid: cf913ed37ea3592409c0a4aed9b32325, type: 2}
+  _colors:
+  - _style: 0
+    _color: {r: 0, g: 0.83679795, b: 1, a: 1}
+  - _style: 1
+    _color: {r: 0.04188675, g: 0.6981132, b: 0, a: 1}
+  - _style: 2
+    _color: {r: 1, g: 0.3993749, b: 0, a: 1}
 --- !u!1 &572815013
 GameObject:
   m_ObjectHideFlags: 0

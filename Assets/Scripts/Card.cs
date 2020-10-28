@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
+using System;
 
 public class Card : MonoBehaviour
 {
@@ -13,9 +14,9 @@ public class Card : MonoBehaviour
 
     public int AnimationID { get; private set; }
 
-    public void SetCard(Dance dance)
+    public void SetCard(Dance dance, Color color)
     {
-        _background.color = dance.BackgroundColor;
+        _background.color = color;
         _label.text = dance.LabelText;
         _icon.sprite = dance.IconSprite;
         _icon.enabled = _icon.sprite != null;

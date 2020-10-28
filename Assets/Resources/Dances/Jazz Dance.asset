@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 620104d604ebb7740b3c16410dc815fd, type: 3}
-  m_Name: Salsa
+  m_Name: Jazz Dance
   m_EditorClassIdentifier: 
-  _animationId: 2
-  _lableText: Salsa
-  _iconSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  _backgroundColor: {r: 0.7298237, g: 1, b: 0.61960787, a: 1}
+  _animationId: 5
+  _lableText: Jazz Dance
+  _iconSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _style: 1

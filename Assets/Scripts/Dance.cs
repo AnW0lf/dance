@@ -8,10 +8,12 @@ public class Dance : ScriptableObject
     [SerializeField] private int _animationId = 0;
     [SerializeField] private string _lableText = string.Empty;
     [SerializeField] private Sprite _iconSprite = null;
-    [SerializeField] private Color _backgroundColor = Color.white;
+    [SerializeField] private DanceStyle _style = DanceStyle.CLASSIC;
 
     public int AnimationID => _animationId;
     public string LabelText => _lableText;
     public Sprite IconSprite => _iconSprite;
-    public Color BackgroundColor => _backgroundColor;
+    public DanceStyle Style => _style;
 }
+
+public enum DanceStyle { CLASSIC, JAZZ, STREET }

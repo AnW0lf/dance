@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+using Random = UnityEngine.Random;
+using System.Collections.Generic;
 
 public class CardSpawner : MonoBehaviour
 {
@@ -8,6 +11,7 @@ public class CardSpawner : MonoBehaviour
     [SerializeField] private RectTransform _rect = null;
     [SerializeField] private MinionController _minion = null;
     [SerializeField] private Dance[] _dances = null;
+    [SerializeField] private DanceStyleColor[] _colors = null;
 
     public bool Visible
     {
@@ -38,7 +42,19 @@ public class CardSpawner : MonoBehaviour
     public void Spawn(int count)
     {
         Clear();
-        for (int i = 0; i < count; i++) Spawn();
+        List<Dance> dances = new List<Dance>(_dances);
+        for (int i = 0; i < count; i++)
+        {
+            Dance dance = dances[Random.Range(0, _dances.Length)];
+            dances.Remove(dance);
+            Card card = Instantiate(_cardPrefab, transform).GetComponent<Card>();
+            card.SetCard(dance, GetColor(dance.Style));
+            card.SetAction(() =>
+            {
+                _minion.SetDance(dance);
+                Spawn(3);
+            });
+        }
     }
 
     /// <summary>
@@ -46,14 +62,7 @@ public class CardSpawner : MonoBehaviour
     /// </summary>
     private void Spawn()
     {
-        Dance dance = _dances[Random.Range(0, _dances.Length)];
-        Card card = Instantiate(_cardPrefab, transform).GetComponent<Card>();
-        card.SetCard(dance);
-        card.SetAction(() =>
-        {
-            _minion.SetDance(dance);
-            Spawn(3);
-        });
+        
     }
 
     private IEnumerator MoveTo()
@@ -80,5 +89,22 @@ public class CardSpawner : MonoBehaviour
         else _rect.anchoredPosition = Vector2.down * 500f;
 
         Spawn(3);
+    }
+
+    private Color GetColor(DanceStyle style)
+    {
+        foreach(var pair in _colors)
+            if (pair.Style == style) return pair.Color;
+        return Color.white;
+    }
+
+    [Serializable]
+    class DanceStyleColor
+    {
+        [SerializeField] private DanceStyle _style = DanceStyle.CLASSIC;
+        [SerializeField] private Color _color = Color.white;
+
+        public DanceStyle Style => _style;
+        public Color Color => _color;
     }
 }
