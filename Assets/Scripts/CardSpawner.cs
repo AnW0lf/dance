@@ -45,7 +45,7 @@ public class CardSpawner : MonoBehaviour
         List<Dance> dances = new List<Dance>(_dances);
         for (int i = 0; i < count; i++)
         {
-            Dance dance = dances[Random.Range(0, _dances.Length)];
+            Dance dance = dances[Random.Range(0, dances.Count)];
             dances.Remove(dance);
             Card card = Instantiate(_cardPrefab, transform).GetComponent<Card>();
             card.SetCard(dance, GetColor(dance.Style));
@@ -55,14 +55,6 @@ public class CardSpawner : MonoBehaviour
                 Spawn(3);
             });
         }
-    }
-
-    /// <summary>
-    /// Spawn one new random card
-    /// </summary>
-    private void Spawn()
-    {
-        
     }
 
     private IEnumerator MoveTo()
