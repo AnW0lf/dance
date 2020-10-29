@@ -13,6 +13,7 @@ public class MinionController : MonoBehaviour
     [SerializeField] private ProgressBar _progress = null;
 
     private bool _beginDance = false;
+    private bool _tooSlow = false;
 
     public UnityAction OnMiss { get; set; } = null;
     public UnityAction OnGood { get; set; } = null;
@@ -55,6 +56,7 @@ public class MinionController : MonoBehaviour
         _beginDance = false;
         _progress.Progress = 0f;
         _animator.SetTrigger("Dance");
+        DanceId = 0;
     }
 
     private void Update()
@@ -67,6 +69,7 @@ public class MinionController : MonoBehaviour
                     if (!_progress.Visible)
                         _progress.Visible = true;
                     _progress.Progress = CurrentAnimationProgress;
+                    if (_progress.Progress == 1f) _tooSlow = true;
                 }
                 break;
             case AnimationTag.IDLE:
@@ -79,6 +82,12 @@ public class MinionController : MonoBehaviour
 
                     if (_beginDance)
                         BeginDance();
+
+                    if (_tooSlow)
+                    {
+                        _tooSlow = false;
+                        DoMiss();
+                    }
                 }
                 break;
             default:
