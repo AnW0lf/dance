@@ -1,25 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class MinionController : MonoBehaviour
 {
-    [SerializeField] private float _perfectBorder = 0.75f;
+    [SerializeField] private float _maxMiss = 0.7f;
+    [SerializeField] private float _maxGood = 0.9f;
+    [SerializeField] private float _maxPerfect = 1f;
     [SerializeField] private Animator _animator = null;
     [SerializeField] private ProgressBar _progress = null;
 
     private bool _beginDance = false;
 
+    public UnityAction OnMiss { get; set; } = null;
+    public UnityAction OnGood { get; set; } = null;
+    public UnityAction OnPerfect { get; set; } = null;
+    public UnityAction OnTooSlow { get; set; } = null;
+
+    private void Start()
+    {
+        OnMiss += DoMiss;
+        OnTooSlow += DoMiss;
+    }
+
     public void SetDance(Dance dance)
     {
-        if (CurrentAnimationTag == AnimationTag.DANCE && CurrentAnimationProgress < _perfectBorder)
-            DoMiss();
+        if (CurrentAnimationTag == AnimationTag.DANCE)
+        {
+            float currentProgress = CurrentAnimationProgress;
+            if (currentProgress < _maxMiss) OnMiss?.Invoke();
+            else if (currentProgress < _maxGood) OnGood?.Invoke();
+            else if (currentProgress < _maxPerfect) OnPerfect?.Invoke();
+            else OnTooSlow?.Invoke();
+        }
         DanceId = dance.AnimationID;
         _beginDance = true;
     }
 
-    private int DanceId
+    public int DanceId
     {
         get => _animator.GetInteger("DanceId");
         set => _animator.SetInteger("DanceId", value);
