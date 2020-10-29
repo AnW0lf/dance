@@ -53,15 +53,15 @@ public class MinionController : MonoBehaviour
 
     private void BeginDance()
     {
+        print("begin");
         _beginDance = false;
         _progress.Progress = 0f;
         _animator.SetTrigger("Dance");
-        DanceId = 0;
     }
 
     private void Update()
     {
-        print($"Animation tag {CurrentAnimationTag}");
+        //print($"Animation tag {CurrentAnimationTag}");
         switch (CurrentAnimationTag)
         {
             case AnimationTag.DANCE:
