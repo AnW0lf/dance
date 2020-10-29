@@ -15,4 +15,5 @@ MonoBehaviour:
   _animationId: 7
   _lableText: Soul Spin
   _iconSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _backgroundSprite: {fileID: 21300000, guid: 448da1362e1336540b9e48db487816ee, type: 3}
   _style: 2
