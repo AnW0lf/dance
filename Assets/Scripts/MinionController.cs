@@ -13,9 +13,10 @@ public class MinionController : MonoBehaviour
 
     public void SetDance(Dance dance)
     {
+        if (CurrentAnimationTag == AnimationTag.DANCE && CurrentAnimationProgress < _perfectBorder)
+            DoMiss();
         DanceId = dance.AnimationID;
         _beginDance = true;
-        if (CurrentAnimationProgress < _perfectBorder) DoMiss();
     }
 
     private int DanceId
@@ -38,6 +39,7 @@ public class MinionController : MonoBehaviour
 
     private void Update()
     {
+        print($"Animation tag {CurrentAnimationTag}");
         switch (CurrentAnimationTag)
         {
             case AnimationTag.DANCE:

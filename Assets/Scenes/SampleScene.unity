@@ -850,13 +850,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 66c1d2f06e552d3428f28478d6901e4f, type: 2}
   - {fileID: 11400000, guid: be6ba8d3fe0f6f84aacddf7d273b9d74, type: 2}
   - {fileID: 11400000, guid: cf913ed37ea3592409c0a4aed9b32325, type: 2}
-  _colors:
-  - _style: 0
-    _color: {r: 0, g: 0.83679795, b: 1, a: 1}
-  - _style: 1
-    _color: {r: 0.04188675, g: 0.6981132, b: 0, a: 1}
-  - _style: 2
-    _color: {r: 1, g: 0.3993749, b: 0, a: 1}
 --- !u!1 &572815013
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,6 +2716,16 @@ PrefabInstance:
       propertyPath: _progress
       value: 
       objectReference: {fileID: 54235147}
+    - target: {fileID: 5966196926522566537, guid: 6d85ed62c3e6f1f4893db569b2e38feb,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966196926522566537, guid: 6d85ed62c3e6f1f4893db569b2e38feb,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5966196927685585002, guid: 6d85ed62c3e6f1f4893db569b2e38feb,
         type: 3}
       propertyPath: m_LocalPosition.x
