@@ -51,9 +51,17 @@ public class CardSpawner : MonoBehaviour
             card.SetAction(() =>
             {
                 _minion.SetDance(dance);
-                Spawn(3);
+                FadingCard();
+                card.State = CardState.GLOWED;
+                StartCoroutine(SpawnWithHideAndShow(2f, 3));
             });
         }
+    }
+
+    private void FadingCard()
+    {
+        foreach (var card in GetComponentsInChildren<Card>())
+            card.State = CardState.FADED;
     }
 
     private IEnumerator MoveTo()
@@ -80,5 +88,18 @@ public class CardSpawner : MonoBehaviour
         else _rect.anchoredPosition = Vector2.down * 500f;
 
         Spawn(3);
+    }
+
+    private IEnumerator SpawnWithHideAndShow(float delay, int count)
+    {
+        yield return new WaitForSeconds(delay);
+
+        Visible = false;
+
+        yield return new WaitWhile(() => _moveTo != null);
+
+        Spawn(count);
+
+        Visible = true;
     }
 }
