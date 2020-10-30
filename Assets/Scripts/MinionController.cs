@@ -48,20 +48,24 @@ public class MinionController : MonoBehaviour
 
     private void DoMiss()
     {
+        print("Miss");
         _animator.SetTrigger("Miss");
     }
 
     private void BeginDance()
     {
-        print("begin");
         _beginDance = false;
         _progress.Progress = 0f;
         _animator.SetTrigger("Dance");
+
+        StartCoroutine(DelayedAction(0.5f, () => DanceId = 0));
+        StartCoroutine(DelayedAction(0.5f, () => _tooSlow = true));
     }
 
     private void Update()
     {
         //print($"Animation tag {CurrentAnimationTag}");
+        //print($"Animation duration {CurrentAnimationDuration} sec.");
         switch (CurrentAnimationTag)
         {
             case AnimationTag.DANCE:
@@ -69,7 +73,6 @@ public class MinionController : MonoBehaviour
                     if (!_progress.Visible)
                         _progress.Visible = true;
                     _progress.Progress = CurrentAnimationProgress;
-                    if (_progress.Progress == 1f) _tooSlow = true;
                 }
                 break;
             case AnimationTag.IDLE:
@@ -80,14 +83,13 @@ public class MinionController : MonoBehaviour
                         _progress.Progress = 0f;
                     }
 
-                    if (_beginDance)
-                        BeginDance();
-
                     if (_tooSlow)
                     {
                         _tooSlow = false;
-                        DoMiss();
+                        OnTooSlow?.Invoke();
                     }
+                    else if (_beginDance)
+                        BeginDance();
                 }
                 break;
             default:
@@ -103,6 +105,14 @@ public class MinionController : MonoBehaviour
     }
 
     public float CurrentAnimationProgress => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+    public float CurrentAnimationDuration
+    {
+        get
+        {
+            var clip = _animator.GetCurrentAnimatorClipInfo(0)[0].clip;
+            return clip.length;
+        }
+    }
 
     private enum AnimationTag { IDLE, DANCE, MISS, UNTAGGED }
     private AnimationTag CurrentAnimationTag
@@ -114,5 +124,11 @@ public class MinionController : MonoBehaviour
             if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Miss")) return AnimationTag.MISS;
             return AnimationTag.UNTAGGED;
         }
+    }
+
+    private IEnumerator DelayedAction(float delay, UnityAction action)
+    {
+        yield return new WaitForSeconds(delay);
+        action?.Invoke();
     }
 }
