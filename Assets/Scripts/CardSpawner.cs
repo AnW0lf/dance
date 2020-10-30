@@ -53,7 +53,7 @@ public class CardSpawner : MonoBehaviour
                 _minion.SetDance(dance);
                 FadingCard();
                 card.State = CardState.GLOWED;
-                StartCoroutine(SpawnWithHideAndShow(2f, 3));
+                StartCoroutine(SpawnWithHideAndShow(0.2f, 3));
             });
         }
     }
