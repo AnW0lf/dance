@@ -3,11 +3,16 @@ using System.Collections;
 
 public class FanController : MonoBehaviour
 {
+    [SerializeField] private bool _isFan = false;
+
+    [Space(20)]
+    [Header("Like")]
     [SerializeField] private Transform _spawnPoint = null;
     [SerializeField] private Transform _targetInterfacePoint = null;
     [SerializeField] private LikeCounter _likeCounter = null;
     [SerializeField] private GameObject _likePrefab = null;
 
+    #region Like
     public void CreateLike()
     {
         GameObject like = Instantiate(_likePrefab, _targetInterfacePoint);
@@ -33,21 +38,11 @@ public class FanController : MonoBehaviour
         _likeCounter.Count++;
         Destroy(like.gameObject);
     }
+    #endregion Like
 
-    private void Start()
+    public bool IsFan
     {
-        StartCoroutine(Test());
-    }
-
-    private IEnumerator Test()
-    {
-        yield return new WaitForSeconds(2f + Random.Range(-0.1f, 0.1f));
-        CreateLike();
-
-        yield return new WaitForSeconds(3f + Random.Range(-0.1f, 0.1f));
-        CreateLike();
-
-        yield return new WaitForSeconds(4f + Random.Range(-0.1f, 0.1f));
-        CreateLike();
+        get => _isFan;
+        set => _isFan = value;
     }
 }

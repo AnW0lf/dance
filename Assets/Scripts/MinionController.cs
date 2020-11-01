@@ -13,7 +13,6 @@ public class MinionController : MonoBehaviour
     [SerializeField] private ProgressBar _progress = null;
 
     private bool _beginDance = false;
-    private bool _tooSlow = false;
 
     public UnityAction OnMiss { get; set; } = null;
     public UnityAction OnGood { get; set; } = null;
@@ -36,6 +35,7 @@ public class MinionController : MonoBehaviour
             else if (currentProgress < _maxPerfect) OnPerfect?.Invoke();
             else OnTooSlow?.Invoke();
         }
+        TooSlow = false;
         DanceId = dance.AnimationID;
         _beginDance = true;
     }
@@ -43,12 +43,17 @@ public class MinionController : MonoBehaviour
     public int DanceId
     {
         get => _animator.GetInteger("DanceId");
-        set => _animator.SetInteger("DanceId", value);
+        private set => _animator.SetInteger("DanceId", value);
+    }
+
+    public bool TooSlow
+    {
+        get => _animator.GetBool("TooSlow");
+        private set => _animator.SetBool("TooSlow", value);
     }
 
     private void DoMiss()
     {
-        print("Miss");
         _animator.SetTrigger("Miss");
     }
 
@@ -58,8 +63,7 @@ public class MinionController : MonoBehaviour
         _progress.Progress = 0f;
         _animator.SetTrigger("Dance");
 
-        StartCoroutine(DelayedAction(0.5f, () => DanceId = 0));
-        StartCoroutine(DelayedAction(0.5f, () => _tooSlow = true));
+        StartCoroutine(DelayedAction(0.5f, () => TooSlow = true));
     }
 
     private void Update()
@@ -73,6 +77,9 @@ public class MinionController : MonoBehaviour
                     if (!_progress.Visible)
                         _progress.Visible = true;
                     _progress.Progress = CurrentAnimationProgress;
+
+                    if(_progress.Progress >= 0.95f && _beginDance)
+                        BeginDance();
                 }
                 break;
             case AnimationTag.IDLE:
@@ -83,9 +90,9 @@ public class MinionController : MonoBehaviour
                         _progress.Progress = 0f;
                     }
 
-                    if (_tooSlow)
+                    if (TooSlow)
                     {
-                        _tooSlow = false;
+                        TooSlow = false;
                         OnTooSlow?.Invoke();
                     }
                     else if (_beginDance)
