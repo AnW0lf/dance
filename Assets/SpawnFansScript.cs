@@ -27,7 +27,7 @@ public class SpawnFansScript : MonoBehaviour
         for (int i = 0; i < fans.Count; i++)
         {
             Transform fan = fans[i];
-            fan.GetChild(0).GetComponent<Animator>().SetFloat("IdleOffset", Random.Range(0f, 1f));
+            fan.GetChild(0).GetChild(0).GetComponent<Animator>().SetFloat("IdleOffset", Random.Range(0f, 1f));
             if (i >= _visibleCount)
                 fans[i].gameObject.SetActive(false);
         }
