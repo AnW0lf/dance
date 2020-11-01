@@ -5,6 +5,8 @@ public class FanController : MonoBehaviour
 {
     [SerializeField] private bool _isFan = false;
 
+    private MinionController _minion = null;
+
     [Space(20)]
     [Header("Like")]
     [SerializeField] private Transform _spawnPoint = null;
@@ -26,7 +28,8 @@ public class FanController : MonoBehaviour
     {
         Vector3 startPosition = like.position;
         float timer = 0;
-        float duration = 0.6f;
+        float speed = Random.Range(1200f, 1800f);
+        float duration = Vector2.Distance(startPosition, endPosition) / speed;
 
         while(timer <= duration)
         {
@@ -44,5 +47,16 @@ public class FanController : MonoBehaviour
     {
         get => _isFan;
         set => _isFan = value;
+    }
+
+    private void Start()
+    {
+        IsFan = Random.Range(0f, 1f) >= 0.5f;
+
+        _minion = FindObjectOfType<MinionController>();
+        _minion.OnPerfect += CreateLike;
+        _minion.OnGood += () => { if (IsFan || Random.Range(0f, 1f) >= 0.5f) CreateLike(); };
+        _minion.OnTooSlow += () => { if (Random.Range(0f, 1f) >= 0.8f) CreateLike(); };
+        _minion.OnMiss += () => { if (Random.Range(0f, 1f) >= 0.8f) CreateLike(); };
     }
 }

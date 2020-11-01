@@ -35,7 +35,6 @@ public class MinionController : MonoBehaviour
             else if (currentProgress < _maxPerfect) OnPerfect?.Invoke();
             else OnTooSlow?.Invoke();
         }
-        TooSlow = false;
         DanceId = dance.AnimationID;
         _beginDance = true;
     }
@@ -62,8 +61,6 @@ public class MinionController : MonoBehaviour
         _beginDance = false;
         _progress.Progress = 0f;
         _animator.SetTrigger("Dance");
-
-        StartCoroutine(DelayedAction(0.5f, () => TooSlow = true));
     }
 
     private void Update()
@@ -78,8 +75,11 @@ public class MinionController : MonoBehaviour
                         _progress.Visible = true;
                     _progress.Progress = CurrentAnimationProgress;
 
-                    if(_progress.Progress >= 0.95f && _beginDance)
+                    if(_progress.Progress >= 0.9f && _beginDance)
                         BeginDance();
+
+                    if (_progress.Progress == 1f)
+                        TooSlow = true;
                 }
                 break;
             case AnimationTag.IDLE:
@@ -96,6 +96,17 @@ public class MinionController : MonoBehaviour
                         OnTooSlow?.Invoke();
                     }
                     else if (_beginDance)
+                        BeginDance();
+                }
+                break;
+            case AnimationTag.MISS:
+                {
+                    if (_progress.Visible)
+                    {
+                        _progress.Visible = false;
+                        _progress.Progress = 0f;
+                    }
+                    if (_beginDance)
                         BeginDance();
                 }
                 break;
