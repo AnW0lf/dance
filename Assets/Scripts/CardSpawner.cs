@@ -10,7 +10,10 @@ public class CardSpawner : MonoBehaviour
     [SerializeField] private GameObject _cardPrefab = null;
     [SerializeField] private RectTransform _rect = null;
     [SerializeField] private MinionController _minion = null;
+    [SerializeField] private Timer _timer = null;
     [SerializeField] private Dance[] _dances = null;
+
+    private Dance _notUse = null;
 
     public bool Visible
     {
@@ -42,6 +45,8 @@ public class CardSpawner : MonoBehaviour
     {
         Clear();
         List<Dance> dances = new List<Dance>(_dances);
+        if (_notUse != null)
+            dances.Remove(_notUse);
         for (int i = 0; i < count; i++)
         {
             Dance dance = dances[Random.Range(0, dances.Count)];
@@ -50,6 +55,7 @@ public class CardSpawner : MonoBehaviour
             card.SetCard(dance);
             card.SetAction(() =>
             {
+                _notUse = dance;
                 _minion.SetDance(dance);
                 FadingCard();
                 card.State = CardState.GLOWED;
@@ -101,5 +107,10 @@ public class CardSpawner : MonoBehaviour
         Spawn(count);
 
         Visible = true;
+    }
+
+    private void Update()
+    {
+        if (_timer.TimeOver && Visible) Visible = false;
     }
 }

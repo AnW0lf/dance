@@ -44,7 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a510a2f6819469a4db27c1022299d44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _musicPlayer: {fileID: 0}
+  _timer: {fileID: 0}
+  _maxMiss: 0.7
+  _maxGood: 0.9
+  _maxPerfect: 1
   _animator: {fileID: 5966196926522566537}
+  _progress: {fileID: 0}
 --- !u!1001 &5966196926531982057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118,7 +124,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 545e06a4c00334347aeedd69f2eda219, type: 2}
     - target: {fileID: 9500000, guid: fa7f36c71b9e8fa4798df3a931c2fd92, type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: fa7f36c71b9e8fa4798df3a931c2fd92, type: 3}
       propertyPath: m_WarningMessage

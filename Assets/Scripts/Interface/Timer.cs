@@ -19,6 +19,11 @@ public class Timer : MonoBehaviour
 
     public bool TimeOver => _duration == 0f;
 
+    public void Begin()
+    {
+        Active = true;
+    }
+
     public void Begin(float duration)
     {
         _duration = duration;

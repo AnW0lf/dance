@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class MinionController : MonoBehaviour
 {
+    [SerializeField] private MusicPlayer _musicPlayer = null;
+    [SerializeField] private Timer _timer = null;
+    [Space(20)]
+    [Header("Animation controller")]
     [SerializeField] private float _maxMiss = 0.7f;
     [SerializeField] private float _maxGood = 0.9f;
     [SerializeField] private float _maxPerfect = 1f;
@@ -35,6 +39,14 @@ public class MinionController : MonoBehaviour
             else if (currentProgress < _maxPerfect) OnPerfect?.Invoke();
             else OnTooSlow?.Invoke();
         }
+        else
+        {
+            if (!_timer.Active)
+                _timer.Active = true;
+            if (!_musicPlayer.Active)
+                _musicPlayer.Play();
+        }
+
         DanceId = dance.AnimationID;
         _beginDance = true;
     }
@@ -75,11 +87,14 @@ public class MinionController : MonoBehaviour
                         _progress.Visible = true;
                     _progress.Progress = CurrentAnimationProgress;
 
-                    if(_progress.Progress >= 0.9f && _beginDance)
+                    if (_progress.Progress >= 0.9f && _beginDance)
                         BeginDance();
 
                     if (_progress.Progress == 1f)
-                        TooSlow = true;
+                    {
+                        if (!_timer.TimeOver)
+                            TooSlow = true;
+                    }
                 }
                 break;
             case AnimationTag.IDLE:
@@ -90,13 +105,21 @@ public class MinionController : MonoBehaviour
                         _progress.Progress = 0f;
                     }
 
-                    if (TooSlow)
+                    if (_timer.TimeOver)
                     {
-                        TooSlow = false;
-                        OnTooSlow?.Invoke();
+                        if (_musicPlayer.Active)
+                            _musicPlayer.Stop();
                     }
-                    else if (_beginDance)
-                        BeginDance();
+                    else
+                    {
+                        if (TooSlow)
+                        {
+                            TooSlow = false;
+                            OnTooSlow?.Invoke();
+                        }
+                        else if (_beginDance)
+                            BeginDance();
+                    }
                 }
                 break;
             case AnimationTag.MISS:
