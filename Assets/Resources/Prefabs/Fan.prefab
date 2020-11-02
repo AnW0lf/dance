@@ -1105,6 +1105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e13be72b9bc59418334c4650f1fcde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isFan: 0
+  _fanMaterial: {fileID: 2100000, guid: 61d6a9c648dc09e41a36fa828e5961f1, type: 2}
+  _viewerMaterial: {fileID: 2100000, guid: 3a3fcf5652878734c841795886f2de4b, type: 2}
+  _renderer: {fileID: 7323127999207061529}
   _spawnPoint: {fileID: 7323127999894944978}
   _targetInterfacePoint: {fileID: 0}
   _likeCounter: {fileID: 0}

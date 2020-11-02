@@ -4,6 +4,9 @@ using System.Collections;
 public class FanController : MonoBehaviour
 {
     [SerializeField] private bool _isFan = false;
+    [SerializeField] private Material _fanMaterial = null;
+    [SerializeField] private Material _viewerMaterial = null;
+    [SerializeField] private Renderer _renderer = null;
 
     private MinionController _minion = null;
 
@@ -51,7 +54,10 @@ public class FanController : MonoBehaviour
 
     private void Start()
     {
-        IsFan = Random.Range(0f, 1f) >= 0.5f;
+        IsFan = Random.Range(0, 2) == 1;
+
+        if (IsFan) _renderer.material = _fanMaterial;
+        else _renderer.material = _viewerMaterial;
 
         _minion = FindObjectOfType<MinionController>();
         _minion.OnPerfect += CreateLike;
