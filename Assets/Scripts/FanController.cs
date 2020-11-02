@@ -121,7 +121,7 @@ public class FanController : MonoBehaviour
 
     private bool IsTimerActive => _timer.Active && !_timer.TimeOver;
 
-    private float RandomDelay => Random.Range(0f, 0.1f);
+    private float RandomDelay => Random.Range(0f, 0.3f);
 
     private void LikeWithClamping()
     {
@@ -138,7 +138,7 @@ public class FanController : MonoBehaviour
 
     private void Fail()
     {
-        StartCoroutine(DelayedAction(RandomDelay, () => { DoFail(); }));
+        StartCoroutine(DelayedAction(RandomDelay * 3f, () => { DoFail(); }));
     }
 
     #endregion Actions
