@@ -1,12 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class FanController : MonoBehaviour
 {
+    [Space(20)]
+    [Header("Look At settings")]
+    [SerializeField] private Transform _lookAtTransform = null;
+    [SerializeField] private Transform _bodyTransform = null;
+    [SerializeField] private float _smoothness = 0.05f;
+
+    [Space(20)]
+    [Header("Fan settings")]
     [SerializeField] private bool _isFan = false;
     [SerializeField] private Material _fanMaterial = null;
     [SerializeField] private Material _viewerMaterial = null;
     [SerializeField] private Renderer _renderer = null;
+    [SerializeField] private Animator _animator = null;
+    [SerializeField] private Timer _timer = null;
+
+    public bool IsFan
+    {
+        get => _isFan;
+        set => _isFan = value;
+    }
 
     private MinionController _minion = null;
 
@@ -34,7 +51,7 @@ public class FanController : MonoBehaviour
         float speed = Random.Range(1200f, 1800f);
         float duration = Vector2.Distance(startPosition, endPosition) / speed;
 
-        while(timer <= duration)
+        while (timer <= duration)
         {
             timer += Time.deltaTime;
             like.position = Vector3.Lerp(startPosition, endPosition, timer / duration);
@@ -46,11 +63,85 @@ public class FanController : MonoBehaviour
     }
     #endregion Like
 
-    public bool IsFan
+    #region Actions
+    private void OnMiss()
     {
-        get => _isFan;
-        set => _isFan = value;
+        float rnd = Random.Range(0f, 1f);
+        if (rnd >= 0.8f)
+            Like();
+        else if (rnd < 0.2f)
+            Fail();
     }
+
+    private void OnGood()
+    {
+        if (IsFan)
+        {
+            LikeWithClamping();
+        }
+        else
+        {
+            float rnd = Random.Range(0f, 1f);
+            if (rnd >= 0.5f)
+            {
+                LikeWithClamping();
+            }
+        }
+    }
+
+    private void OnPerfect()
+    {
+        LikeWithClamping();
+    }
+
+    private void OnTooSlow()
+    {
+        float rnd = Random.Range(0f, 1f);
+        if (rnd >= 0.8f)
+            Like();
+        else if (rnd < 0.2f)
+            Fail();
+    }
+
+    private void DoClamp()
+    {
+        _animator.SetTrigger("Succes");
+    }
+
+    private void DoFail()
+    {
+        _animator.SetTrigger("Fail");
+    }
+
+    private bool Dancing
+    {
+        get => _animator.GetBool("Dancing");
+        set => _animator.SetBool("Dancing", value);
+    }
+
+    private bool IsTimerActive => _timer.Active && !_timer.TimeOver;
+
+    private float RandomDelay => Random.Range(0f, 0.1f);
+
+    private void LikeWithClamping()
+    {
+        StartCoroutine(DelayedAction(RandomDelay, () => {
+            CreateLike();
+            DoClamp();
+        }));
+    }
+
+    private void Like()
+    {
+        StartCoroutine(DelayedAction(RandomDelay, () => { CreateLike(); }));
+    }
+
+    private void Fail()
+    {
+        StartCoroutine(DelayedAction(RandomDelay, () => { DoFail(); }));
+    }
+
+    #endregion Actions
 
     private void Start()
     {
@@ -60,9 +151,33 @@ public class FanController : MonoBehaviour
         else _renderer.material = _viewerMaterial;
 
         _minion = FindObjectOfType<MinionController>();
-        _minion.OnPerfect += CreateLike;
-        _minion.OnGood += () => { if (IsFan || Random.Range(0f, 1f) >= 0.5f) CreateLike(); };
-        _minion.OnTooSlow += () => { if (Random.Range(0f, 1f) >= 0.8f) CreateLike(); };
-        _minion.OnMiss += () => { if (Random.Range(0f, 1f) >= 0.8f) CreateLike(); };
+        _minion.OnMiss += OnMiss;
+        _minion.OnGood += OnGood;
+        _minion.OnPerfect += OnPerfect;
+        _minion.OnTooSlow += OnTooSlow;
+    }
+
+    private void Update()
+    {
+        if (IsTimerActive)
+        {
+            if (!Dancing) Dancing = true;
+        }
+        else
+        {
+            if (Dancing) Dancing = false;
+        }
+
+        Vector3 direction = _lookAtTransform.position - _bodyTransform.position;
+        direction.y = 0f;
+        direction.Normalize();
+        Quaternion lookAtRotation = Quaternion.LookRotation(direction, Vector3.up);
+        _bodyTransform.rotation = Quaternion.Lerp(_bodyTransform.rotation, lookAtRotation, _smoothness);
+    }
+
+    private IEnumerator DelayedAction(float delay, UnityAction action)
+    {
+        yield return new WaitForSeconds(delay);
+        action?.Invoke();
     }
 }

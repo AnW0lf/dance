@@ -198,6 +198,16 @@ PrefabInstance:
       propertyPath: _likeCounter
       value: 
       objectReference: {fileID: 1066746338}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _lookAtTransform
+      value: 
+      objectReference: {fileID: 1088985216}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _timer
+      value: 
+      objectReference: {fileID: 762195554}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f07c80b2780ca4e8638106fdd13f16, type: 3}
 --- !u!4 &4383418 stripped
@@ -708,6 +718,16 @@ PrefabInstance:
       propertyPath: _likeCounter
       value: 
       objectReference: {fileID: 1066746338}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _lookAtTransform
+      value: 
+      objectReference: {fileID: 1088985216}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _timer
+      value: 
+      objectReference: {fileID: 762195554}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f07c80b2780ca4e8638106fdd13f16, type: 3}
 --- !u!4 &327787213 stripped
@@ -1646,6 +1666,12 @@ Transform:
   m_Father: {fileID: 1419781896}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1088985216 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5966196926531586117, guid: 6d85ed62c3e6f1f4893db569b2e38feb,
+    type: 3}
+  m_PrefabInstance: {fileID: 5966196928056354503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1185110925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,6 +1824,16 @@ PrefabInstance:
       propertyPath: _likeCounter
       value: 
       objectReference: {fileID: 1066746338}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _lookAtTransform
+      value: 
+      objectReference: {fileID: 1088985216}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _timer
+      value: 
+      objectReference: {fileID: 762195554}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f07c80b2780ca4e8638106fdd13f16, type: 3}
 --- !u!4 &1405252774 stripped
@@ -2045,6 +2081,16 @@ PrefabInstance:
       propertyPath: _likeCounter
       value: 
       objectReference: {fileID: 1066746338}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _lookAtTransform
+      value: 
+      objectReference: {fileID: 1088985216}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _timer
+      value: 
+      objectReference: {fileID: 762195554}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f07c80b2780ca4e8638106fdd13f16, type: 3}
 --- !u!4 &1526850416 stripped
