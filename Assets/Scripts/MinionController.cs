@@ -91,6 +91,7 @@ public class MinionController : MonoBehaviour
     private void DoMiss()
     {
         _animator.SetTrigger("Miss");
+        _progress.Clear();
     }
 
     private void BeginDance()
@@ -208,8 +209,6 @@ public class MinionController : MonoBehaviour
 
     private IEnumerator BonusMoveWaiter(BonusMove bonusMove)
     {
-        yield return new WaitWhile(() => CurrentAnimationProgress > 0.5f);
-        yield return new WaitWhile(() => CurrentAnimationProgress < 0.1f);
         BonusMoveCircle moveCircle = _bonusMoveCirleZone.AddBonusCircle();
         moveCircle.OnClick += BonusMove;
 
