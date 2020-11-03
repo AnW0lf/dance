@@ -40,6 +40,13 @@ public class MinionController : MonoBehaviour
     private void TestBegin(int id)
     {
         print($"Begin id {id} progress {CurrentAnimationProgress}");
+
+        if (_bonusMoves != null)
+        {
+            _progress.SetBonusMoves(_bonusMoves);
+            foreach (var bonusMove in _bonusMoves)
+                StartCoroutine(BonusMoveWaiter(bonusMove));
+        }
     }
 
     private void TestEnd(int id)
@@ -90,12 +97,7 @@ public class MinionController : MonoBehaviour
     {
         _beginDance = false;
         _progress.Progress = 0f;
-        if (_bonusMoves != null)
-        {
-            _progress.SetBonusMoves(_bonusMoves);
-            foreach (var bonusMove in _bonusMoves)
-                StartCoroutine(BonusMoveWaiter(bonusMove));
-        }
+        _progress.Clear();
         _animator.SetTrigger("Dance");
     }
 

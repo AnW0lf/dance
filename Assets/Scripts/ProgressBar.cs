@@ -38,10 +38,15 @@ public class ProgressBar : MonoBehaviour
         _slider.gameObject.SetActive(_visible);
     }
 
-    public void SetBonusMoves(ReadOnlyCollection<BonusMove> bonusMoves)
+    public void Clear()
     {
         for (int i = _bonusMoveContainer.childCount - 1; i >= 0; i--)
             Destroy(_bonusMoveContainer.GetChild(i).gameObject);
+    }
+
+    public void SetBonusMoves(ReadOnlyCollection<BonusMove> bonusMoves)
+    {
+        Clear();
 
         foreach (var bonusMove in bonusMoves)
         {
