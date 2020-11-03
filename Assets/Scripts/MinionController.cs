@@ -92,6 +92,7 @@ public class MinionController : MonoBehaviour
     {
         _animator.SetTrigger("Miss");
         _progress.Clear();
+        _bonusMoveCirleZone.Clear();
     }
 
     private void BeginDance()

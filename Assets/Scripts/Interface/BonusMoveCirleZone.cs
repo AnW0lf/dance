@@ -13,6 +13,12 @@ public class BonusMoveCirleZone : MonoBehaviour
         _rect = GetComponent<RectTransform>();
     }
 
+    public void Clear()
+    {
+        for(int i = transform.childCount - 1; i >= 0; i--)
+            Destroy(transform.GetChild(i).gameObject);
+    }
+
     public BonusMoveCircle AddBonusCircle()
     {
         RectTransform bonusCircle = Instantiate(_bonusCirclePrefab, transform).GetComponent<RectTransform>();
