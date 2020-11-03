@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -15,6 +16,8 @@ public class MinionController : MonoBehaviour
     [SerializeField] private float _maxPerfect = 1f;
     [SerializeField] private Animator _animator = null;
     [SerializeField] private ProgressBar _progress = null;
+    [SerializeField] private BonusMoveCirleZone _bonusMoveCirleZone = null;
+    [SerializeField] private MinionEventListener _eventListener = null;
 
     private bool _beginDance = false;
 
@@ -23,10 +26,25 @@ public class MinionController : MonoBehaviour
     public UnityAction OnPerfect { get; set; } = null;
     public UnityAction OnTooSlow { get; set; } = null;
 
+    private ReadOnlyCollection<BonusMove> _bonusMoves = null;
+
     private void Start()
     {
         OnMiss += DoMiss;
         OnTooSlow += DoMiss;
+
+        _eventListener.OnBegin += TestBegin;
+        _eventListener.OnEnd += TestEnd;
+    }
+
+    private void TestBegin(int id)
+    {
+        print($"Begin id {id} progress {CurrentAnimationProgress}");
+    }
+
+    private void TestEnd(int id)
+    {
+        print($"End id {id} progress {CurrentAnimationProgress}");
     }
 
     public void SetDance(Dance dance)
@@ -46,7 +64,7 @@ public class MinionController : MonoBehaviour
             if (!_musicPlayer.Active)
                 _musicPlayer.Play();
         }
-
+        _bonusMoves = dance.BonusMoves;
         DanceId = dance.AnimationID;
         _beginDance = true;
     }
@@ -72,13 +90,17 @@ public class MinionController : MonoBehaviour
     {
         _beginDance = false;
         _progress.Progress = 0f;
+        if (_bonusMoves != null)
+        {
+            _progress.SetBonusMoves(_bonusMoves);
+            foreach (var bonusMove in _bonusMoves)
+                StartCoroutine(BonusMoveWaiter(bonusMove));
+        }
         _animator.SetTrigger("Dance");
     }
 
     private void Update()
     {
-        //print($"Animation tag {CurrentAnimationTag}");
-        //print($"Animation duration {CurrentAnimationDuration} sec.");
         switch (CurrentAnimationTag)
         {
             case AnimationTag.DANCE:
@@ -90,7 +112,7 @@ public class MinionController : MonoBehaviour
                     if (_progress.Progress >= 0.9f && _beginDance)
                         BeginDance();
 
-                    if (_progress.Progress == 1f)
+                    if (_progress.Progress >= 1f)
                     {
                         if (!_timer.TimeOver)
                             TooSlow = true;
@@ -145,7 +167,16 @@ public class MinionController : MonoBehaviour
         }
     }
 
-    public float CurrentAnimationProgress => _animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+    public float CurrentAnimationProgress
+    {
+        get
+        {
+            float progress = _animator.GetNextAnimatorStateInfo(0).normalizedTime;
+            if (progress == 0)
+                return _animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+            return progress;
+        }
+    }
     public float CurrentAnimationDuration
     {
         get
@@ -171,5 +202,25 @@ public class MinionController : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         action?.Invoke();
+    }
+
+    private IEnumerator BonusMoveWaiter(BonusMove bonusMove)
+    {
+        yield return new WaitWhile(() => CurrentAnimationProgress > 0.5f);
+        yield return new WaitWhile(() => CurrentAnimationProgress < 0.1f);
+        BonusMoveCircle moveCircle = _bonusMoveCirleZone.AddBonusCircle();
+        moveCircle.OnClick += BonusMove;
+
+        while (moveCircle != null)
+        {
+            moveCircle.Progress = (CurrentAnimationProgress - bonusMove.Start) / bonusMove.Length;
+            yield return null;
+        }
+    }
+
+    private void BonusMove(float progress)
+    {
+        if (progress >= -0.25f && progress <= 0.25f) OnPerfect?.Invoke();
+        else OnGood?.Invoke();
     }
 }
