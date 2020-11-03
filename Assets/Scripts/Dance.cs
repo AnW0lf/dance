@@ -24,18 +24,19 @@ public class Dance : ScriptableObject
 public class BonusMove
 {
     [Range(0f, 1f)]
-    [SerializeField] private float _position = 0.5f;
-    [Range(0f, 0.1f)]
-    [SerializeField] private float _range = 0.05f;
+    [SerializeField] private float _start = 0.5f;
+    [Range(0f, 1f)]
+    [SerializeField] private float _length = 0.05f;
 
     public BonusMove(float position, float range)
     {
-        _position = position;
-        _range = range;
+        _start = position;
+        _length = range;
     }
 
-    public float Position => _position;
-    public float Range => _range;
+    public float Start => _start;
+    public float Length => _length;
+    public float End => _start + _length;
 
 }
 

@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4854180490176373167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5966196926531949607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a5007b8caa10b4dbe834841c69d342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5966196927685585003
 GameObject:
   m_ObjectHideFlags: 0
@@ -51,6 +63,8 @@ MonoBehaviour:
   _maxPerfect: 1
   _animator: {fileID: 5966196926522566537}
   _progress: {fileID: 0}
+  _bonusMoveCirleZone: {fileID: 0}
+  _eventListener: {fileID: 4854180490176373167}
 --- !u!1001 &5966196926531982057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128,16 +142,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: fa7f36c71b9e8fa4798df3a931c2fd92, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'thumb_01_l'\n\tTransform 'spine_02'\n\tTransform
-        'thumb_01_r'\n\tTransform 'thigh_l'\n\tTransform 'calf_l'\n\tTransform 'spine_01'\n\tTransform
-        'clavicle_r'\n\tTransform 'hand_l'\n\tTransform 'lowerarm_l'\n\tTransform
-        'index_01_l'\n\tand more ...\n\tFrom animation clip 'StandingWBriefcaseIdle'\n\tFrom
-        animation clip 'Belly Dance'\n\tFrom animation clip 'Salsa Dancing'"
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa7f36c71b9e8fa4798df3a931c2fd92, type: 3}
+--- !u!1 &5966196926531949607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100046, guid: fa7f36c71b9e8fa4798df3a931c2fd92,
+    type: 3}
+  m_PrefabInstance: {fileID: 5966196926531982057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5966196926531586117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400044, guid: fa7f36c71b9e8fa4798df3a931c2fd92,

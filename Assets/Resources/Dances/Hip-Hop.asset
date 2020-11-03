@@ -18,5 +18,5 @@ MonoBehaviour:
   _backgroundSprite: {fileID: 21300000, guid: 448da1362e1336540b9e48db487816ee, type: 3}
   _style: 2
   _bonusMoves:
-  - _position: 0.315
-    _range: 0.0238
+  - _start: 0.5
+    _length: 0.1
