@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -22,6 +23,8 @@ public class MinionController : MonoBehaviour
     public UnityAction OnGood { get; set; } = null;
     public UnityAction OnPerfect { get; set; } = null;
     public UnityAction OnTooSlow { get; set; } = null;
+
+    private ReadOnlyCollection<BonusMove> _bonusMoves = null;
 
     private void Start()
     {
@@ -46,7 +49,7 @@ public class MinionController : MonoBehaviour
             if (!_musicPlayer.Active)
                 _musicPlayer.Play();
         }
-
+        _bonusMoves = dance.BonusMoves;
         DanceId = dance.AnimationID;
         _beginDance = true;
     }
@@ -72,6 +75,8 @@ public class MinionController : MonoBehaviour
     {
         _beginDance = false;
         _progress.Progress = 0f;
+        if (_bonusMoves != null && _bonusMoves.Count > 0)
+            _progress.SetBonusMoves(_bonusMoves);
         _animator.SetTrigger("Dance");
     }
 
