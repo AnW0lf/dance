@@ -18,6 +18,7 @@ public class MinionController : MonoBehaviour
     [SerializeField] private ProgressBar _progress = null;
     //[SerializeField] private BonusMoveCirleZone _bonusMoveCirleZone = null;
     [SerializeField] private MinionEventListener _eventListener = null;
+    [SerializeField] private CardSpawner _cardSpawner = null;
 
     private bool _beginDance = false;
     private bool _hasEnd = true;
@@ -42,13 +43,22 @@ public class MinionController : MonoBehaviour
         print($"Begin id {id} in progress {CurrentAnimationProgress}");
 
         _progress.Clear();
+        List<BonusMove> bonusMoves = new List<BonusMove>();
         if (_currentDance.BonusMoves != null)
         {
-            _progress.SetBonusMoves(_currentDance.BonusMoves);
-            //foreach (var bonusMove in _bonusMoves)
-            //    StartCoroutine(BonusMoveWaiter(bonusMove));
+            foreach (var bonusMove in _currentDance.BonusMoves)
+                bonusMoves.Add(bonusMove);
         }
+        _progress.SetBonusMoves(bonusMoves);
+        StartCoroutine(BonusMovesProcessor(bonusMoves));
+
         _progress.Visible = true;
+
+        //if (_currentDance.BonusMoves != null)
+        //{
+        //    foreach (var bonusMove in _bonusMoves)
+        //        StartCoroutine(BonusMoveWaiter(bonusMove));
+        //}
     }
 
     private void OnDanceEnd(int id)
@@ -250,9 +260,56 @@ public class MinionController : MonoBehaviour
     //    }
     //}
 
-    //private void BonusMove(float progress)
-    //{
-    //    if (progress >= -0.25f && progress <= 0.25f) OnPerfect?.Invoke();
-    //    else OnGood?.Invoke();
-    //}
+    public void BonusMove()
+    {
+        //if (progress >= -0.25f && progress <= 0.25f) OnPerfect?.Invoke();
+        //else OnGood?.Invoke();
+        OnGood?.Invoke();
+        _bonusHasClick = true;
+    }
+
+    private bool _bonusHasClick = false;
+
+    private IEnumerator BonusMovesProcessor(List<BonusMove> bonusMoves)
+    {
+        while (bonusMoves.Count > 0)
+        {
+            float progress = _progress.Progress;
+            for (int i = bonusMoves.Count - 1; i >= 0; i--)
+            {
+                BonusMove bonus = bonusMoves[i];
+
+                if (_bonusHasClick)
+                {
+                    if (bonus.Start <= progress)
+                    {
+                        _cardSpawner.DeactiveBonus();
+                        bonusMoves.RemoveAt(i);
+                        _bonusHasClick = false;
+                    }
+                }
+                else
+                {
+                    if (_cardSpawner.BonusCardActive)
+                    {
+                        if (bonus.End < progress)
+                        {
+                            _cardSpawner.DeactiveBonus();
+                            bonusMoves.RemoveAt(i);
+                        }
+                    }
+                    else
+                    {
+                        if (bonus.Start <= progress)
+                        {
+                            _cardSpawner.ActiveBonus();
+                        }
+                    }
+                }
+            }
+            yield return null;
+        }
+
+        _cardSpawner.SpawnByHide(3);
+    }
 }
