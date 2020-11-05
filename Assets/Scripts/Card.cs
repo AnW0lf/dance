@@ -16,6 +16,7 @@ public class Card : MonoBehaviour
 
     public int AnimationID { get; private set; }
 
+    private Coroutine _scaling = null;
     private CardState _state = CardState.NORMAL;
     public CardState State
     {
@@ -41,7 +42,7 @@ public class Card : MonoBehaviour
                     _glow.SetActive(true);
                     _fade.SetActive(false);
                     _button.interactable = true;
-                    SetScale(Vector3.one * 1.25f);
+                    SetScale(Vector3.one * 1.2f);
                     break;
                 case CardState.FADED:
                     _glow.SetActive(false);
@@ -55,11 +56,8 @@ public class Card : MonoBehaviour
 
     private void SetScale(Vector3 scale)
     {
-        _fade.transform.localScale = scale;
-        _background.transform.localScale = scale;
-        _glow.transform.localScale = scale;
-        _icon.transform.localScale = scale;
-        _label.transform.localScale = scale;
+        if (_scaling != null) StopCoroutine(_scaling);
+        _scaling = StartCoroutine(Scaling(1.5f, scale));
     }
 
     public void SetCard(Dance dance)
@@ -78,6 +76,26 @@ public class Card : MonoBehaviour
     public void ClearActions()
     {
         _button.onClick.RemoveAllListeners();
+    }
+
+    private IEnumerator Scaling(float speed, Vector3 scale)
+    {
+        float timer = 0f;
+        float duration = Vector3.Distance(_background.transform.localScale, scale) / speed;
+
+        while(timer <= duration)
+        {
+            timer += Time.deltaTime;
+            Vector3 newScale = Vector3.Lerp(_fade.transform.localScale, scale, timer / duration);
+            _fade.transform.localScale = newScale;
+            _background.transform.localScale = newScale;
+            _glow.transform.localScale = newScale;
+            _icon.transform.localScale = newScale;
+            _label.transform.localScale = newScale;
+            yield return null;
+        }
+
+        _scaling = null;
     }
 }
 
