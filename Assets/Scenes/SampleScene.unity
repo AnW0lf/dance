@@ -1071,7 +1071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _active: 0
   _timer: {fileID: 1636817507}
-  _duration: 60
+  _duration: 10
 --- !u!1 &798143943
 GameObject:
   m_ObjectHideFlags: 0

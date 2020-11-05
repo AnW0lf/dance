@@ -165,7 +165,13 @@ public class MinionController : MonoBehaviour
 
                     if (_progress.Progress >= 1f)
                     {
-                        if (!_timer.TimeOver && !HasNextDance)
+                        if (_timer.TimeOver)
+                        {
+                            DanceId = 0;
+                            _currentDance = null;
+                            _animator.SetTrigger("TimeOver");
+                        }
+                        else if (!HasNextDance)
                         {
                             TooSlow = true;
                         }
