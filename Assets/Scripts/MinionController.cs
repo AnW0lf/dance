@@ -16,53 +16,97 @@ public class MinionController : MonoBehaviour
     [SerializeField] private float _maxPerfect = 1f;
     [SerializeField] private Animator _animator = null;
     [SerializeField] private ProgressBar _progress = null;
-    [SerializeField] private BonusMoveCirleZone _bonusMoveCirleZone = null;
+    //[SerializeField] private BonusMoveCirleZone _bonusMoveCirleZone = null;
     [SerializeField] private MinionEventListener _eventListener = null;
 
     private bool _beginDance = false;
+    private bool _hasEnd = true;
+    private Dance _currentDance = null;
 
     public UnityAction OnMiss { get; set; } = null;
     public UnityAction OnGood { get; set; } = null;
     public UnityAction OnPerfect { get; set; } = null;
     public UnityAction OnTooSlow { get; set; } = null;
 
-    private ReadOnlyCollection<BonusMove> _bonusMoves = null;
-
     private void Start()
     {
-        OnMiss += DoMiss;
-        OnTooSlow += DoMiss;
+        _eventListener.OnBegin += OnDanceBegin;
+        _eventListener.OnEnd += OnDanceEnd;
 
-        _eventListener.OnBegin += TestBegin;
-        _eventListener.OnEnd += TestEnd;
+        _eventListener.OnMissBegin += OnMissBegin;
+        _eventListener.OnMissEnd += OnMissEnd;
     }
 
-    private void TestBegin(int id)
+    private void OnDanceBegin(int id)
     {
-        print($"Begin id {id} progress {CurrentAnimationProgress}");
+        print($"Begin id {id} in progress {CurrentAnimationProgress}");
 
-        if (_bonusMoves != null)
+        _progress.Clear();
+        if (_currentDance.BonusMoves != null)
         {
-            _progress.SetBonusMoves(_bonusMoves);
-            foreach (var bonusMove in _bonusMoves)
-                StartCoroutine(BonusMoveWaiter(bonusMove));
+            _progress.SetBonusMoves(_currentDance.BonusMoves);
+            //foreach (var bonusMove in _bonusMoves)
+            //    StartCoroutine(BonusMoveWaiter(bonusMove));
         }
+        _progress.Visible = true;
     }
 
-    private void TestEnd(int id)
+    private void OnDanceEnd(int id)
     {
-        print($"End id {id} progress {CurrentAnimationProgress}");
+        print($"End id {id} in progress {CurrentAnimationProgress}");
+
+        _hasEnd = true;
+        _progress.Visible = false;
+        _progress.Clear();
+        HasNextDance = false;
+    }
+
+    private void OnMissBegin()
+    {
+        print($"Begin miss");
+
+        _progress.Visible = false;
+        _progress.Clear();
+    }
+
+    private void OnMissEnd()
+    {
+        print($"End miss");
     }
 
     public void SetDance(Dance dance)
     {
+        if (!_hasEnd && _currentDance != null)
+            OnDanceEnd(_currentDance.AnimationID);
+
+        _currentDance = dance;
+        DanceId = _currentDance.AnimationID;
+        _hasEnd = false;
+
         if (CurrentAnimationTag == AnimationTag.DANCE)
         {
             float currentProgress = CurrentAnimationProgress;
-            if (currentProgress < _maxMiss) OnMiss?.Invoke();
-            else if (currentProgress < _maxGood) OnGood?.Invoke();
-            else if (currentProgress < _maxPerfect) OnPerfect?.Invoke();
-            else OnTooSlow?.Invoke();
+            if (currentProgress < _maxMiss)
+            {
+                OnMiss?.Invoke();
+                DoMiss();
+                HasNextDance = true;
+            }
+            else if (currentProgress < _maxGood)
+            {
+                OnGood?.Invoke();
+                HasNextDance = true;
+            }
+            else if (currentProgress < _maxPerfect)
+            {
+                OnPerfect?.Invoke();
+                HasNextDance = true;
+            }
+            else
+            {
+                OnTooSlow?.Invoke();
+                DoTooSlow();
+            }
         }
         else
         {
@@ -70,10 +114,9 @@ public class MinionController : MonoBehaviour
                 _timer.Active = true;
             if (!_musicPlayer.Active)
                 _musicPlayer.Play();
+            if (CurrentAnimationTag == AnimationTag.IDLE)
+                HasNextDance = true;
         }
-        _bonusMoves = dance.BonusMoves;
-        DanceId = dance.AnimationID;
-        _beginDance = true;
     }
 
     public int DanceId
@@ -91,16 +134,25 @@ public class MinionController : MonoBehaviour
     private void DoMiss()
     {
         _animator.SetTrigger("Miss");
-        _progress.Clear();
-        _bonusMoveCirleZone.Clear();
+        //_bonusMoveCirleZone.Clear();
     }
 
-    private void BeginDance()
+    private void DoTooSlow()
     {
-        _beginDance = false;
-        _progress.Progress = 0f;
-        _progress.Clear();
-        _animator.SetTrigger("Dance");
+        _animator.SetTrigger("Miss");
+        DanceId = 0;
+        //_bonusMoveCirleZone.Clear();
+    }
+
+    private bool _hasNextDance = false;
+    public bool HasNextDance
+    {
+        get => _hasNextDance;
+        set
+        {
+            _hasNextDance = value;
+            if (_hasNextDance) _animator.SetTrigger("Dance");
+        }
     }
 
     private void Update()
@@ -109,28 +161,19 @@ public class MinionController : MonoBehaviour
         {
             case AnimationTag.DANCE:
                 {
-                    if (!_progress.Visible)
-                        _progress.Visible = true;
                     _progress.Progress = CurrentAnimationProgress;
-
-                    if (_progress.Progress >= 0.9f && _beginDance)
-                        BeginDance();
 
                     if (_progress.Progress >= 1f)
                     {
-                        if (!_timer.TimeOver)
+                        if (!_timer.TimeOver && !HasNextDance)
+                        {
                             TooSlow = true;
+                        }
                     }
                 }
                 break;
             case AnimationTag.IDLE:
                 {
-                    if (_progress.Visible)
-                    {
-                        _progress.Visible = false;
-                        _progress.Progress = 0f;
-                    }
-
                     if (_timer.TimeOver)
                     {
                         if (_musicPlayer.Active)
@@ -142,21 +185,9 @@ public class MinionController : MonoBehaviour
                         {
                             TooSlow = false;
                             OnTooSlow?.Invoke();
+                            DoTooSlow();
                         }
-                        else if (_beginDance)
-                            BeginDance();
                     }
-                }
-                break;
-            case AnimationTag.MISS:
-                {
-                    if (_progress.Visible)
-                    {
-                        _progress.Visible = false;
-                        _progress.Progress = 0f;
-                    }
-                    if (_beginDance)
-                        BeginDance();
                 }
                 break;
             default:
@@ -182,14 +213,6 @@ public class MinionController : MonoBehaviour
             return progress;
         }
     }
-    public float CurrentAnimationDuration
-    {
-        get
-        {
-            var clip = _animator.GetCurrentAnimatorClipInfo(0)[0].clip;
-            return clip.length;
-        }
-    }
 
     private enum AnimationTag { IDLE, DANCE, MISS, UNTAGGED }
     private AnimationTag CurrentAnimationTag
@@ -209,21 +232,21 @@ public class MinionController : MonoBehaviour
         action?.Invoke();
     }
 
-    private IEnumerator BonusMoveWaiter(BonusMove bonusMove)
-    {
-        BonusMoveCircle moveCircle = _bonusMoveCirleZone.AddBonusCircle();
-        moveCircle.OnClick += BonusMove;
+    //private IEnumerator BonusMoveWaiter(BonusMove bonusMove)
+    //{
+    //    BonusMoveCircle moveCircle = _bonusMoveCirleZone.AddBonusCircle();
+    //    moveCircle.OnClick += BonusMove;
 
-        while (moveCircle != null)
-        {
-            moveCircle.Progress = (CurrentAnimationProgress - bonusMove.Start) / bonusMove.Length;
-            yield return null;
-        }
-    }
+    //    while (moveCircle != null)
+    //    {
+    //        moveCircle.Progress = (CurrentAnimationProgress - bonusMove.Start) / bonusMove.Length;
+    //        yield return null;
+    //    }
+    //}
 
-    private void BonusMove(float progress)
-    {
-        if (progress >= -0.25f && progress <= 0.25f) OnPerfect?.Invoke();
-        else OnGood?.Invoke();
-    }
+    //private void BonusMove(float progress)
+    //{
+    //    if (progress >= -0.25f && progress <= 0.25f) OnPerfect?.Invoke();
+    //    else OnGood?.Invoke();
+    //}
 }
