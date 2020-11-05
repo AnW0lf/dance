@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7436179255080614706}
   - component: {fileID: 127308623618775598}
   m_Layer: 5
-  m_Name: Glow
+  m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 1, g: 1, b: 0, a: 1}
-  m_EffectDistance: {x: 8, y: 8}
+  m_EffectDistance: {x: 10, y: 10}
   m_UseGraphicAlpha: 0
 --- !u!114 &127308623618775598
 MonoBehaviour:

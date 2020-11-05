@@ -1071,7 +1071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _active: 0
   _timer: {fileID: 1636817507}
-  _duration: 10
+  _duration: 30
 --- !u!1 &798143943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2845,6 +2845,11 @@ PrefabInstance:
       propertyPath: _bonusMoveCirleZone
       value: 
       objectReference: {fileID: 385159242}
+    - target: {fileID: 2994947711278033369, guid: 6d85ed62c3e6f1f4893db569b2e38feb,
+        type: 3}
+      propertyPath: _cardSpawner
+      value: 
+      objectReference: {fileID: 526916875}
     - target: {fileID: 5966196926518286665, guid: 6d85ed62c3e6f1f4893db569b2e38feb,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections.ObjectModel;
+using System.Collections.Generic;
 
 public class ProgressBar : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class ProgressBar : MonoBehaviour
             Destroy(_bonusMoveContainer.GetChild(i).gameObject);
     }
 
-    public void SetBonusMoves(ReadOnlyCollection<BonusMove> bonusMoves)
+    public void SetBonusMoves(List<BonusMove> bonusMoves)
     {
         Clear();
 
