@@ -51,8 +51,8 @@ public class ProgressBar : MonoBehaviour
         foreach (var bonusMove in bonusMoves)
         {
             RectTransform bonusMoveZone = Instantiate(_bonusMoveZonePrefab, _bonusMoveContainer).GetComponent<RectTransform>();
-            bonusMoveZone.anchoredPosition = Vector2.right * bonusMove.Start * 1125f;
-            bonusMoveZone.sizeDelta = Vector2.right * bonusMove.Length * 1125f;
+            bonusMoveZone.anchorMin = new Vector2(bonusMove.Start, bonusMoveZone.anchorMin.y);
+            bonusMoveZone.anchorMax = new Vector2(bonusMove.End, bonusMoveZone.anchorMax.y);
         }
     }
 }

@@ -177,7 +177,8 @@ public class MinionController : MonoBehaviour
         {
             float progress = _animator.GetNextAnimatorStateInfo(0).normalizedTime;
             if (progress == 0)
-                return _animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+                progress = _animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+            progress = progress * 5f / 4f - 1f / 8f;
             return progress;
         }
     }
