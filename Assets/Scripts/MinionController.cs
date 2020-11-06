@@ -87,7 +87,6 @@ public class MinionController : MonoBehaviour
         {
             StopCoroutine(_bonusMovesProcessing);
             _bonusMovesProcessing = null;
-            _cardSpawner.SpawnByHide(3);
         }
     }
 
