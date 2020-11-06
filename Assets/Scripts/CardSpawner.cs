@@ -27,8 +27,6 @@ public class CardSpawner : MonoBehaviour
         }
     }
 
-    public bool BonusCardActive { get; private set; } = false;
-
     private Coroutine _moveTo = null;
 
     /// <summary>
@@ -38,7 +36,6 @@ public class CardSpawner : MonoBehaviour
     {
         for (int i = transform.childCount - 1; i >= 0; i--)
             Destroy(transform.GetChild(i).gameObject);
-        BonusCardActive = false;
     }
 
     /// <summary>
@@ -63,7 +60,7 @@ public class CardSpawner : MonoBehaviour
                 _minion.SetDance(dance);
                 FadingCard();
                 card.State = CardState.GLOWED;
-                StartCoroutine(HideFaded(0.6f));
+                Visible = false;
             });
         }
     }
@@ -85,30 +82,11 @@ public class CardSpawner : MonoBehaviour
         while (timer <= duration)
         {
             timer += Time.deltaTime;
-            _rect.anchoredPosition = Vector2.Lerp(startPosition, endPosition, timer / duration);
+            _rect.anchoredPosition = Vector2.Lerp(_rect.anchoredPosition, endPosition, timer / duration);
             yield return null;
         }
 
         _moveTo = null;
-    }
-
-    public void ActiveBonus()
-    {
-        Card glowedCard = GetComponentsInChildren<Card>().First((card) => card.State == CardState.GLOWED);
-        if (glowedCard == null) return;
-        glowedCard.State = CardState.BONUS;
-        glowedCard.ClearActions();
-        glowedCard.SetAction(() => _minion.BonusMove());
-        BonusCardActive = true;
-    }
-
-    public void DeactiveBonus()
-    {
-        Card bonusCard = GetComponentsInChildren<Card>().First((card) => card.State == CardState.BONUS);
-        if (bonusCard == null) return;
-        bonusCard.State = CardState.GLOWED;
-        bonusCard.ClearActions();
-        BonusCardActive = false;
     }
 
     private void Start()
@@ -117,45 +95,6 @@ public class CardSpawner : MonoBehaviour
         else _rect.anchoredPosition = Vector2.down * 500f;
 
         Spawn(3);
-    }
-
-    private IEnumerator HideFaded(float duration)
-    {
-        List<RectTransform> cards = new List<RectTransform>();
-        foreach (var card in GetComponentsInChildren<Card>().Where((card) => card.State == CardState.FADED))
-            cards.Add(card.GetComponent<RectTransform>());
-
-        float timer = 0f;
-        float startY = cards[0].anchoredPosition.y;
-        float endY = -1000f;
-
-        while (timer <= duration)
-        {
-            timer += Time.deltaTime;
-            foreach (var card in cards)
-            {
-                Vector2 position = card.anchoredPosition;
-                position.y = Mathf.Lerp(startY, endY, timer / duration);
-                card.anchoredPosition = position;
-            }
-            yield return null;
-        }
-    }
-
-    public void SpawnByHide(int count)
-    {
-        StartCoroutine(SpawnByHideCoroutine(count));
-    }
-
-    private IEnumerator SpawnByHideCoroutine(int count)
-    {
-        Visible = false;
-
-        yield return new WaitWhile(() => _moveTo != null);
-
-        Spawn(count);
-
-        Visible = true;
     }
 
     private void Update()

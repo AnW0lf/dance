@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
+using System;
+using Random = UnityEngine.Random;
 
 public class FanController : MonoBehaviour
 {
@@ -9,6 +11,16 @@ public class FanController : MonoBehaviour
     [SerializeField] private Transform _lookAtTransform = null;
     [SerializeField] private Transform _bodyTransform = null;
     [SerializeField] private float _smoothness = 0.05f;
+
+    [Space(20)]
+    [Header("Wish settings")]
+    [SerializeField] private Wish _wish = null;
+    [SerializeField] private float _holdDuration = 6f;
+    [Range(0f, 1f)]
+    [SerializeField] private float _chancePerSecond = 0.2f;
+    [SerializeField] private StyleSprite[] _styleSprites = null;
+    private Coroutine _wishSpawner = null;
+    
 
     [Space(20)]
     [Header("Fan settings")]
@@ -35,18 +47,22 @@ public class FanController : MonoBehaviour
     [SerializeField] private GameObject _likePrefab = null;
 
     #region Like
+    public bool LikePowerUpped { get; private set; } = false;
+
     public void CreateLike()
     {
-        GameObject like = Instantiate(_likePrefab, _targetInterfacePoint);
+        Like like = Instantiate(_likePrefab, _targetInterfacePoint).GetComponent<Like>();
         like.transform.position = Camera.main.WorldToScreenPoint(_spawnPoint.position);
+        like.Count = LikePowerUpped ? 2 : 1;
+        LikePowerUpped = false;
 
         Vector3 endPosition = _targetInterfacePoint.position;
-        StartCoroutine(MoveToCounter(like.transform, endPosition));
+        StartCoroutine(MoveToCounter(like, endPosition));
     }
 
-    private IEnumerator MoveToCounter(Transform like, Vector3 endPosition)
+    private IEnumerator MoveToCounter(Like like, Vector3 endPosition)
     {
-        Vector3 startPosition = like.position;
+        Vector3 startPosition = like.transform.position;
         float timer = 0;
         float speed = Random.Range(1200f, 1800f);
         float duration = Vector2.Distance(startPosition, endPosition) / speed;
@@ -54,11 +70,11 @@ public class FanController : MonoBehaviour
         while (timer <= duration)
         {
             timer += Time.deltaTime;
-            like.position = Vector3.Lerp(startPosition, endPosition, timer / duration);
+            like.transform.position = Vector3.Lerp(startPosition, endPosition, timer / duration);
             yield return null;
         }
 
-        _likeCounter.Count++;
+        _likeCounter.Count += like.Count;
         Destroy(like.gameObject);
     }
     #endregion Like
@@ -103,6 +119,16 @@ public class FanController : MonoBehaviour
             Fail();
     }
 
+    private void OnSetDance(Dance dance)
+    {
+        if (!IsWishSpawned) return;
+        if (Wish == dance.Style)
+        {
+            LikePowerUpped = true;
+            BreakWish();
+        }
+    }
+
     private void DoClamp()
     {
         _animator.SetTrigger("Succes");
@@ -143,6 +169,55 @@ public class FanController : MonoBehaviour
 
     #endregion Actions
 
+    #region Wish
+    private IEnumerator SpawnWishProcessor(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        WaitForSeconds second = new WaitForSeconds(1f);
+        while (Random.Range(0f, 1f) > _chancePerSecond)
+            yield return second;
+
+        StyleSprite styleSprite = _styleSprites[Random.Range(0, _styleSprites.Length)];
+        Wish = styleSprite.Style;
+        _wish.SetWish(styleSprite.Sprite);
+
+        yield return new WaitForSeconds(_holdDuration);
+
+        _wish.Visible = false;
+        Wish = DanceStyle.UNSTYLED;
+        _wishSpawner = null;
+    }
+
+    private void SpawnWish(float delay)
+    {
+        if (_wishSpawner != null) StopCoroutine(_wishSpawner);
+        _wishSpawner = StartCoroutine(SpawnWishProcessor(3f));
+    }
+
+    private void BreakWish()
+    {
+        _wish.Visible = false;
+        StopCoroutine(_wishSpawner);
+        _wishSpawner = null;
+    }
+
+    public bool IsWishSpawning => _wishSpawner != null;
+    public bool IsWishSpawned => Wish != DanceStyle.UNSTYLED;
+
+    public DanceStyle Wish { get; private set; } = DanceStyle.UNSTYLED;
+
+    [Serializable]
+    private class StyleSprite
+    {
+        [SerializeField] private DanceStyle _style = DanceStyle.UNSTYLED;
+        [SerializeField] private Sprite _sprite = null;
+
+        public DanceStyle Style => _style;
+        public Sprite Sprite => _sprite;
+    }
+    #endregion Wish
+
     private void Start()
     {
         IsFan = Random.Range(0, 2) == 1;
@@ -155,6 +230,7 @@ public class FanController : MonoBehaviour
         _minion.OnGood += OnGood;
         _minion.OnPerfect += OnPerfect;
         _minion.OnTooSlow += OnTooSlow;
+        _minion.OnSetDance += OnSetDance;
     }
 
     private void Update()
@@ -162,10 +238,12 @@ public class FanController : MonoBehaviour
         if (IsTimerActive)
         {
             if (!Dancing) Dancing = true;
+            if (!IsWishSpawning) SpawnWish(2f);
         }
         else
         {
             if (Dancing) Dancing = false;
+            if (IsWishSpawning) BreakWish();
         }
 
         Vector3 direction = _lookAtTransform.position - _bodyTransform.position;

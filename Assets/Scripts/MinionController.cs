@@ -16,9 +16,9 @@ public class MinionController : MonoBehaviour
     [SerializeField] private float _maxPerfect = 1f;
     [SerializeField] private Animator _animator = null;
     [SerializeField] private ProgressBar _progress = null;
-    //[SerializeField] private BonusMoveCirleZone _bonusMoveCirleZone = null;
     [SerializeField] private MinionEventListener _eventListener = null;
     [SerializeField] private CardSpawner _cardSpawner = null;
+    [SerializeField] private BonusButton _bonusButton = null;
     [SerializeField] private GameObject _perfectEffect, _bonusEffect;
 
     private bool _beginDance = false;
@@ -30,6 +30,7 @@ public class MinionController : MonoBehaviour
     public UnityAction OnGood { get; set; } = null;
     public UnityAction OnPerfect { get; set; } = null;
     public UnityAction OnTooSlow { get; set; } = null;
+    public UnityAction<Dance> OnSetDance { get; set; } = null;
 
     private void Start()
     {
@@ -58,12 +59,6 @@ public class MinionController : MonoBehaviour
         _bonusMovesProcessing = StartCoroutine(BonusMovesProcessor(bonusMoves));
 
         _progress.Visible = true;
-
-        //if (_currentDance.BonusMoves != null)
-        //{
-        //    foreach (var bonusMove in _bonusMoves)
-        //        StartCoroutine(BonusMoveWaiter(bonusMove));
-        //}
     }
 
     private void OnDanceEnd(int id)
@@ -103,6 +98,7 @@ public class MinionController : MonoBehaviour
         _currentDance = dance;
         DanceId = _currentDance.AnimationID;
         _hasEnd = false;
+        OnSetDance?.Invoke(_currentDance);
 
         if (CurrentAnimationTag == AnimationTag.DANCE)
         {
@@ -156,14 +152,12 @@ public class MinionController : MonoBehaviour
     private void DoMiss()
     {
         _animator.SetTrigger("Miss");
-        //_bonusMoveCirleZone.Clear();
     }
 
     private void DoTooSlow()
     {
         _animator.SetTrigger("Miss");
         DanceId = 0;
-        //_bonusMoveCirleZone.Clear();
     }
 
     private bool _hasNextDance = false;
@@ -254,30 +248,9 @@ public class MinionController : MonoBehaviour
         }
     }
 
-    private IEnumerator DelayedAction(float delay, UnityAction action)
-    {
-        yield return new WaitForSeconds(delay);
-        action?.Invoke();
-    }
-
-    //private IEnumerator BonusMoveWaiter(BonusMove bonusMove)
-    //{
-    //    BonusMoveCircle moveCircle = _bonusMoveCirleZone.AddBonusCircle();
-    //    moveCircle.OnClick += BonusMove;
-
-    //    while (moveCircle != null)
-    //    {
-    //        moveCircle.Progress = (CurrentAnimationProgress - bonusMove.Start) / bonusMove.Length;
-    //        yield return null;
-    //    }
-    //}
-
     public void BonusMove()
     {
-        //if (progress >= -0.25f && progress <= 0.25f) OnPerfect?.Invoke();
-        //else OnGood?.Invoke();
         OnGood?.Invoke();
-        // Instantiate(_bonusEffect, gameObject.transform);    
         _bonusHasClick = true;
     }
 
@@ -285,6 +258,9 @@ public class MinionController : MonoBehaviour
 
     private IEnumerator BonusMovesProcessor(List<BonusMove> bonusMoves)
     {
+        _cardSpawner.Visible = false;
+        _bonusButton.Visible = true;
+        _bonusButton.OnClick = BonusMove;
         while (bonusMoves.Count > 0)
         {
             float progress = _progress.Progress;
@@ -296,26 +272,26 @@ public class MinionController : MonoBehaviour
                 {
                     if (bonus.Start <= progress)
                     {
-                        _cardSpawner.DeactiveBonus();
+                        _bonusButton.Interactable = false;
                         bonusMoves.RemoveAt(i);
                         _bonusHasClick = false;
                     }
                 }
                 else
                 {
-                    if (_cardSpawner.BonusCardActive)
+                    if (_bonusButton.Interactable)
                     {
                         if (bonus.End < progress)
                         {
-                            _cardSpawner.DeactiveBonus();
+                            _bonusButton.Interactable = false;
                             bonusMoves.RemoveAt(i);
                         }
                     }
                     else
                     {
-                        if (bonus.Start <= progress)
+                        if (bonus.Start <= progress && !_bonusButton.Interactable)
                         {
-                            _cardSpawner.ActiveBonus();
+                            _bonusButton.Interactable = true;
                         }
                     }
                 }
@@ -323,6 +299,8 @@ public class MinionController : MonoBehaviour
             yield return null;
         }
 
-        _cardSpawner.SpawnByHide(3);
+        _bonusButton.Visible = false;
+        _cardSpawner.Spawn(3);
+        _cardSpawner.Visible = true;
     }
 }
