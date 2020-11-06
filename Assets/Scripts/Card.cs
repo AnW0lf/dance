@@ -42,7 +42,7 @@ public class Card : MonoBehaviour
                     _glow.SetActive(true);
                     _fade.SetActive(false);
                     _button.interactable = true;
-                    SetScale(Vector3.one * 1.2f);
+                    SetScale(Vector3.one * 1.1f);
                     break;
                 case CardState.FADED:
                     _glow.SetActive(false);
@@ -57,7 +57,7 @@ public class Card : MonoBehaviour
     private void SetScale(Vector3 scale)
     {
         if (_scaling != null) StopCoroutine(_scaling);
-        _scaling = StartCoroutine(Scaling(1.5f, scale));
+        _scaling = StartCoroutine(Scaling(1.1f, scale));
     }
 
     public void SetCard(Dance dance)

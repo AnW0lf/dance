@@ -19,10 +19,12 @@ public class MinionController : MonoBehaviour
     //[SerializeField] private BonusMoveCirleZone _bonusMoveCirleZone = null;
     [SerializeField] private MinionEventListener _eventListener = null;
     [SerializeField] private CardSpawner _cardSpawner = null;
+    [SerializeField] private GameObject _perfectEffect, _bonusEffect;
 
     private bool _beginDance = false;
     private bool _hasEnd = true;
     private Dance _currentDance = null;
+    private Coroutine _bonusMovesProcessing = null;
 
     public UnityAction OnMiss { get; set; } = null;
     public UnityAction OnGood { get; set; } = null;
@@ -50,7 +52,10 @@ public class MinionController : MonoBehaviour
                 bonusMoves.Add(bonusMove);
         }
         _progress.SetBonusMoves(bonusMoves);
-        StartCoroutine(BonusMovesProcessor(bonusMoves));
+
+        if(_bonusMovesProcessing != null)
+            StopCoroutine(_bonusMovesProcessing);
+        _bonusMovesProcessing = StartCoroutine(BonusMovesProcessor(bonusMoves));
 
         _progress.Visible = true;
 
@@ -77,6 +82,13 @@ public class MinionController : MonoBehaviour
 
         _progress.Visible = false;
         _progress.Clear();
+
+        if (_bonusMovesProcessing != null)
+        {
+            StopCoroutine(_bonusMovesProcessing);
+            _bonusMovesProcessing = null;
+            _cardSpawner.SpawnByHide(3);
+        }
     }
 
     private void OnMissEnd()
@@ -110,6 +122,7 @@ public class MinionController : MonoBehaviour
             else if (currentProgress < _maxPerfect)
             {
                 OnPerfect?.Invoke();
+                Instantiate(_perfectEffect, gameObject.transform);
                 HasNextDance = true;
             }
             else
@@ -265,6 +278,7 @@ public class MinionController : MonoBehaviour
         //if (progress >= -0.25f && progress <= 0.25f) OnPerfect?.Invoke();
         //else OnGood?.Invoke();
         OnGood?.Invoke();
+        // Instantiate(_bonusEffect, gameObject.transform);    
         _bonusHasClick = true;
     }
 

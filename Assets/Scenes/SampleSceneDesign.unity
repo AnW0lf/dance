@@ -2488,7 +2488,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419781895}
   m_LocalRotation: {x: -0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.62, z: 0}
+  m_LocalPosition: {x: 0, y: 0.747, z: 0.233}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 1083616501}
@@ -24238,3 +24238,7 @@ MonoBehaviour:
   _progress: {fileID: 54235147}
   _eventListener: {fileID: 34315037}
   _cardSpawner: {fileID: 526916875}
+  _perfectEffect: {fileID: 3730580843384364469, guid: 8c31b67186f72084eb0b86bed72a58c6,
+    type: 3}
+  _bonusEffect: {fileID: 4746026878146133857, guid: 57ac1058024cfb246819e67ce5b2d749,
+    type: 3}
