@@ -2,22 +2,33 @@
 using System.Collections;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class LikeCounter : MonoBehaviour
 {
     [SerializeField] private int _count = 0;
     [SerializeField] private TextMeshProUGUI _counter = null;
     [SerializeField] private Image _icon = null;
+    [SerializeField] private float _iconPulseScale = 1.25f;
+    [SerializeField] private float _iconPulseDuration = 0.3f;
+    [SerializeField] private LeanTweenType _ltt = LeanTweenType.linear;
 
     private bool _doPulse = false;
-    private Coroutine _pulse = null;
+    private bool _pulsing = false;
+    private LTDescr _pulse = null;
 
+    public UnityAction<int> OnCountChanged { get; set; } = null;
+ 
     public int Count
     {
         get => _count;
         set
         {
-            _doPulse = _count != value;
+            if(_count != value)
+            {
+                _doPulse = true;
+                OnCountChanged?.Invoke(value);
+            }
             _count = value;
             _counter.text = _count.ToString();
         }
@@ -30,37 +41,15 @@ public class LikeCounter : MonoBehaviour
 
     private void Update()
     {
-        if (_doPulse && _pulse == null)
+        if (_doPulse && !_pulsing)
         {
             _doPulse = false;
-            _pulse = StartCoroutine(Pulse());
+            if (_pulse != null) LeanTween.cancel(_pulse.uniqueId);
+            _pulsing = true;
+            _pulse = LeanTween.scale(_icon.gameObject, Vector3.one * _iconPulseScale, _iconPulseDuration / 2f)
+                .setEase(_ltt)
+                .setLoopPingPong(1)
+                .setOnComplete(() => _pulsing = false);
         }
-    }
-
-    private IEnumerator Pulse()
-    {
-        Vector3 startScale = _icon.transform.localScale;
-        Vector3 maxScale = _icon.transform.localScale * 1.2f;
-
-        float timer = 0f;
-        float duration = 0.3f;
-
-        while (timer < duration)
-        {
-            timer += Time.deltaTime;
-            _icon.transform.localScale = Vector3.Lerp(startScale, maxScale, timer / duration);
-            yield return null;
-        }
-
-        timer = 0f;
-
-        while (timer < duration)
-        {
-            timer += Time.deltaTime;
-            _icon.transform.localScale = Vector3.Lerp(maxScale, startScale, timer / duration);
-            yield return null;
-        }
-
-        _pulse = null;
     }
 }
