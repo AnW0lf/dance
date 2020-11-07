@@ -256,6 +256,7 @@ public class MinionController : MonoBehaviour
     public void BonusMove()
     {
         OnGood?.Invoke();
+        Instantiate(_bonusEffect, gameObject.transform);
         _bonusHasClick = true;
     }
 
