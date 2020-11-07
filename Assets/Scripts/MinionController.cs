@@ -21,7 +21,7 @@ public class MinionController : MonoBehaviour
     [SerializeField] private BonusButton _bonusButton = null;
     [SerializeField] private GameObject _perfectEffect, _bonusEffect;
 
-    private bool _beginDance = false;
+    private bool _missing = false;
     private bool _hasEnd = true;
     private Dance _currentDance = null;
     private Coroutine _bonusMovesProcessing = null;
@@ -54,7 +54,7 @@ public class MinionController : MonoBehaviour
         }
         _progress.SetBonusMoves(bonusMoves);
 
-        if(_bonusMovesProcessing != null)
+        if (_bonusMovesProcessing != null)
             StopCoroutine(_bonusMovesProcessing);
         _bonusMovesProcessing = StartCoroutine(BonusMovesProcessor(bonusMoves));
 
@@ -75,6 +75,7 @@ public class MinionController : MonoBehaviour
     {
         print($"Begin miss");
 
+        _missing = false;
         _progress.Visible = false;
         _progress.Clear();
 
@@ -102,6 +103,7 @@ public class MinionController : MonoBehaviour
 
         if (CurrentAnimationTag == AnimationTag.DANCE)
         {
+            print("1");
             float currentProgress = CurrentAnimationProgress;
             if (currentProgress < _maxMiss)
             {
@@ -122,8 +124,8 @@ public class MinionController : MonoBehaviour
             }
             else
             {
-                OnTooSlow?.Invoke();
-                DoTooSlow();
+                //OnTooSlow?.Invoke();
+                //DoTooSlow();
             }
         }
         else
@@ -132,8 +134,8 @@ public class MinionController : MonoBehaviour
                 _timer.Active = true;
             if (!_musicPlayer.Active)
                 _musicPlayer.Play();
-            if (CurrentAnimationTag == AnimationTag.IDLE)
-                HasNextDance = true;
+            HasNextDance = true;
+            print("2");
         }
     }
 
@@ -151,12 +153,13 @@ public class MinionController : MonoBehaviour
 
     private void DoMiss()
     {
+        print("Do miss");
         _animator.SetTrigger("Miss");
     }
 
     private void DoTooSlow()
     {
-        _animator.SetTrigger("Miss");
+        DoMiss();
         DanceId = 0;
     }
 
@@ -187,9 +190,11 @@ public class MinionController : MonoBehaviour
                             _currentDance = null;
                             _animator.SetTrigger("TimeOver");
                         }
-                        else if (!HasNextDance)
+                        else if (!HasNextDance && !_missing)
                         {
-                            TooSlow = true;
+                            _missing = true;
+                            OnTooSlow?.Invoke();
+                            DoTooSlow();
                         }
                     }
                 }
@@ -200,15 +205,6 @@ public class MinionController : MonoBehaviour
                     {
                         if (_musicPlayer.Active)
                             _musicPlayer.Stop();
-                    }
-                    else
-                    {
-                        if (TooSlow)
-                        {
-                            TooSlow = false;
-                            OnTooSlow?.Invoke();
-                            DoTooSlow();
-                        }
                     }
                 }
                 break;
@@ -224,15 +220,23 @@ public class MinionController : MonoBehaviour
         }
     }
 
+    private AnimatorStateInfo CurrentAnimatorStateInfo
+    {
+        get
+        {
+            AnimatorStateInfo stateInfo = _animator.GetNextAnimatorStateInfo(0);
+            if (stateInfo.normalizedTime == 0)
+                stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+            return stateInfo;
+        }
+    }
+
     public float CurrentAnimationProgress
     {
         get
         {
-            float progress = _animator.GetNextAnimatorStateInfo(0).normalizedTime;
-            if (progress == 0)
-                progress = _animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
-            progress = progress * 5f / 4f - 1f / 8f;
-            return progress;
+            AnimatorStateInfo stateInfo = CurrentAnimatorStateInfo;
+            return stateInfo.normalizedTime * 5f / 4f - 1f / 8f;
         }
     }
 
@@ -241,9 +245,10 @@ public class MinionController : MonoBehaviour
     {
         get
         {
-            if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Dance")) return AnimationTag.DANCE;
-            if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Idle")) return AnimationTag.IDLE;
-            if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Miss")) return AnimationTag.MISS;
+            AnimatorStateInfo stateInfo = CurrentAnimatorStateInfo;
+            if (stateInfo.IsTag("Dance")) return AnimationTag.DANCE;
+            if (stateInfo.IsTag("Idle")) return AnimationTag.IDLE;
+            if (stateInfo.IsTag("Miss")) return AnimationTag.MISS;
             return AnimationTag.UNTAGGED;
         }
     }
