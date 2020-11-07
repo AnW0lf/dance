@@ -13,6 +13,7 @@ public class CardSpawner : MonoBehaviour
     [SerializeField] private MinionController _minion = null;
     [SerializeField] private Timer _timer = null;
     [SerializeField] private Dance[] _dances = null;
+    [SerializeField] private GameObject _startLabel = null;
 
     private Dance _notUse = null;
 
@@ -61,6 +62,9 @@ public class CardSpawner : MonoBehaviour
                 FadingCard();
                 card.State = CardState.GLOWED;
                 Visible = false;
+
+                if (_startLabel.activeSelf)
+                    _startLabel.SetActive(false);
             });
         }
     }
