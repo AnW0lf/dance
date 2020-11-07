@@ -9,15 +9,14 @@ public class LevelProgress : MonoBehaviour
     [SerializeField] private Slider _slider;
     [SerializeField] private int _needLikes;
 
-    // Start is called before the first frame update
     void Start()
     {
         _slider.maxValue = _needLikes;
+        _likeCounter.OnCountChanged += OnCountChanged;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCountChanged(int count)
     {
-        _slider.value = _likeCounter.Count;
+        _slider.value = count;
     }
 }
