@@ -247,4 +247,4 @@ MonoBehaviour:
   _likeImage: {fileID: 2383932879409545943}
   _counter: {fileID: 7446260502642605645}
   _normal: {fileID: 21300000, guid: e9adf946fbde5364bbe33107547f1304, type: 3}
-  _powerUpped: {fileID: 21300000, guid: e9adf946fbde5364bbe33107547f1304, type: 3}
+  _powerUpped: {fileID: 21300000, guid: b9c190498d68b5548a7a4a0ba102ea49, type: 3}
