@@ -3373,10 +3373,10 @@ MonoBehaviour:
   - {fileID: 47752196}
   - {fileID: 1214590300}
   _minion: {fileID: 1022310277}
-  _distance: 1
+  _distance: 1.3
   _kProportional: 2
-  _kIntegrating: 0.2
-  _kDifferentiating: 1
+  _kIntegrating: 0.4
+  _kDifferentiating: 2
 --- !u!1 &980061868
 GameObject:
   m_ObjectHideFlags: 0
