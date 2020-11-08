@@ -131,18 +131,13 @@ public class FanController : MonoBehaviour
 
     private void DoClamp()
     {
+        Randomizer = Random.Range(0f, 1f);
         _animator.SetTrigger("Succes");
     }
 
     private void DoFail()
     {
         _animator.SetTrigger("Fail");
-    }
-
-    public bool LoopClamp
-    {
-        get => _animator.GetBool("LoopClamp");
-        set => _animator.SetBool("LoopClamp", value);
     }
 
     private bool Dancing
@@ -155,20 +150,26 @@ public class FanController : MonoBehaviour
 
     private float RandomDelay => Random.Range(0f, 0.3f);
 
-    private void LikeWithClamping()
+    private float Randomizer
     {
-        StartCoroutine(DelayedAction(RandomDelay, () => {
+        get => _animator.GetFloat("Randomizer");
+        set => _animator.SetFloat("Randomizer", value);
+    }
+
+    public void LikeWithClamping()
+    {
+        StartCoroutine(DelayedAction(RandomDelay * 2f, () => {
             CreateLike();
             DoClamp();
         }));
     }
 
-    private void Like()
+    public void Like()
     {
         StartCoroutine(DelayedAction(RandomDelay, () => { CreateLike(); }));
     }
 
-    private void Fail()
+    public void Fail()
     {
         StartCoroutine(DelayedAction(RandomDelay * 3f, () => { DoFail(); }));
     }

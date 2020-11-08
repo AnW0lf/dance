@@ -51,8 +51,7 @@ public class LevelScript : MonoBehaviour
         FanController[] fans = FindObjectsOfType<FanController>();
         foreach (var fan in fans)
         {
-            fan.LoopClamp = true;
-            fan.CreateLike();
+            fan.LikeWithClamping();
         }
     }
 }
