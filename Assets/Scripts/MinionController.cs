@@ -73,7 +73,9 @@ public class MinionController : MonoBehaviour
 
     private void OnMissBegin()
     {
-        print($"Begin miss");
+        print($"Begin miss {_animator.name}");
+
+        StartCoroutine(SetZeroPosition());
 
         _missing = false;
         _progress.Visible = false;
@@ -83,6 +85,16 @@ public class MinionController : MonoBehaviour
         {
             StopCoroutine(_bonusMovesProcessing);
             _bonusMovesProcessing = null;
+        }
+    }
+
+    private IEnumerator SetZeroPosition()
+    {
+        WaitForFixedUpdate wait = new WaitForFixedUpdate();
+        while (_animator.transform.position != transform.position)
+        {
+            _animator.transform.position = transform.position;
+            yield return wait;
         }
     }
 
