@@ -93,21 +93,21 @@ public class FanController : MonoBehaviour
     {
         if (IsFan)
         {
-            LikeWithClamping();
+            LikeWithClapping();
         }
         else
         {
             float rnd = Random.Range(0f, 1f);
             if (rnd >= 0.5f)
             {
-                LikeWithClamping();
+                LikeWithClapping();
             }
         }
     }
 
     private void OnPerfect()
     {
-        LikeWithClamping();
+        LikeWithClapping();
     }
 
     private void OnTooSlow()
@@ -129,9 +129,16 @@ public class FanController : MonoBehaviour
         }
     }
 
-    private void DoClamp()
+    private bool LoopClapping
+    {
+        get => _animator.GetBool("LoopClapping");
+        set => _animator.SetBool("LoopClapping", value);
+    }
+
+    private void DoClap()
     {
         Randomizer = Random.Range(0f, 1f);
+        if (Randomizer == 0.5f) Randomizer += 0.1f;
         _animator.SetTrigger("Succes");
     }
 
@@ -156,11 +163,11 @@ public class FanController : MonoBehaviour
         set => _animator.SetFloat("Randomizer", value);
     }
 
-    public void LikeWithClamping()
+    public void LikeWithClapping()
     {
-        StartCoroutine(DelayedAction(RandomDelay * 2f, () => {
+        StartCoroutine(DelayedAction(RandomDelay, () => {
             CreateLike();
-            DoClamp();
+            DoClap();
         }));
     }
 
@@ -172,6 +179,14 @@ public class FanController : MonoBehaviour
     public void Fail()
     {
         StartCoroutine(DelayedAction(RandomDelay * 3f, () => { DoFail(); }));
+    }
+
+    public void LikeWithLoopClamping()
+    {
+        StartCoroutine(DelayedAction(RandomDelay * 2f, () => {
+            CreateLike();
+            LoopClapping = true;
+        }));
     }
 
     #endregion Actions
@@ -225,12 +240,19 @@ public class FanController : MonoBehaviour
     }
     #endregion Wish
 
+    private void Awake()
+    {
+        _animator.SetFloat("IdleOffset", Random.Range(0f, 1f));
+    }
+
     private void Start()
     {
         IsFan = Random.Range(0, 2) == 1;
 
         if (IsFan) _renderer.material = _fanMaterial;
         else _renderer.material = _viewerMaterial;
+
+        
 
         _minion = FindObjectOfType<MinionController>();
         _minion.OnMiss += OnMiss;

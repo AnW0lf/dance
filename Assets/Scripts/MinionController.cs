@@ -45,6 +45,8 @@ public class MinionController : MonoBehaviour
     {
         print($"Begin id {id} in progress {CurrentAnimationProgress}");
 
+        StartCoroutine(SetZeroPosition());
+
         _progress.Clear();
         List<BonusMove> bonusMoves = new List<BonusMove>();
         if (_currentDance.BonusMoves != null)
@@ -149,6 +151,10 @@ public class MinionController : MonoBehaviour
             HasNextDance = true;
             print("2");
         }
+
+        _cardSpawner.Visible = false;
+        _bonusButton.Visible = true;
+        _bonusButton.OnClick = BonusMove;
     }
 
     public int DanceId
@@ -276,9 +282,6 @@ public class MinionController : MonoBehaviour
 
     private IEnumerator BonusMovesProcessor(List<BonusMove> bonusMoves)
     {
-        _cardSpawner.Visible = false;
-        _bonusButton.Visible = true;
-        _bonusButton.OnClick = BonusMove;
         while (bonusMoves.Count > 0)
         {
             float progress = _progress.Progress;
