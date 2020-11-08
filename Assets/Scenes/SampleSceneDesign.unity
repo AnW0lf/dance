@@ -3351,6 +3351,9 @@ MonoBehaviour:
   _minion: {fileID: 8888981335394995998}
   _timer: {fileID: 762195554}
   _bottomPanel: {fileID: 63831235}
+  _levelProgress: {fileID: 730221888}
+  _victoryScreen: {fileID: 935701973}
+  _defeatScreen: {fileID: 1399675288}
 --- !u!114 &963194233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3369,6 +3372,11 @@ MonoBehaviour:
   - {fileID: 633555188}
   - {fileID: 47752196}
   - {fileID: 1214590300}
+  _minion: {fileID: 1022310277}
+  _distance: 1
+  _kProportional: 2
+  _kIntegrating: 0.2
+  _kDifferentiating: 1
 --- !u!1 &980061868
 GameObject:
   m_ObjectHideFlags: 0

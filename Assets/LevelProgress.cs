@@ -19,4 +19,6 @@ public class LevelProgress : MonoBehaviour
     {
         _slider.value = count;
     }
+
+    public float Progress => _slider.value / _slider.maxValue;
 }

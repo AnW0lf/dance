@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LevelScript : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class LevelScript : MonoBehaviour
     [SerializeField] private MinionController _minion = null;
     [SerializeField] private Timer _timer = null;
     [SerializeField] private MovePanel _bottomPanel = null;
+    [SerializeField] private LevelProgress _levelProgress = null;
+    [SerializeField] private GameObject _victoryScreen = null;
+    [SerializeField] private GameObject _defeatScreen = null;
 
     private bool _levelEnded = false;
 
@@ -50,8 +54,21 @@ public class LevelScript : MonoBehaviour
     {
         FanController[] fans = FindObjectsOfType<FanController>();
         foreach (var fan in fans)
-        {
             fan.LikeWithLoopClamping();
-        }
+
+        StartCoroutine(OpenScreen(2f));
+    }
+
+    private IEnumerator OpenScreen(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (_levelProgress.Progress == 1f) _victoryScreen.SetActive(true);
+        else _defeatScreen.SetActive(true);
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
