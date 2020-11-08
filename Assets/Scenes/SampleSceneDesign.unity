@@ -2319,6 +2319,9 @@ MonoBehaviour:
   - {fileID: 762195555}
   - {fileID: 1066746339}
   - {fileID: 730221889}
+  _minion: {fileID: 8888981335394995998}
+  _timer: {fileID: 762195554}
+  _bottomPanel: {fileID: 63831235}
 --- !u!114 &963194233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5637,7 +5640,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 191.435, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2057533413

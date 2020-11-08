@@ -139,6 +139,12 @@ public class FanController : MonoBehaviour
         _animator.SetTrigger("Fail");
     }
 
+    public bool LoopClamp
+    {
+        get => _animator.GetBool("LoopClamp");
+        set => _animator.SetBool("LoopClamp", value);
+    }
+
     private bool Dancing
     {
         get => _animator.GetBool("Dancing");

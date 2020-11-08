@@ -113,7 +113,7 @@ public class MinionController : MonoBehaviour
         _hasEnd = false;
         OnSetDance?.Invoke(_currentDance);
 
-        if (CurrentAnimationTag == AnimationTag.DANCE)
+        if (CurrentAnimationTag == MinionAnimationTag.DANCE)
         {
             print("1");
             float currentProgress = CurrentAnimationProgress;
@@ -190,7 +190,7 @@ public class MinionController : MonoBehaviour
     {
         switch (CurrentAnimationTag)
         {
-            case AnimationTag.DANCE:
+            case MinionAnimationTag.DANCE:
                 {
                     _progress.Progress = CurrentAnimationProgress;
 
@@ -211,7 +211,7 @@ public class MinionController : MonoBehaviour
                     }
                 }
                 break;
-            case AnimationTag.IDLE:
+            case MinionAnimationTag.IDLE:
                 {
                     if (_timer.TimeOver)
                     {
@@ -232,7 +232,7 @@ public class MinionController : MonoBehaviour
         }
     }
 
-    private AnimatorStateInfo CurrentAnimatorStateInfo
+    public AnimatorStateInfo CurrentAnimatorStateInfo
     {
         get
         {
@@ -252,16 +252,16 @@ public class MinionController : MonoBehaviour
         }
     }
 
-    private enum AnimationTag { IDLE, DANCE, MISS, UNTAGGED }
-    private AnimationTag CurrentAnimationTag
+    public enum MinionAnimationTag { IDLE, DANCE, MISS, UNTAGGED }
+    public MinionAnimationTag CurrentAnimationTag
     {
         get
         {
             AnimatorStateInfo stateInfo = CurrentAnimatorStateInfo;
-            if (stateInfo.IsTag("Dance")) return AnimationTag.DANCE;
-            if (stateInfo.IsTag("Idle")) return AnimationTag.IDLE;
-            if (stateInfo.IsTag("Miss")) return AnimationTag.MISS;
-            return AnimationTag.UNTAGGED;
+            if (stateInfo.IsTag("Dance")) return MinionAnimationTag.DANCE;
+            if (stateInfo.IsTag("Idle")) return MinionAnimationTag.IDLE;
+            if (stateInfo.IsTag("Miss")) return MinionAnimationTag.MISS;
+            return MinionAnimationTag.UNTAGGED;
         }
     }
 
