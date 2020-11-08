@@ -45,8 +45,6 @@ public class MinionController : MonoBehaviour
     {
         print($"Begin id {id} in progress {CurrentAnimationProgress}");
 
-        StartCoroutine(SetZeroPosition());
-
         _progress.Clear();
         List<BonusMove> bonusMoves = new List<BonusMove>();
         if (_currentDance.BonusMoves != null)
