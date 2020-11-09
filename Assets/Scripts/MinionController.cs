@@ -131,7 +131,7 @@ public class MinionController : MonoBehaviour
             else if (currentProgress < _maxPerfect)
             {
                 OnPerfect?.Invoke();
-                Instantiate(_perfectEffect, gameObject.transform);
+                Instantiate(_perfectEffect, _animator.transform);
                 HasNextDance = true;
             }
             else
@@ -272,7 +272,7 @@ public class MinionController : MonoBehaviour
     public void BonusMove()
     {
         OnGood?.Invoke();
-        Instantiate(_bonusEffect, gameObject.transform);
+        Instantiate(_bonusEffect, _animator.transform);
         _bonusHasClick = true;
     }
 

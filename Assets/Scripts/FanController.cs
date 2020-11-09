@@ -17,7 +17,7 @@ public class FanController : MonoBehaviour
     [SerializeField] private Wish _wish = null;
     [SerializeField] private float _holdDuration = 6f;
     [Range(0f, 1f)]
-    [SerializeField] private float _chancePerSecond = 0.2f;
+    [SerializeField] public float _chancePerSecond = 0.2f;
     [SerializeField] private StyleSprite[] _styleSprites = null;
     private Coroutine _wishSpawner = null;
     
