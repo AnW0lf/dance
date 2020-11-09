@@ -73,7 +73,7 @@ public class MinionController : MonoBehaviour
 
     private void OnMissBegin()
     {
-        print($"Begin miss {_animator.name}");
+        print($"Begin miss");
 
         StartCoroutine(SetZeroPosition());
 
@@ -88,6 +88,11 @@ public class MinionController : MonoBehaviour
         }
     }
 
+    private void OnMissEnd()
+    {
+        print($"End miss");
+    }
+
     private IEnumerator SetZeroPosition()
     {
         WaitForFixedUpdate wait = new WaitForFixedUpdate();
@@ -96,11 +101,6 @@ public class MinionController : MonoBehaviour
             _animator.transform.position = transform.position;
             yield return wait;
         }
-    }
-
-    private void OnMissEnd()
-    {
-        print($"End miss");
     }
 
     public void SetDance(Dance dance)
@@ -115,7 +115,6 @@ public class MinionController : MonoBehaviour
 
         if (CurrentAnimationTag == MinionAnimationTag.DANCE)
         {
-            print("1");
             float currentProgress = CurrentAnimationProgress;
             if (currentProgress < _maxMiss)
             {
@@ -147,7 +146,6 @@ public class MinionController : MonoBehaviour
             if (!_musicPlayer.Active)
                 _musicPlayer.Play();
             HasNextDance = true;
-            print("2");
         }
 
         _cardSpawner.Visible = false;

@@ -51,8 +51,8 @@ public class FanController : MonoBehaviour
 
     public void CreateLike()
     {
-        Like like = Instantiate(_likePrefab, _targetInterfacePoint).GetComponent<Like>();
-        like.transform.position = Camera.main.WorldToScreenPoint(_spawnPoint.position);
+        Like like = Instantiate(_likePrefab).GetComponent<Like>();
+        like.transform.position = _spawnPoint.position;
         like.Count = LikePowerUpped ? 2 : 1;
         LikePowerUpped = false;
 
@@ -64,12 +64,12 @@ public class FanController : MonoBehaviour
     {
         Vector3 startPosition = like.transform.position;
         float timer = 0;
-        float speed = Random.Range(1200f, 1800f);
-        float duration = Vector2.Distance(startPosition, endPosition) / speed;
+        float duration = Random.Range(0.5f, 1.2f);
 
         while (timer <= duration)
         {
             timer += Time.deltaTime;
+            like.transform.LookAt(Camera.main.transform);
             like.transform.position = Vector3.Lerp(startPosition, endPosition, timer / duration);
             yield return null;
         }
