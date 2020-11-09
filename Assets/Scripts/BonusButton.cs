@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class BonusButton : MonoBehaviour
 {
     [SerializeField] private bool _visible = false;
+    [SerializeField] private float _moveDuration = 0.7f;
     [SerializeField] private Vector2 _visiblePosition = Vector2.zero;
     [SerializeField] private Vector2 _invisiblePosition = Vector2.zero;
     [SerializeField] private RectTransform _rect = null;
@@ -30,14 +31,13 @@ public class BonusButton : MonoBehaviour
     private IEnumerator MoveTo()
     {
         float timer = 0f;
-        float speed = 1500f;
+        Vector2 startPosition = _rect.anchoredPosition;
         Vector2 endPosition = Visible ? _visiblePosition : _invisiblePosition;
-        float duration = Vector2.Distance(_rect.anchoredPosition, endPosition) / speed;
 
-        while (timer <= duration)
+        while (timer <= _moveDuration)
         {
             timer += Time.deltaTime;
-            _rect.anchoredPosition = Vector2.Lerp(_rect.anchoredPosition, endPosition, timer / duration);
+            _rect.anchoredPosition = Vector2.Lerp(startPosition, endPosition, timer / _moveDuration);
             yield return null;
         }
 

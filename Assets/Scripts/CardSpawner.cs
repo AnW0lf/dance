@@ -8,6 +8,7 @@ using System.Linq;
 public class CardSpawner : MonoBehaviour
 {
     [SerializeField] private bool _visible = true;
+    [SerializeField] private float _moveDuration = 0.7f;
     [SerializeField] private GameObject _cardPrefab = null;
     [SerializeField] private RectTransform _rect = null;
     [SerializeField] private MinionController _minion = null;
@@ -78,15 +79,13 @@ public class CardSpawner : MonoBehaviour
     private IEnumerator MoveTo()
     {
         float timer = 0f;
-        float speed = 1500f;
         Vector2 startPosition = _rect.anchoredPosition;
         Vector2 endPosition = Visible ? Vector2.zero : Vector2.down * 500f;
-        float duration = Vector2.Distance(startPosition, endPosition) / speed;
 
-        while (timer <= duration)
+        while (timer <= _moveDuration)
         {
             timer += Time.deltaTime;
-            _rect.anchoredPosition = Vector2.Lerp(_rect.anchoredPosition, endPosition, timer / duration);
+            _rect.anchoredPosition = Vector2.Lerp(startPosition, endPosition, timer / _moveDuration);
             yield return null;
         }
 
