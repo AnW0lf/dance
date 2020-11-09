@@ -144,7 +144,10 @@ public class MinionController : MonoBehaviour
             if (!_timer.Active)
                 _timer.Active = true;
             if (!_musicPlayer.Active)
+            {
                 _musicPlayer.Play();
+                _musicPlayer.FadeSound(0f, 1f);
+            }
             HasNextDance = true;
         }
 
@@ -203,6 +206,9 @@ public class MinionController : MonoBehaviour
                             DanceId = 0;
                             _currentDance = null;
                             _animator.SetTrigger("TimeOver");
+
+                            if (!_musicPlayer.IsFading)
+                                _musicPlayer.FadeSound(1f, 0.3f);
                         }
                         else if (!HasNextDance && !_missing)
                         {
@@ -210,15 +216,6 @@ public class MinionController : MonoBehaviour
                             OnTooSlow?.Invoke();
                             DoTooSlow();
                         }
-                    }
-                }
-                break;
-            case MinionAnimationTag.IDLE:
-                {
-                    if (_timer.TimeOver)
-                    {
-                        if (_musicPlayer.Active)
-                            _musicPlayer.Stop();
                     }
                 }
                 break;
@@ -254,7 +251,7 @@ public class MinionController : MonoBehaviour
         }
     }
 
-    public enum MinionAnimationTag { IDLE, DANCE, MISS, UNTAGGED }
+    public enum MinionAnimationTag { IDLE, DANCE, MISS, THANKFULL, UNTAGGED }
     public MinionAnimationTag CurrentAnimationTag
     {
         get
@@ -263,6 +260,7 @@ public class MinionController : MonoBehaviour
             if (stateInfo.IsTag("Dance")) return MinionAnimationTag.DANCE;
             if (stateInfo.IsTag("Idle")) return MinionAnimationTag.IDLE;
             if (stateInfo.IsTag("Miss")) return MinionAnimationTag.MISS;
+            if (stateInfo.IsTag("Thankfull")) return MinionAnimationTag.THANKFULL;
             return MinionAnimationTag.UNTAGGED;
         }
     }
