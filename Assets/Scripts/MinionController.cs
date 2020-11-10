@@ -21,6 +21,7 @@ public class MinionController : MonoBehaviour
     [SerializeField] private BonusButton _bonusButton = null;
     [SerializeField] private GameObject _perfectEffect, _bonusEffect;
     [SerializeField] private LevelProgress _levelProgress = null;
+    [SerializeField] private GameObject[] _winEffects = null;
 
     private bool _missing = false;
     private bool _hasEnd = true;
@@ -204,13 +205,20 @@ public class MinionController : MonoBehaviour
                     {
                         if (_timer.TimeOver)
                         {
+                            bool win = _levelProgress.Progress >= 1f;
                             DanceId = 0;
                             _currentDance = null;
-                            _animator.SetBool("Win", _levelProgress.Progress >= 1f);
+                            _animator.SetBool("Win", win);
                             _animator.SetTrigger("TimeOver");
 
                             if (!_musicPlayer.IsFading)
                                 _musicPlayer.FadeSound(1f, 0.3f);
+
+                            if (win)
+                            {
+                                foreach (var winEffect in _winEffects)
+                                    if (!winEffect.activeSelf) winEffect.SetActive(true);
+                            }
                         }
                         else if (!HasNextDance && !_missing)
                         {
