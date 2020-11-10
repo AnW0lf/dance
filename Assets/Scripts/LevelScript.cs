@@ -52,23 +52,27 @@ public class LevelScript : MonoBehaviour
 
     private void EndLevel()
     {
-        bool win = _levelProgress.Progress >= 1f;
-
         FanController[] fans = FindObjectsOfType<FanController>();
-
-        if (win)
-            foreach (var fan in fans) fan.LikeWithLoopClapping();
-        else
             foreach (var fan in fans) fan.LikeWithClapping();
 
-        StartCoroutine(OpenScreen(2f, win));
+        StartCoroutine(OpenScreen(2.2f));
     }
 
-    private IEnumerator OpenScreen(float delay, bool win)
+    private IEnumerator OpenScreen(float delay)
     {
         yield return new WaitForSeconds(delay);
 
-        if (win) _victoryScreen.SetActive(true);
+        bool win = _levelProgress.Progress >= 1f;
+
+        _minion.EndGame(win);
+
+        if (win)
+        {
+            _victoryScreen.SetActive(true);
+
+            FanController[] fans = FindObjectsOfType<FanController>();
+            foreach (var fan in fans) fan.DoLoopClapping();
+        }
         else _defeatScreen.SetActive(true);
     }
 

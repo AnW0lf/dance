@@ -181,12 +181,9 @@ public class FanController : MonoBehaviour
         StartCoroutine(DelayedAction(RandomDelay * 3f, () => { DoFail(); }));
     }
 
-    public void LikeWithLoopClapping()
+    public void DoLoopClapping()
     {
-        StartCoroutine(DelayedAction(RandomDelay * 2f, () => {
-            CreateLike();
-            LoopClapping = true;
-        }));
+        StartCoroutine(DelayedAction(RandomDelay * 2f, () => LoopClapping = true));
     }
 
     #endregion Actions

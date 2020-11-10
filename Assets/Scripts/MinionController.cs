@@ -193,6 +193,20 @@ public class MinionController : MonoBehaviour
         }
     }
 
+    public void EndGame(bool win)
+    {
+        DanceId = 0;
+        _currentDance = null;
+        _animator.SetBool("Win", win);
+        _animator.SetTrigger("TimeOver");
+
+        if (win)
+        {
+            foreach (var winEffect in _winEffects)
+                if (!winEffect.activeSelf) winEffect.SetActive(true);
+        }
+    }
+
     private void Update()
     {
         switch (CurrentAnimationTag)
@@ -205,20 +219,12 @@ public class MinionController : MonoBehaviour
                     {
                         if (_timer.TimeOver)
                         {
-                            bool win = _levelProgress.Progress >= 1f;
                             DanceId = 0;
                             _currentDance = null;
-                            _animator.SetBool("Win", win);
                             _animator.SetTrigger("TimeOver");
 
                             if (!_musicPlayer.IsFading)
                                 _musicPlayer.FadeSound(1f, 0.3f);
-
-                            if (win)
-                            {
-                                foreach (var winEffect in _winEffects)
-                                    if (!winEffect.activeSelf) winEffect.SetActive(true);
-                            }
                         }
                         else if (!HasNextDance && !_missing)
                         {
