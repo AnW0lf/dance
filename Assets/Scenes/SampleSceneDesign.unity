@@ -34851,7 +34851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _active: 0
   _timer: {fileID: 1636817507}
-  _duration: 60
+  _duration: 10
 --- !u!114 &762195555
 MonoBehaviour:
   m_ObjectHideFlags: 0
