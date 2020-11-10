@@ -20,6 +20,7 @@ public class MinionController : MonoBehaviour
     [SerializeField] private CardSpawner _cardSpawner = null;
     [SerializeField] private BonusButton _bonusButton = null;
     [SerializeField] private GameObject _perfectEffect, _bonusEffect;
+    [SerializeField] private LevelProgress _levelProgress = null;
 
     private bool _missing = false;
     private bool _hasEnd = true;
@@ -205,6 +206,7 @@ public class MinionController : MonoBehaviour
                         {
                             DanceId = 0;
                             _currentDance = null;
+                            _animator.SetBool("Win", _levelProgress.Progress >= 1f);
                             _animator.SetTrigger("TimeOver");
 
                             if (!_musicPlayer.IsFading)
@@ -251,7 +253,7 @@ public class MinionController : MonoBehaviour
         }
     }
 
-    public enum MinionAnimationTag { IDLE, DANCE, MISS, THANKFULL, UNTAGGED }
+    public enum MinionAnimationTag { IDLE, DANCE, MISS, COMPLETE, UNTAGGED }
     public MinionAnimationTag CurrentAnimationTag
     {
         get
@@ -260,7 +262,7 @@ public class MinionController : MonoBehaviour
             if (stateInfo.IsTag("Dance")) return MinionAnimationTag.DANCE;
             if (stateInfo.IsTag("Idle")) return MinionAnimationTag.IDLE;
             if (stateInfo.IsTag("Miss")) return MinionAnimationTag.MISS;
-            if (stateInfo.IsTag("Thankfull")) return MinionAnimationTag.THANKFULL;
+            if (stateInfo.IsTag("Complete")) return MinionAnimationTag.COMPLETE;
             return MinionAnimationTag.UNTAGGED;
         }
     }

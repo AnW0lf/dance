@@ -31,7 +31,7 @@ public class LevelScript : MonoBehaviour
         {
             if (_bottomPanel.Visible) _bottomPanel.Visible = false;
 
-            if (!_levelEnded && _minion.CurrentAnimationTag == MinionController.MinionAnimationTag.THANKFULL)
+            if (!_levelEnded && _minion.CurrentAnimationTag == MinionController.MinionAnimationTag.COMPLETE)
             {
                 _levelEnded = true;
                 EndLevel();
