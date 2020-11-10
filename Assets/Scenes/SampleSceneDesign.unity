@@ -34853,7 +34853,7 @@ MonoBehaviour:
   _bottomPanel: {fileID: 63831235}
   _levelProgress: {fileID: 730221888}
   _victoryScreen: {fileID: 935701973}
-  _defeatScreen: {fileID: 0}
+  _defeatScreen: {fileID: 1203452347}
 --- !u!114 &963194233
 MonoBehaviour:
   m_ObjectHideFlags: 0
