@@ -54,7 +54,12 @@ public class LevelScript : MonoBehaviour
     {
         FanController[] fans = FindObjectsOfType<FanController>();
         foreach (var fan in fans)
-            fan.LikeWithLoopClamping();
+        {
+            if (_levelProgress.Progress >= 1f)
+                fan.LikeWithLoopClamping();
+            else fan.LikeWithClapping();
+
+        }
 
         StartCoroutine(OpenScreen(2f));
     }
