@@ -14,6 +14,7 @@ public class MinionController : MonoBehaviour
     [SerializeField] private float _maxMiss = 0.7f;
     [SerializeField] private float _maxGood = 0.9f;
     [SerializeField] private float _maxPerfect = 1f;
+    [SerializeField] private float _switchButtonsDelay = 0.2f;
     [SerializeField] private Animator _animator = null;
     [SerializeField] private ProgressBar _progress = null;
     [SerializeField] private MinionEventListener _eventListener = null;
@@ -154,8 +155,16 @@ public class MinionController : MonoBehaviour
         }
 
         _cardSpawner.Visible = false;
-        _bonusButton.Visible = true;
+
+        StartCoroutine(DelayedAction(_switchButtonsDelay, () => _bonusButton.Visible = true));
+
         _bonusButton.OnClick = BonusMove;
+    }
+
+    private IEnumerator DelayedAction(float delay, UnityAction action)
+    {
+        yield return new WaitForSeconds(delay);
+        action?.Invoke();
     }
 
     public int DanceId
@@ -332,6 +341,7 @@ public class MinionController : MonoBehaviour
 
         _bonusButton.Visible = false;
         _cardSpawner.Spawn(3);
-        _cardSpawner.Visible = true;
+
+        yield return StartCoroutine(DelayedAction(_switchButtonsDelay, () => _cardSpawner.Visible = true));
     }
 }
