@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animationId: 2
   _lableText: Chicken Dance
-  _iconSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _iconSprite: {fileID: 21300000, guid: 4b646e91f5e01b344a3e2a2a35e84c89, type: 3}
   _backgroundSprite: {fileID: 21300000, guid: ab584de0445b7244ca138add9bce7b4d, type: 3}
   _style: 0
   _bonusMoves:
