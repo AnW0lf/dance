@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Houses_2
-  m_Shader: {fileID: 4800000, guid: a97e290cd0cec1a4cb176e474e69c1dc, type: 3}
+  m_Shader: {fileID: 4800000, guid: 48dca5b99d113b8d11006bab44295342, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -71,6 +71,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Outline: 0.005
     - _Parallax: 0.02
     - _RimMax: 1
     - _RimMin: 0.5
@@ -84,5 +85,6 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
     - _HColor: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 0.2}
     - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0}
     - _SColor: {r: 1, g: 1, b: 1, a: 1}

@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 5616228950119678949}
   - component: {fileID: 3834188202356508908}
   - component: {fileID: 4457652635228706970}
+  - component: {fileID: 1306619773330190219}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -558,6 +559,21 @@ MonoBehaviour:
   _button: {fileID: 3834188202356508908}
   _glow: {fileID: 556524336010505172}
   _fade: {fileID: 8687357643279414612}
+--- !u!114 &1306619773330190219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5616228950119678946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.21568628}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5616228950493624163
 GameObject:
   m_ObjectHideFlags: 0

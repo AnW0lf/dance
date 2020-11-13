@@ -121,7 +121,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2302849935552043634, guid: 65ea4bbc255bc5d4583f62bdfdb34550, type: 2}
+  - {fileID: 2100000, guid: 1c0c344988455c249b177ff0e098807f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -176,18 +176,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Good
+  m_text: Good!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 65ea4bbc255bc5d4583f62bdfdb34550, type: 2}
-  m_sharedMaterial: {fileID: -2302849935552043634, guid: 65ea4bbc255bc5d4583f62bdfdb34550,
-    type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 1c0c344988455c249b177ff0e098807f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 65340
-  m_fontColor: {r: 0.23529412, g: 1, b: 0, a: 0}
+    rgba: 65374
+  m_fontColor: {r: 0.37058055, g: 1, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -246,7 +245,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2254287751849909825}
-    characterCount: 4
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
