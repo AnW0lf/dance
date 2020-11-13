@@ -20,11 +20,6 @@ public class LevelScript : MonoBehaviour
 
     private bool _levelEnded = false;
 
-    private void Start()
-    {
-        StartLevel();
-    }
-
     private void LateUpdate()
     {
         if (_timer.TimeOver)
@@ -39,7 +34,7 @@ public class LevelScript : MonoBehaviour
         }
     }
 
-    private void StartLevel()
+    public void StartLevel()
     {
         _moveCamera.OnBegin += () => LeanTween.delayedCall(0.3f, () => _levelName.Show());
         _moveCamera.OnEnd += () =>
