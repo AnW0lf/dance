@@ -48,7 +48,11 @@ public class LevelScript : MonoBehaviour
     private void EndLevel()
     {
         FanController[] fans = FindObjectsOfType<FanController>();
-            foreach (var fan in fans) fan.LikeWithClapping();
+        foreach (var fan in fans)
+        {
+            fan.Dancing = false;
+            fan.LikeWithClapping();
+        }
 
         StartCoroutine(OpenScreen(2.2f));
     }
