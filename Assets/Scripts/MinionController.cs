@@ -24,8 +24,7 @@ public class MinionController : MonoBehaviour
     [SerializeField] private LevelProgress _levelProgress = null;
     [SerializeField] private GameObject[] _winEffects = null;
 
-    private bool _missing = false;
-    private bool _hasEnd = true;
+    private bool _hasEnd = false;
     private Dance _currentDance = null;
     private Coroutine _bonusMovesProcessing = null;
 
@@ -37,63 +36,14 @@ public class MinionController : MonoBehaviour
 
     private void Start()
     {
-        _eventListener.OnBegin += OnDanceBegin;
-        _eventListener.OnEnd += OnDanceEnd;
+        _eventListener.OnBegin += OnBegin;
+        _eventListener.OnEnd += OnEnd;
 
         _eventListener.OnMissBegin += OnMissBegin;
         _eventListener.OnMissEnd += OnMissEnd;
-    }
 
-    private void OnDanceBegin(int id)
-    {
-        print($"Begin id {id} in progress {CurrentAnimationProgress}");
-
-        _progress.Clear();
-        List<BonusMove> bonusMoves = new List<BonusMove>();
-        if (_currentDance.BonusMoves != null)
-        {
-            foreach (var bonusMove in _currentDance.BonusMoves)
-                bonusMoves.Add(bonusMove);
-        }
-        _progress.SetBonusMoves(bonusMoves);
-
-        if (_bonusMovesProcessing != null)
-            StopCoroutine(_bonusMovesProcessing);
-        _bonusMovesProcessing = StartCoroutine(BonusMovesProcessor(bonusMoves));
-
-        _progress.Visible = true;
-    }
-
-    private void OnDanceEnd(int id)
-    {
-        print($"End id {id} in progress {CurrentAnimationProgress}");
-
-        _hasEnd = true;
-        _progress.Visible = false;
-        _progress.Clear();
-        HasNextDance = false;
-    }
-
-    private void OnMissBegin()
-    {
-        print($"Begin miss");
-
-        StartCoroutine(SetZeroPosition());
-
-        _missing = false;
-        _progress.Visible = false;
-        _progress.Clear();
-
-        if (_bonusMovesProcessing != null)
-        {
-            StopCoroutine(_bonusMovesProcessing);
-            _bonusMovesProcessing = null;
-        }
-    }
-
-    private void OnMissEnd()
-    {
-        print($"End miss");
+        SetNextState(StateType.STRETCH);
+        BeginNextStage();
     }
 
     private IEnumerator SetZeroPosition()
@@ -108,12 +58,7 @@ public class MinionController : MonoBehaviour
 
     public void SetDance(Dance dance)
     {
-        if (!_hasEnd && _currentDance != null)
-            OnDanceEnd(_currentDance.AnimationID);
-
         _currentDance = dance;
-        DanceId = _currentDance.AnimationID;
-        _hasEnd = false;
         OnSetDance?.Invoke(_currentDance);
 
         if (CurrentAnimationTag == MinionAnimationTag.DANCE)
@@ -122,25 +67,30 @@ public class MinionController : MonoBehaviour
             if (currentProgress < _maxMiss)
             {
                 OnMiss?.Invoke();
-                DoMiss();
-                HasNextDance = true;
-            }
-            else if (currentProgress < _maxGood)
-            {
-                OnGood?.Invoke();
-                HasNextDance = true;
-            }
-            else if (currentProgress < _maxPerfect)
-            {
-                OnPerfect?.Invoke();
-                Instantiate(_perfectEffect, _animator.transform);
-                HasNextDance = true;
+
+                SetNextState(StateType.MISSTAKE);
+                OnEnd(_currentDance.AnimationID);
+                SetNextState(StateType.DANCE, _currentDance.AnimationID);
             }
             else
             {
-                //OnTooSlow?.Invoke();
-                //DoTooSlow();
+                if (currentProgress < _maxGood)
+                {
+                    OnGood?.Invoke();
+                }
+                else if (currentProgress < _maxPerfect)
+                {
+                    OnPerfect?.Invoke();
+                    Instantiate(_perfectEffect, _animator.transform);
+                }
+
+                SetNextState(StateType.DANCE, _currentDance.AnimationID);
             }
+        }
+        else if (CurrentAnimationTag == MinionAnimationTag.MISSTAKE)
+        {
+            OnGood?.Invoke();
+            SetNextState(StateType.DANCE, _currentDance.AnimationID);
         }
         else
         {
@@ -151,7 +101,10 @@ public class MinionController : MonoBehaviour
                 _musicPlayer.Play();
                 _musicPlayer.FadeSound(0f, 1f);
             }
-            HasNextDance = true;
+
+            OnGood?.Invoke();
+            SetNextState(StateType.DANCE, _currentDance.AnimationID);
+            BeginNextStage();
         }
 
         _cardSpawner.Visible = false;
@@ -167,47 +120,9 @@ public class MinionController : MonoBehaviour
         action?.Invoke();
     }
 
-    public int DanceId
-    {
-        get => _animator.GetInteger("DanceId");
-        private set => _animator.SetInteger("DanceId", value);
-    }
-
-    public bool TooSlow
-    {
-        get => _animator.GetBool("TooSlow");
-        private set => _animator.SetBool("TooSlow", value);
-    }
-
-    private void DoMiss()
-    {
-        print("Do miss");
-        _animator.SetTrigger("Miss");
-    }
-
-    private void DoTooSlow()
-    {
-        DoMiss();
-        DanceId = 0;
-    }
-
-    private bool _hasNextDance = false;
-    public bool HasNextDance
-    {
-        get => _hasNextDance;
-        set
-        {
-            _hasNextDance = value;
-            if (_hasNextDance) _animator.SetTrigger("Dance");
-        }
-    }
-
     public void EndGame(bool win)
     {
-        DanceId = 0;
         _currentDance = null;
-        _animator.SetBool("Win", win);
-        _animator.SetTrigger("TimeOver");
 
         if (win)
         {
@@ -218,44 +133,189 @@ public class MinionController : MonoBehaviour
 
     private void Update()
     {
-        switch (CurrentAnimationTag)
+        MinionAnimationTag animationTag = CurrentAnimationTag;
+
+        if (animationTag != MinionAnimationTag.DANCE)
         {
-            case MinionAnimationTag.DANCE:
-                {
-                    _progress.Progress = CurrentAnimationProgress;
+            if (_progress.Visible)
+            {
+                _progress.Visible = false;
+                _progress.Progress = 0f;
+            }
 
-                    if (_progress.Progress >= 1f)
-                    {
-                        if (_timer.TimeOver)
-                        {
-                            DanceId = 0;
-                            _currentDance = null;
-                            _animator.SetTrigger("TimeOver");
-
-                            if (!_musicPlayer.IsFading)
-                                _musicPlayer.FadeSound(1f, 0.3f);
-                        }
-                        else if (!HasNextDance && !_missing)
-                        {
-                            _missing = true;
-                            OnTooSlow?.Invoke();
-                            DoTooSlow();
-                        }
-                    }
-                }
-                break;
-            default:
+            if (animationTag == MinionAnimationTag.IDLE)
+            {
+                if (_hasNextState)
                 {
-                    if (_progress.Visible)
-                    {
-                        _progress.Visible = false;
-                        _progress.Progress = 0f;
-                    }
+                    OnGood?.Invoke();
+                    BeginNextStage();
                 }
-                break;
+            }
+        }
+        else
+        {
+            _progress.Progress = CurrentAnimationProgress;
         }
     }
 
+    #region NewDanceSystem
+    private StateType _currentState = StateType.IDLE;
+    private int _currentDanceId = 0;
+
+    private StateType _nextState = StateType.IDLE;
+    private int _nextDanceId = 0;
+
+    private bool _hasNextState = false;
+
+    private void BeginState(string stateName)
+    {
+        _animator.CrossFade(stateName, 0.1f);
+    }
+    private void BeginState(StateType stateType)
+    {
+        string stateName = string.Empty;
+
+        switch (stateType)
+        {
+            case StateType.IDLE:
+                stateName = "Idle";
+                break;
+            case StateType.STRETCH:
+                stateName = "Stretch";
+                break;
+            case StateType.DANCE:
+                stateName = $"Dance {_currentDanceId}";
+                break;
+            case StateType.MISSTAKE:
+                stateName = "Misstake";
+                break;
+            case StateType.VICTORY:
+                stateName = "Victory";
+                break;
+            case StateType.DEFEAT:
+                stateName = "Defeat";
+                break;
+        }
+
+        BeginState(stateName);
+    }
+
+    public void SetNextState(StateType nextState)
+    {
+        _nextState = nextState;
+        _hasNextState = true;
+    }
+
+    public void SetNextState(StateType nextState, int nextDanceId)
+    {
+        _nextState = nextState;
+        _nextDanceId = nextDanceId;
+        _hasNextState = true;
+    }
+
+    private void BeginNextStage()
+    {
+        _hasNextState = false;
+        _currentState = _nextState;
+        _currentDanceId = _nextDanceId;
+        BeginState(_currentState);
+    }
+
+    private bool TryBeginNextStage()
+    {
+        if (_hasNextState)
+        {
+            BeginNextStage();
+            return true;
+        }
+        else return false;
+    }
+
+    private void OnBegin(int id)
+    {
+        print($"Begin {id}");
+
+        _progress.Clear();
+        List<BonusMove> bonusMoves = new List<BonusMove>();
+        if (_currentDance.BonusMoves != null)
+        {
+            foreach (var bonusMove in _currentDance.BonusMoves)
+                bonusMoves.Add(bonusMove);
+        }
+        _progress.SetBonusMoves(bonusMoves);
+
+        if (_bonusMovesProcessing != null)
+            StopCoroutine(_bonusMovesProcessing);
+        _bonusMovesProcessing = StartCoroutine(BonusMovesProcessor(bonusMoves));
+
+        _progress.Visible = true;
+
+        _hasEnd = false;
+    }
+
+    private void OnEnd(int id)
+    {
+        print($"End {id}");
+        if (_hasEnd) return;
+
+        if (_timer.TimeOver)
+        {
+            SetNextState(StateType.VICTORY);
+            BeginNextStage();
+        }
+        else
+        {
+            bool fail = !TryBeginNextStage();
+            if (fail)
+            {
+                SetNextState(StateType.MISSTAKE);
+                BeginNextStage();
+            }
+        }
+
+        _hasEnd = true;
+        _progress.Visible = false;
+        _progress.Clear();
+    }
+
+    private void OnMissBegin()
+    {
+        print($"Begin miss");
+
+        StartCoroutine(SetZeroPosition());
+
+        _progress.Visible = false;
+        _progress.Clear();
+
+        if (_bonusMovesProcessing != null)
+        {
+            StopCoroutine(_bonusMovesProcessing);
+            _bonusMovesProcessing = null;
+        }
+    }
+
+    private void OnMissEnd()
+    {
+        print($"End miss");
+
+        if (_timer.TimeOver)
+        {
+            SetNextState(StateType.VICTORY);
+            BeginNextStage();
+        }
+        else
+        {
+            bool fail = !TryBeginNextStage();
+            if (fail)
+            {
+                SetNextState(StateType.IDLE);
+                BeginNextStage();
+            }
+        }
+    }
+    #endregion NewDanceSystem
+
+    #region AnimationStateInfo
     public AnimatorStateInfo CurrentAnimatorStateInfo
     {
         get
@@ -276,7 +336,7 @@ public class MinionController : MonoBehaviour
         }
     }
 
-    public enum MinionAnimationTag { IDLE, DANCE, MISS, COMPLETE, UNTAGGED }
+    public enum MinionAnimationTag { IDLE, DANCE, MISSTAKE, END, UNTAGGED }
     public MinionAnimationTag CurrentAnimationTag
     {
         get
@@ -284,12 +344,14 @@ public class MinionController : MonoBehaviour
             AnimatorStateInfo stateInfo = CurrentAnimatorStateInfo;
             if (stateInfo.IsTag("Dance")) return MinionAnimationTag.DANCE;
             if (stateInfo.IsTag("Idle")) return MinionAnimationTag.IDLE;
-            if (stateInfo.IsTag("Miss")) return MinionAnimationTag.MISS;
-            if (stateInfo.IsTag("Complete")) return MinionAnimationTag.COMPLETE;
+            if (stateInfo.IsTag("Misstake")) return MinionAnimationTag.MISSTAKE;
+            if (stateInfo.IsTag("End")) return MinionAnimationTag.END;
             return MinionAnimationTag.UNTAGGED;
         }
     }
+    #endregion AnimationStateInfo
 
+    #region BonusMove
     public void BonusMove()
     {
         OnGood?.Invoke();
@@ -344,4 +406,7 @@ public class MinionController : MonoBehaviour
 
         yield return StartCoroutine(DelayedAction(_switchButtonsDelay, () => _cardSpawner.Visible = true));
     }
+    #endregion BonusMove
 }
+
+public enum StateType { IDLE, STRETCH, DANCE, MISSTAKE, VICTORY, DEFEAT }
