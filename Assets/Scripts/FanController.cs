@@ -147,7 +147,7 @@ public class FanController : MonoBehaviour
         _animator.SetTrigger("Fail");
     }
 
-    private bool Dancing
+    public bool Dancing
     {
         get => _animator.GetBool("Dancing");
         set => _animator.SetBool("Dancing", value);
@@ -268,7 +268,6 @@ public class FanController : MonoBehaviour
         }
         else
         {
-            if (Dancing) Dancing = false;
             if (IsWishSpawning) BreakWish();
         }
 
