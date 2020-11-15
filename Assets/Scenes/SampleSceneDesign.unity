@@ -33575,7 +33575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _likeCounter: {fileID: 1066746338}
   _slider: {fileID: 756470171}
-  _needLikes: 50
+  _needLikes: 100
 --- !u!114 &730221889
 MonoBehaviour:
   m_ObjectHideFlags: 0
