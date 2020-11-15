@@ -129,6 +129,12 @@ public class MinionController : MonoBehaviour
             foreach (var winEffect in _winEffects)
                 if (!winEffect.activeSelf) winEffect.SetActive(true);
         }
+        else
+        {
+
+            SetNextState(StateType.DEFEAT);
+            BeginNextStage();
+        }
     }
 
     private void Update()
@@ -145,7 +151,12 @@ public class MinionController : MonoBehaviour
 
             if (animationTag == MinionAnimationTag.IDLE)
             {
-                if (_hasNextState)
+                if (_timer.TimeOver && _currentState != StateType.VICTORY)
+                {
+                    SetNextState(StateType.VICTORY);
+                    BeginNextStage();
+                }
+                else if (_hasNextState)
                 {
                     OnGood?.Invoke();
                     BeginNextStage();
