@@ -1281,9 +1281,10 @@ MonoBehaviour:
     _sprite: {fileID: 21300000, guid: afc2d52c1721c944bb62116cccaf3f19, type: 3}
   - _style: 2
     _sprite: {fileID: 21300000, guid: 448da1362e1336540b9e48db487816ee, type: 3}
-  _isFan: 0
-  _fanMaterial: {fileID: 2100000, guid: 61d6a9c648dc09e41a36fa828e5961f1, type: 2}
-  _viewerMaterial: {fileID: 2100000, guid: 3a3fcf5652878734c841795886f2de4b, type: 2}
+  _likedStyle: 0
+  _classicSkin: {fileID: 2100000, guid: a1154d7850cfd86478d38bee498c0902, type: 2}
+  _jazzSkin: {fileID: 2100000, guid: 9b5556da37db7f34c9fbb9219befba2d, type: 2}
+  _streetSkin: {fileID: 2100000, guid: 61d6a9c648dc09e41a36fa828e5961f1, type: 2}
   _renderer: {fileID: 7323127999207061529}
   _animator: {fileID: 7323127999035025871}
   _timer: {fileID: 0}

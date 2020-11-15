@@ -28,10 +28,10 @@ public class MinionController : MonoBehaviour
     private Dance _currentDance = null;
     private Coroutine _bonusMovesProcessing = null;
 
-    public UnityAction OnMiss { get; set; } = null;
-    public UnityAction OnGood { get; set; } = null;
-    public UnityAction OnPerfect { get; set; } = null;
-    public UnityAction OnTooSlow { get; set; } = null;
+    public UnityAction<Dance> OnMiss { get; set; } = null;
+    public UnityAction<Dance> OnGood { get; set; } = null;
+    public UnityAction<Dance> OnPerfect { get; set; } = null;
+    public UnityAction<Dance> OnTooSlow { get; set; } = null;
     public UnityAction<Dance> OnSetDance { get; set; } = null;
 
     private void Start()
@@ -66,7 +66,7 @@ public class MinionController : MonoBehaviour
             float currentProgress = CurrentAnimationProgress;
             if (currentProgress < _maxMiss)
             {
-                OnMiss?.Invoke();
+                OnMiss?.Invoke(_currentDance);
 
                 SetNextState(StateType.MISSTAKE);
                 OnEnd(_currentDance.AnimationID);
@@ -76,11 +76,11 @@ public class MinionController : MonoBehaviour
             {
                 if (currentProgress < _maxGood)
                 {
-                    OnGood?.Invoke();
+                    OnGood?.Invoke(_currentDance);
                 }
                 else if (currentProgress < _maxPerfect)
                 {
-                    OnPerfect?.Invoke();
+                    OnPerfect?.Invoke(_currentDance);
                     Instantiate(_perfectEffect, _animator.transform);
                 }
 
@@ -89,7 +89,7 @@ public class MinionController : MonoBehaviour
         }
         else if (CurrentAnimationTag == MinionAnimationTag.MISSTAKE)
         {
-            OnGood?.Invoke();
+            OnGood?.Invoke(_currentDance);
             SetNextState(StateType.DANCE, _currentDance.AnimationID);
         }
         else
@@ -102,7 +102,7 @@ public class MinionController : MonoBehaviour
                 _musicPlayer.FadeSound(0f, 1f);
             }
 
-            OnGood?.Invoke();
+            OnGood?.Invoke(_currentDance);
             SetNextState(StateType.DANCE, _currentDance.AnimationID);
             BeginNextStage();
         }
@@ -158,7 +158,7 @@ public class MinionController : MonoBehaviour
                 }
                 else if (_hasNextState)
                 {
-                    OnGood?.Invoke();
+                    OnGood?.Invoke(_currentDance);
                     BeginNextStage();
                 }
             }
@@ -279,6 +279,7 @@ public class MinionController : MonoBehaviour
             bool fail = !TryBeginNextStage();
             if (fail)
             {
+                _currentDance = null;
                 SetNextState(StateType.MISSTAKE);
                 BeginNextStage();
             }
@@ -365,7 +366,7 @@ public class MinionController : MonoBehaviour
     #region BonusMove
     public void BonusMove()
     {
-        OnGood?.Invoke();
+        OnGood?.Invoke(_currentDance);
         Instantiate(_bonusEffect, _animator.transform);
         _bonusHasClick = true;
     }

@@ -40,4 +40,4 @@ public class BonusMove
 
 }
 
-public enum DanceStyle { CLASSIC, JAZZ, STREET, UNSTYLED }
+public enum DanceStyle { CLASSIC = 1, JAZZ = 2, STREET = 3, UNSTYLED = 0 }

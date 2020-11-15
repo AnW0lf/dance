@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.Events;
 using System;
 using Random = UnityEngine.Random;
+using System.Linq;
 
 public class FanController : MonoBehaviour
 {
@@ -24,17 +25,18 @@ public class FanController : MonoBehaviour
 
     [Space(20)]
     [Header("Fan settings")]
-    [SerializeField] private bool _isFan = false;
-    [SerializeField] private Material _fanMaterial = null;
-    [SerializeField] private Material _viewerMaterial = null;
+    [SerializeField] private DanceStyle _likedStyle = DanceStyle.UNSTYLED;
+    [SerializeField] private Material _classicSkin = null;
+    [SerializeField] private Material _jazzSkin = null;
+    [SerializeField] private Material _streetSkin = null;
     [SerializeField] private Renderer _renderer = null;
     [SerializeField] private Animator _animator = null;
     [SerializeField] private Timer _timer = null;
 
-    public bool IsFan
+    public DanceStyle LikedStyle
     {
-        get => _isFan;
-        set => _isFan = value;
+        get => _likedStyle;
+        set => _likedStyle = value;
     }
 
     private MinionController _minion = null;
@@ -80,7 +82,7 @@ public class FanController : MonoBehaviour
     #endregion Like
 
     #region Actions
-    private void OnMiss()
+    private void OnMiss(Dance dance)
     {
         float rnd = Random.Range(0f, 1f);
         if (rnd >= 0.8f)
@@ -89,10 +91,16 @@ public class FanController : MonoBehaviour
             Fail();
     }
 
-    private void OnGood()
+    private void OnGood(Dance dance)
     {
-        if (IsFan)
+        if (LikedStyle == dance.Style)
         {
+            if (!LikePowerUpped)
+            {
+                bool styleIsPoweredUp = FindObjectsOfType<FanController>().Where((fan) => fan.LikePowerUpped).Count() > 0;
+                if (styleIsPoweredUp) LikePowerUpped = Random.Range(0f, 1f) > 0.8f;
+            }
+
             LikeWithClapping();
         }
         else
@@ -105,12 +113,29 @@ public class FanController : MonoBehaviour
         }
     }
 
-    private void OnPerfect()
+    private void OnPerfect(Dance dance)
     {
-        LikeWithClapping();
+        if (LikedStyle == dance.Style)
+        {
+            if (!LikePowerUpped)
+            {
+                bool styleIsPoweredUp = FindObjectsOfType<FanController>().Where((fan) => fan.LikePowerUpped).Count() > 0;
+                if (styleIsPoweredUp) LikePowerUpped = Random.Range(0f, 1f) > 0.5f;
+            }
+
+            LikeWithClapping();
+        }
+        else
+        {
+            float rnd = Random.Range(0f, 1f);
+            if (rnd >= 0.5f)
+            {
+                LikeWithClapping();
+            }
+        }
     }
 
-    private void OnTooSlow()
+    private void OnTooSlow(Dance dance)
     {
         float rnd = Random.Range(0f, 1f);
         if (rnd >= 0.8f)
@@ -244,12 +269,22 @@ public class FanController : MonoBehaviour
 
     private void Start()
     {
-        IsFan = Random.Range(0, 2) == 1;
+        LikedStyle = (DanceStyle)Random.Range(1, 4);
 
-        if (IsFan) _renderer.material = _fanMaterial;
-        else _renderer.material = _viewerMaterial;
-
-        
+        switch (LikedStyle)
+        {
+            case DanceStyle.CLASSIC:
+                _renderer.material = _classicSkin;
+                break;
+            case DanceStyle.JAZZ:
+                _renderer.material = _jazzSkin;
+                break;
+            case DanceStyle.STREET:
+                _renderer.material = _streetSkin;
+                break;
+            default:
+                break;
+        }
 
         _minion = FindObjectOfType<MinionController>();
         _minion.OnMiss += OnMiss;
