@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -18,6 +19,9 @@ namespace Assets.Scripts.Inventory
         public Dance Dance { get; private set; } = null;
 
         public bool IsEmpty => Dance == null;
+
+        public UnityAction<Cell> OnCellDrop { get; set; } = null;
+        public UnityAction<Cell> OnCellEndDrag { get; set; } = null;
 
         public Cell DraggedCell
         {
@@ -76,6 +80,7 @@ namespace Assets.Scripts.Inventory
                 TargetCell = null;
                 DraggedCell.Clear();
             }
+            OnCellEndDrag?.Invoke(this);
         }
 
         public void OnDrop(PointerEventData eventData)
@@ -88,6 +93,7 @@ namespace Assets.Scripts.Inventory
                 TargetCell = null;
                 DraggedCell.Clear();
             }
+            OnCellDrop?.Invoke(this);
         }
     }
 }

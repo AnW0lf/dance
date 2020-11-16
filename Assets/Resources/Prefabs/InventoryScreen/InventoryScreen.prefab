@@ -62,7 +62,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -149,7 +148,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -257,6 +255,7 @@ GameObject:
   - component: {fileID: 349086483265537504}
   - component: {fileID: 7400817003440732861}
   - component: {fileID: 7690644093622546641}
+  - component: {fileID: 7701854032822151865}
   m_Layer: 5
   m_Name: Asset
   m_TagString: Untagged
@@ -314,7 +313,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0, b: 1, a: 0.3137255}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -352,6 +350,18 @@ MonoBehaviour:
   m_Spacing: {x: 30, y: 30}
   m_Constraint: 1
   m_ConstraintCount: 2
+--- !u!114 &7701854032822151865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4846341701603718568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c0111a47d673f429fb902ce52b3088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5933463749196831298
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +422,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -564,7 +573,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -620,20 +628,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 542a809c73b15db49854b54cf954742c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _addCell: 0
   _cellContainer: {fileID: 6222029851658550288}
   _cellPrefab: {fileID: 1745512473453388827, guid: e0c3456e7db7bc447a576a325a1a7fcd,
     type: 3}
   _draggedCell: {fileID: 4604892749473450523}
-  _dances:
-  - {fileID: 11400000, guid: 0c64d335c47b7c34ba512f507319e699, type: 2}
-  - {fileID: 11400000, guid: 77c6fcda17cbd4d4282dc994cbc0ee6e, type: 2}
-  - {fileID: 11400000, guid: 398b6127981cc5643ab00a3d17920fff, type: 2}
-  - {fileID: 11400000, guid: 7990b170c8d5e2b47a7849f2eed8f2de, type: 2}
-  - {fileID: 11400000, guid: 19c3e33b73b27c64a9878cfbe4e9d656, type: 2}
-  - {fileID: 11400000, guid: 66c1d2f06e552d3428f28478d6901e4f, type: 2}
-  - {fileID: 11400000, guid: be6ba8d3fe0f6f84aacddf7d273b9d74, type: 2}
-  - {fileID: 11400000, guid: cf913ed37ea3592409c0a4aed9b32325, type: 2}
 --- !u!1 &7552884898710413259
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +809,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -885,7 +882,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 0, a: 0.3137255}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -916,6 +912,11 @@ PrefabInstance:
       propertyPath: _draggedCell
       value: 
       objectReference: {fileID: 4604892749473450523}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isEmpty
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -1081,6 +1082,11 @@ PrefabInstance:
       propertyPath: _draggedCell
       value: 
       objectReference: {fileID: 4604892749473450523}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isEmpty
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -1246,6 +1252,11 @@ PrefabInstance:
       propertyPath: _draggedCell
       value: 
       objectReference: {fileID: 4604892749473450523}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isEmpty
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -1411,6 +1422,11 @@ PrefabInstance:
       propertyPath: _draggedCell
       value: 
       objectReference: {fileID: 4604892749473450523}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isEmpty
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -1576,6 +1592,11 @@ PrefabInstance:
       propertyPath: _draggedCell
       value: 
       objectReference: {fileID: 4604892749473450523}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isEmpty
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -1741,6 +1762,11 @@ PrefabInstance:
       propertyPath: _draggedCell
       value: 
       objectReference: {fileID: 4604892749473450523}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isEmpty
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -1906,6 +1932,11 @@ PrefabInstance:
       propertyPath: _draggedCell
       value: 
       objectReference: {fileID: 4604892749473450523}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isEmpty
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2071,6 +2102,11 @@ PrefabInstance:
       propertyPath: _draggedCell
       value: 
       objectReference: {fileID: 4604892749473450523}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isEmpty
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: m_textInfo.characterCount
