@@ -16,7 +16,7 @@ MonoBehaviour:
   _lableText: Nonstop Hip Hop
   _iconSprite: {fileID: 21300000, guid: 092740c1ddd0620499111dfe481df505, type: 3}
   _backgroundSprite: {fileID: 21300000, guid: 448da1362e1336540b9e48db487816ee, type: 3}
-  _style: 2
+  _style: 3
   _bonusMoves:
   - _start: 0.25
     _length: 0.1
