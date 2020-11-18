@@ -7,6 +7,7 @@ public class LevelScript : MonoBehaviour
     [Header("Start level")]
     [SerializeField] private MoveCamera _moveCamera = null;
     [SerializeField] private LevelName _levelName = null;
+    [SerializeField] private InterfaceCounter _moneyCounter = null;
     [SerializeField] private MovePanel[] _panels = null;
 
     [Space(20)]

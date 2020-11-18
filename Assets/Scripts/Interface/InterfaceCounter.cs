@@ -43,13 +43,18 @@ public class InterfaceCounter : MonoBehaviour
     {
         if (_doPulse && !_pulsing)
         {
-            _doPulse = false;
-            if (_pulse != null) LeanTween.cancel(_pulse.uniqueId);
-            _pulsing = true;
-            _pulse = LeanTween.scale(_icon.gameObject, Vector3.one * _iconPulseScale, _iconPulseDuration / 2f)
-                .setEase(_ltt)
-                .setLoopPingPong(1)
-                .setOnComplete(() => _pulsing = false);
+            Pulse();
         }
+    }
+
+    protected void Pulse()
+    {
+        _doPulse = false;
+        if (_pulse != null) LeanTween.cancel(_pulse.uniqueId);
+        _pulsing = true;
+        _pulse = LeanTween.scale(_icon.gameObject, Vector3.one * _iconPulseScale, _iconPulseDuration / 2f)
+            .setEase(_ltt)
+            .setLoopPingPong(1)
+            .setOnComplete(() => _pulsing = false);
     }
 }
