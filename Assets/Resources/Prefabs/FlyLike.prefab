@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95ea3e9ce7a0cb448cf69350242a42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _likeRenderer: {fileID: 7619642936625559895}
+  _spriteRenderer: {fileID: 7619642936625559895}
   _counter: {fileID: 9052066545381992975}
   _normal: {fileID: 21300000, guid: e9adf946fbde5364bbe33107547f1304, type: 3}
   _powerUpped: {fileID: 21300000, guid: b9c190498d68b5548a7a4a0ba102ea49, type: 3}

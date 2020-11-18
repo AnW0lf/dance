@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LevelProgress : MonoBehaviour
 {
-    [SerializeField] private LikeCounter _likeCounter;
+    [SerializeField] private InterfaceCounter _likeCounter;
     [SerializeField] private Slider _slider;
     [SerializeField] private int _needLikes;
 

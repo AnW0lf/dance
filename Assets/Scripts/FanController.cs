@@ -42,44 +42,92 @@ public class FanController : MonoBehaviour
     private MinionController _minion = null;
 
     [Space(20)]
-    [Header("Like")]
+    [Header("Resource")]
     [SerializeField] private Transform _spawnPoint = null;
-    [SerializeField] private Transform _targetInterfacePoint = null;
-    [SerializeField] private LikeCounter _likeCounter = null;
+
+    [Space(20)]
+    [Header("Like")]
+    [SerializeField] private Transform _likeTargetInterfacePoint = null;
+    [SerializeField] private InterfaceCounter _likeCounter = null;
     [SerializeField] private GameObject _likePrefab = null;
+
+    [Space(20)]
+    [Header("Money")]
+    [SerializeField] private Transform _moneyTargetInterfacePoint = null;
+    [SerializeField] private InterfaceCounter _moneyCounter = null;
+    [SerializeField] private GameObject _moneyPrefab = null;
+    [SerializeField] private int _moneyCount = 1;
 
     #region Like
     public bool LikePowerUpped { get; private set; } = false;
 
     public void CreateLike()
     {
-        Like like = Instantiate(_likePrefab).GetComponent<Like>();
-        like.transform.position = _spawnPoint.position;
-        like.Count = LikePowerUpped ? 2 : 1;
+        int count = LikePowerUpped ? 2 : 1;
         LikePowerUpped = false;
 
-        Vector3 endPosition = _targetInterfacePoint.position;
-        StartCoroutine(MoveToCounter(like, endPosition));
+        CreateFlyResource(_likePrefab, _spawnPoint.position,
+            count, _likeTargetInterfacePoint,
+            _likeCounter, Random.Range(0.5f, 1.2f));
+    }
+    #endregion Like
+
+    #region Money
+    public void CreateMoney(int count)
+    {
+        if (count <= 0) return;
+
+        StartCoroutine(CoinSpawner(count, 0.035f));
     }
 
-    private IEnumerator MoveToCounter(Like like, Vector3 endPosition)
+    private IEnumerator CoinSpawner(int count, float delay)
     {
-        Vector3 startPosition = like.transform.position;
+        WaitForSeconds wait = new WaitForSeconds(delay);
+        for (int i = 0; i < 14 && i < count; i++)
+        {
+            CreateCoin(1);
+            yield return wait;
+        }
+
+        if (count > 14)
+            CreateCoin(count - 14);
+    }
+
+    private void CreateCoin(int count)
+    {
+        CreateFlyResource(_moneyPrefab, _spawnPoint.position,
+            count, _moneyTargetInterfacePoint,
+            _moneyCounter, 0.75f);
+    }
+    #endregion Money
+
+    #region Resource
+    public void CreateFlyResource(GameObject prefab, Vector3 spawnPoint, int count, Transform target, InterfaceCounter counter, float flyDuration)
+    {
+        FlyResource resource = Instantiate(prefab).GetComponent<FlyResource>();
+        resource.transform.position = spawnPoint;
+        resource.Count = count;
+
+        StartCoroutine(MoveToCounter(resource, target, counter, flyDuration));
+    }
+
+    private IEnumerator MoveToCounter(FlyResource resource, Transform target, InterfaceCounter counter, float duration)
+    {
+        Vector3 startPosition = resource.transform.position;
         float timer = 0;
-        float duration = Random.Range(0.5f, 1.2f);
 
         while (timer <= duration)
         {
             timer += Time.deltaTime;
-            like.transform.LookAt(Camera.main.transform);
-            like.transform.position = Vector3.Lerp(startPosition, endPosition, timer / duration);
+            resource.transform.LookAt(Camera.main.transform);
+            resource.transform.position = Vector3.Lerp(startPosition, target.position, timer / duration);
             yield return null;
         }
 
-        _likeCounter.Count += like.Count;
-        Destroy(like.gameObject);
+        counter.Count += resource.Count;
+        Destroy(resource.gameObject);
     }
-    #endregion Like
+    #endregion Resource
 
     #region Actions
     private void OnMiss(Dance dance)
@@ -151,6 +199,7 @@ public class FanController : MonoBehaviour
         {
             LikePowerUpped = true;
             BreakWish();
+            CreateMoney(_moneyCount);
         }
     }
 
