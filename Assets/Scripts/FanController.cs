@@ -293,6 +293,7 @@ public class FanController : MonoBehaviour
     {
         _wish.Visible = false;
         StopCoroutine(_wishSpawner);
+        Wish = DanceStyle.UNSTYLED;
         _wishSpawner = null;
     }
 
