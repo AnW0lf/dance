@@ -113,7 +113,7 @@ Material:
     - __dirty: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 0.9864793, b: 0, a: 1}
-    - _Color: {r: 0, g: 1, b: 0, a: 1}
+    - _Color: {r: 0, g: 0.8301887, b: 0, a: 1}
     - _ColorMultiply: {r: 1, g: 0.9972117, b: 0, a: 1}
     - _ColorOverride: {r: 1, g: 0.9048885, b: 0, a: 1}
     - _EmissionColor: {r: 0.026063504, g: 0.2627451, b: 0, a: 1}
