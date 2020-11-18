@@ -1,42 +1,84 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
+using System.Collections.Generic;
+using TMPro;
 
-public class Chest : MonoBehaviour
+namespace Assets.Scripts.Interface.ChestMiniGame
 {
-    [SerializeField] private int _moneyReward = 0;
-    [SerializeField] private int _classicFanReward = 0;
-    [SerializeField] private int _jazzFanReward = 0;
-    [SerializeField] private int _streetFanReward = 0;
-    [SerializeField] private Image _fade = null;
-    [SerializeField] private float _fadingSpeed = 2f;
-    [SerializeField] private RewardMiniGame _miniGame = null;
-
-    public void Reward()
+    public class Chest : MonoBehaviour
     {
-        if (_miniGame.KeyCount <= 0) return;
-        _miniGame.KeyCount--;
-        _miniGame.UpdateLabel();
-        Player.Instance.Money += _moneyReward;
-        Player.Instance.ClassicFansCount += _classicFanReward;
-        Player.Instance.JazzFansCount += _jazzFanReward;
-        Player.Instance.StreetFansCount += _streetFanReward;
-        _fade.raycastTarget = false;
-        StartCoroutine(Fading(0f));
+        [Header("Behaviour components")]
+        [SerializeField] private Image _fade = null;
+        [SerializeField] private Image _chestIcon = null;
+        [SerializeField] private Image _rewardIcon = null;
+        [SerializeField] private TextMeshProUGUI _counter = null;
+        [SerializeField] private float _fadingSpeed = 2f;
+        [SerializeField] private RewardMiniGame _miniGame = null;
+        [SerializeField] private List<ChestSkin> _skins = null;
+
+        public void Reward()
+        {
+            if (_miniGame.KeyCount <= 0) return;
+
+            Reward reward = _miniGame.GetReward();
+            ChestSkin skin = _skins.Find((s) => s.Type == reward.Type);
+            _rewardIcon.sprite = skin.Skin;
+            _rewardIcon.preserveAspect = true;
+            _counter.text = $"+{reward.Count}";
+
+            switch (reward.Type)
+            {
+                case RewardType.MONEY:
+                    Player.Instance.Money += reward.Count;
+                    break;
+                case RewardType.CLASSIC:
+                    Player.Instance.ClassicFansCount += reward.Count;
+                    break;
+                case RewardType.JAZZ:
+                    Player.Instance.JazzFansCount += reward.Count;
+                    break;
+                case RewardType.STREET:
+                    Player.Instance.StreetFansCount += reward.Count;
+                    break;
+                default:
+                    break;
+            }
+
+            _fade.raycastTarget = false;
+            StartCoroutine(Fading(0f));
+        }
+
+        private IEnumerator Fading(float alpha)
+        {
+            float startAlpha = _fade.color.a;
+            float timer = 0f;
+            float duration = Mathf.Abs(startAlpha - alpha) / _fadingSpeed;
+            while (timer <= duration)
+            {
+                timer += Time.deltaTime;
+
+                Color color = _fade.color;
+                color.a = Mathf.Lerp(startAlpha, alpha, timer / duration);
+                _fade.color = color;
+
+                color = _chestIcon.color;
+                color.a = Mathf.Lerp(startAlpha, alpha, timer / duration);
+                _chestIcon.color = color;
+
+                yield return null;
+            }
+        }
     }
 
-    private IEnumerator Fading(float alpha)
+    [Serializable]
+    class ChestSkin
     {
-        float startAlpha = _fade.color.a;
-        float timer = 0f;
-        float duration = Mathf.Abs(startAlpha - alpha) / _fadingSpeed;
-        while (timer <= duration)
-        {
-            timer += Time.deltaTime;
-            Color color = _fade.color;
-            color.a = Mathf.Lerp(startAlpha, alpha, timer / duration);
-            _fade.color = color;
-            yield return null;
-        }
+        [SerializeField] private RewardType _type = RewardType.NONE;
+        [SerializeField] private Sprite _skin = null;
+
+        public RewardType Type => _type;
+        public Sprite Skin => _skin;
     }
 }

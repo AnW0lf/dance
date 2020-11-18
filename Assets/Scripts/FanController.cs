@@ -21,7 +21,7 @@ public class FanController : MonoBehaviour
     [SerializeField] public float _chancePerSecond = 0.2f;
     [SerializeField] private StyleSprite[] _styleSprites = null;
     private Coroutine _wishSpawner = null;
-    
+
 
     [Space(20)]
     [Header("Fan settings")]
@@ -239,7 +239,8 @@ public class FanController : MonoBehaviour
 
     public void LikeWithClapping()
     {
-        StartCoroutine(DelayedAction(RandomDelay, () => {
+        StartCoroutine(DelayedAction(RandomDelay, () =>
+        {
             CreateLike();
             DoClap();
         }));
@@ -348,7 +349,14 @@ public class FanController : MonoBehaviour
         if (IsTimerActive)
         {
             if (!Dancing) Dancing = true;
-            if (!IsWishSpawning) SpawnWish(2f);
+            if (_chancePerSecond > 0f)
+            {
+                if (!IsWishSpawning) SpawnWish(2f);
+            }
+            else
+            {
+                if (IsWishSpawning) StopCoroutine(_wishSpawner);
+            }
         }
         else
         {
