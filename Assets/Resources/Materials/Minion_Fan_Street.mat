@@ -89,7 +89,7 @@ Material:
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
-    - _Glossiness: 0.5
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _Metallic: 1
     - _Mode: 0
@@ -113,10 +113,10 @@ Material:
     - __dirty: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 0.9864793, b: 0, a: 1}
-    - _Color: {r: 0.95539796, g: 1, b: 0, a: 1}
+    - _Color: {r: 0.956, g: 1, b: 0, a: 1}
     - _ColorMultiply: {r: 1, g: 0.9972117, b: 0, a: 1}
     - _ColorOverride: {r: 1, g: 0.9048885, b: 0, a: 1}
-    - _EmissionColor: {r: 0.23746902, g: 0.26415092, b: 0, a: 1}
+    - _EmissionColor: {r: 0.24049559, g: 0.26415092, b: 0, a: 1}
     - _HColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
     - _OutlineColor: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 0.039215688}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
