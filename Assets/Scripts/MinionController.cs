@@ -180,7 +180,10 @@ public class MinionController : MonoBehaviour
 
     private void BeginState(string stateName)
     {
-        _animator.CrossFade(stateName, 0.1f);
+        if (CurrentAnimatorStateIsName(stateName))
+            _animator.CrossFade($"{stateName} 0", 0.1f);
+        else
+            _animator.CrossFade(stateName, 0.1f);
     }
     private void BeginState(StateType stateType)
     {
@@ -338,6 +341,8 @@ public class MinionController : MonoBehaviour
             return stateInfo;
         }
     }
+
+    public bool CurrentAnimatorStateIsName(string stateName) => CurrentAnimatorStateInfo.IsName(stateName);
 
     public float CurrentAnimationProgress
     {

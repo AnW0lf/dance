@@ -8,13 +8,19 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts.Inventory
 {
-    public class Cell : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
+    public class Cell : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler, IPointerClickHandler
     {
-        [SerializeField] private bool _isEmpty = false;
         [SerializeField] private Image _background = null;
         [SerializeField] private Image _icon = null;
         [SerializeField] private TextMeshProUGUI _label = null;
         [SerializeField] private Cell _draggedCell = null;
+
+        private MinionDancePreview _dancePreview = null;
+
+        private void Start()
+        {
+            _dancePreview = FindObjectOfType<MinionDancePreview>();
+        }
 
         public Dance Dance { get; private set; } = null;
 
@@ -88,12 +94,27 @@ namespace Assets.Scripts.Inventory
             if (TargetCell != this)
             {
                 Dance dance = TargetCell.Dance;
-                TargetCell.SetDance(Dance);
-                SetDance(dance);
+                if (dance == Dance && Dance.HasNextLevel)
+                {
+                    TargetCell.Clear();
+                    SetDance(dance.NextLevel);
+                }
+                else
+                {
+                    TargetCell.SetDance(Dance);
+                    SetDance(dance);
+                }
                 TargetCell = null;
                 DraggedCell.Clear();
             }
             OnCellDrop?.Invoke(this);
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            if (IsEmpty) return;
+
+            _dancePreview.ShowDancePreview(Dance);
         }
     }
 }
