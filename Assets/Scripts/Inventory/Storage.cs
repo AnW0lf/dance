@@ -9,6 +9,8 @@ namespace Assets.Scripts.Inventory
 {
     public class Storage : MonoBehaviour, IDropHandler
     {
+        [SerializeField] private bool _addTargetDance = false;
+        [SerializeField] private Dance _targetDance = null;
         [SerializeField] private Transform _cellContainer = null;
         [SerializeField] private GameObject _cellPrefab = null;
         [SerializeField] private Cell _draggedCell = null;
@@ -46,11 +48,19 @@ namespace Assets.Scripts.Inventory
         {
             for (int i = _cells.Count - 1; i >= 0; i--)
                 if (_cells[i].IsEmpty) RemoveCell(_cells[i]);
+
+            if (_addTargetDance)
+            {
+                _addTargetDance = false;
+
+                AddCell(_targetDance);
+            }
         }
 
         public void OnDrop(PointerEventData eventData)
         {
             if (_cells.Contains(Cell.TargetCell)) return;
+            if (Cell.TargetCell == null) return;
             Dance dance = Cell.TargetCell.Dance;
             Cell.TargetCell.DraggedCell.Clear();
             Cell.TargetCell.Clear();

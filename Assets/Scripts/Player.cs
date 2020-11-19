@@ -151,6 +151,8 @@ public class Player : MonoBehaviour
         string asset_string = GetStringOrDefault(ASSET_KEY, string.Empty);
         string storage_string = GetStringOrDefault(STORAGE_KEY, DEFAULT_STORAGE_SET);
 
+        print(storage_string);
+
         Asset = StringToDanceList(asset_string);
         Storage = StringToDanceList(storage_string);
     }

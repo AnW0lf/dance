@@ -256,7 +256,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 514721932}
-  m_PlaneDistance: 3
+  m_PlaneDistance: 3.5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -812,7 +812,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091925178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1691184235}
@@ -903,6 +903,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 19c3e33b73b27c64a9878cfbe4e9d656, type: 2}
   - {fileID: 11400000, guid: 66c1d2f06e552d3428f28478d6901e4f, type: 2}
   - {fileID: 11400000, guid: be6ba8d3fe0f6f84aacddf7d273b9d74, type: 2}
+  - {fileID: 11400000, guid: 32df05983b54eb6489200f43097964c6, type: 2}
+  - {fileID: 11400000, guid: 305c3f5d54b90b146baf965c89045431, type: 2}
 --- !u!4 &2113861833
 Transform:
   m_ObjectHideFlags: 0
@@ -1810,6 +1812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 542a809c73b15db49854b54cf954742c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _addTargetDance: 0
+  _targetDance: {fileID: 11400000, guid: 0c64d335c47b7c34ba512f507319e699, type: 2}
   _cellContainer: {fileID: 3845553615699439991}
   _cellPrefab: {fileID: 1745512473453388827, guid: e0c3456e7db7bc447a576a325a1a7fcd,
     type: 3}

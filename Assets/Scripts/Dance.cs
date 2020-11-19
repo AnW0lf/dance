@@ -25,7 +25,9 @@ public class Dance : ScriptableObject
 
     public override bool Equals(object obj)
     {
-        return obj is Dance dance &&
+        return this is null &&
+               obj is null ||
+               obj is Dance dance &&
                base.Equals(obj) &&
                _animationId == dance._animationId &&
                _lableText == dance._lableText &&
@@ -50,9 +52,9 @@ public class Dance : ScriptableObject
         return hashCode;
     }
 
-    public static bool operator ==(Dance d1, Dance d2) => d1.Equals(d2);
+    public static bool operator ==(Dance d1, Dance d2) => d1 is null && d2 is null || d1.Equals(d2);
 
-    public static bool operator !=(Dance d1, Dance d2) => !d1.Equals(d2);
+    public static bool operator !=(Dance d1, Dance d2) => !(d1 == d2);
 }
 
 [Serializable]

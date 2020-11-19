@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 620104d604ebb7740b3c16410dc815fd, type: 3}
-  m_Name: Chicken Dance
+  m_Name: Chicken Dance 3
   m_EditorClassIdentifier: 
   _animationId: 2
-  _lableText: Chicken Dance
+  _lableText: Mega Uber Chicken
   _iconSprite: {fileID: 21300000, guid: 4b646e91f5e01b344a3e2a2a35e84c89, type: 3}
   _backgroundSprite: {fileID: 21300000, guid: ab584de0445b7244ca138add9bce7b4d, type: 3}
   _style: 1
   _bonusMoves:
   - _start: 0.29
     _length: 0.1
-  _nextLevel: {fileID: 11400000, guid: 32df05983b54eb6489200f43097964c6, type: 2}
+  _nextLevel: {fileID: 0}
