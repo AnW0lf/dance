@@ -13,9 +13,9 @@ public class CardSpawner : MonoBehaviour
     [SerializeField] private RectTransform _rect = null;
     [SerializeField] private MinionController _minion = null;
     [SerializeField] private Timer _timer = null;
-    [SerializeField] private Dance[] _dances = null;
     [SerializeField] private GameObject _startLabel = null;
 
+    private Dance[] _dances = null;
     private Dance _notUse = null;
 
     public bool Visible
@@ -96,6 +96,9 @@ public class CardSpawner : MonoBehaviour
     {
         if (_visible) _rect.anchoredPosition = Vector2.zero;
         else _rect.anchoredPosition = Vector2.down * 500f;
+
+        _dances = Player.Instance.Asset.ToArray();
+        Player.Instance.OnAssetChanged += (asset) => _dances = asset.ToArray();
 
         Spawn(3);
     }
