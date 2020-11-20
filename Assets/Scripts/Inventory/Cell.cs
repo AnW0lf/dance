@@ -14,6 +14,7 @@ namespace Assets.Scripts.Inventory
         [SerializeField] private Image _icon = null;
         [SerializeField] private TextMeshProUGUI _label = null;
         [SerializeField] private Cell _draggedCell = null;
+        [SerializeField] private bool _isAsseted = false;
 
         private MinionDancePreview _dancePreview = null;
 
@@ -25,7 +26,7 @@ namespace Assets.Scripts.Inventory
         public Dance Dance { get; private set; } = null;
 
         public bool IsEmpty => Dance == null;
-
+        public bool IsAsseted => _isAsseted;
         public UnityAction<Cell> OnCellDrop { get; set; } = null;
         public UnityAction<Cell> OnCellEndDrag { get; set; } = null;
 
@@ -96,18 +97,26 @@ namespace Assets.Scripts.Inventory
                 Dance dance = TargetCell.Dance;
                 if (dance == Dance && Dance.HasNextLevel)
                 {
-                    TargetCell.Clear();
-                    SetDance(dance.NextLevel);
+                    if (TargetCell.IsAsseted && !IsAsseted)
+                    {
+                        TargetCell.SetDance(dance.NextLevel);
+                        this.Clear();
+                    }
+                    else
+                    {
+                        TargetCell.Clear();
+                        this.SetDance(dance.NextLevel);
+                    }
                 }
                 else
                 {
                     TargetCell.SetDance(Dance);
-                    SetDance(dance);
+                    this.SetDance(dance);
                 }
                 TargetCell = null;
                 DraggedCell.Clear();
+                OnCellDrop?.Invoke(this);
             }
-            OnCellDrop?.Invoke(this);
         }
 
         public void OnPointerClick(PointerEventData eventData)

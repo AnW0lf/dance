@@ -31,5 +31,29 @@ namespace Assets.Scripts.Inventory
             List<Dance> dances = _cells.Select((cell) => cell.Dance).ToList();
             Player.Instance.SetAsset(dances);
         }
+
+        public bool FillEmpty(Dance dance)
+        {
+            if (!HasEmptyCell) return false;
+            foreach(var cell in _cells)
+            {
+                if (cell.IsEmpty)
+                {
+                    cell.SetDance(dance);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool HasEmptyCell
+        {
+            get
+            {
+                foreach (var cell in _cells)
+                    if (cell.IsEmpty) return true;
+                return false;
+            }
+        }
     }
 }

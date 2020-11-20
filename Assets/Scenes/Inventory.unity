@@ -1099,7 +1099,7 @@ GameObject:
   - component: {fileID: 2540104280956817953}
   - component: {fileID: 1997948096527074774}
   m_Layer: 5
-  m_Name: InventoryScreen
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1176,6 +1176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d62356d8880cc948a91f0a471a4a8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _asset: {fileID: 713058456835598302}
+  _storage: {fileID: 3958082739720744532}
 --- !u!1 &2003178219316350896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,6 +1272,11 @@ PrefabInstance:
     - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: _isEmpty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isAsseted
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
@@ -1579,6 +1586,11 @@ PrefabInstance:
       propertyPath: _isEmpty
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isAsseted
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -1859,6 +1871,11 @@ PrefabInstance:
     - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: _isEmpty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isAsseted
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
@@ -2173,6 +2190,7 @@ MonoBehaviour:
   _icon: {fileID: 770621242587071469}
   _label: {fileID: 2717287115396874648}
   _draggedCell: {fileID: 0}
+  _isAsseted: 0
 --- !u!1001 &6731599927924937013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2193,6 +2211,11 @@ PrefabInstance:
     - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: _isEmpty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isAsseted
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
@@ -2371,6 +2394,11 @@ PrefabInstance:
     - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: _isEmpty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isAsseted
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
@@ -2568,6 +2596,11 @@ PrefabInstance:
     - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: _isEmpty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isAsseted
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
@@ -2783,6 +2816,11 @@ PrefabInstance:
       propertyPath: _isEmpty
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isAsseted
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2951,6 +2989,11 @@ PrefabInstance:
     - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
         type: 3}
       propertyPath: _isEmpty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268801748589432433, guid: e0c3456e7db7bc447a576a325a1a7fcd,
+        type: 3}
+      propertyPath: _isAsseted
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3366118436778417367, guid: e0c3456e7db7bc447a576a325a1a7fcd,

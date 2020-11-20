@@ -37,6 +37,26 @@ namespace Assets.Scripts.Inventory
             OnAddCell?.Invoke(cell);
         }
 
+        public bool IsEmpty => _cells == null || _cells.Count == 0;
+
+        public Cell FirstCell
+        {
+            get
+            {
+                if (IsEmpty) return null;
+                return _cells[0];
+            }
+        }
+
+        public Cell LastCell
+        {
+            get
+            {
+                if (IsEmpty) return null;
+                return _cells[_cells.Count - 1];
+            }
+        }
+
         public void RemoveCell(Cell cell)
         {
             _cells.Remove(cell);
@@ -59,8 +79,9 @@ namespace Assets.Scripts.Inventory
 
         public void OnDrop(PointerEventData eventData)
         {
-            if (_cells.Contains(Cell.TargetCell)) return;
             if (Cell.TargetCell == null) return;
+            if (_cells.Contains(Cell.TargetCell)) return;
+            if (Cell.TargetCell.IsAsseted) return;
             Dance dance = Cell.TargetCell.Dance;
             Cell.TargetCell.DraggedCell.Clear();
             Cell.TargetCell.Clear();
