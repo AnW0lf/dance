@@ -19,4 +19,5 @@ MonoBehaviour:
   _style: 2
   _bonusMoves:
   - _start: 0.4
-    _length: 0.1
+    _length: 0.05
+  _nextLevel: {fileID: 11400000, guid: 42d3de77bf7bc9043b83701920176a03, type: 2}
