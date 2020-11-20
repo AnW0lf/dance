@@ -13,6 +13,7 @@ namespace Assets.Scripts.Inventory
         [SerializeField] private Image _background = null;
         [SerializeField] private Image _icon = null;
         [SerializeField] private TextMeshProUGUI _label = null;
+        [SerializeField] private Image _fade = null;
         [SerializeField] private Cell _draggedCell = null;
         [SerializeField] private bool _isAsseted = false;
 
@@ -27,6 +28,11 @@ namespace Assets.Scripts.Inventory
 
         public bool IsEmpty => Dance == null;
         public bool IsAsseted => _isAsseted;
+        public bool IsFaded
+        {
+            get => _fade.gameObject.activeSelf;
+            set => _fade.gameObject.SetActive(value);
+        }
         public UnityAction<Cell> OnCellDrop { get; set; } = null;
         public UnityAction<Cell> OnCellEndDrag { get; set; } = null;
 
@@ -46,6 +52,7 @@ namespace Assets.Scripts.Inventory
                 Dance = dance;
 
                 _background.sprite = Dance.BackgroundSprite;
+                _fade.sprite = Dance.BackgroundSprite;
                 _icon.sprite = Dance.IconSprite;
                 _label.text = Dance.LabelText;
 
@@ -60,6 +67,7 @@ namespace Assets.Scripts.Inventory
             Dance = null;
 
             _background.sprite = null;
+            _fade.sprite = null;
             _icon.sprite = null;
             _label.text = string.Empty;
 
@@ -73,6 +81,8 @@ namespace Assets.Scripts.Inventory
             TargetCell = this;
 
             DraggedCell.SetDance(Dance);
+
+            IsFaded = true;
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -88,6 +98,7 @@ namespace Assets.Scripts.Inventory
                 DraggedCell.Clear();
             }
             OnCellEndDrag?.Invoke(this);
+            IsFaded = false;
         }
 
         public void OnDrop(PointerEventData eventData)
@@ -115,8 +126,8 @@ namespace Assets.Scripts.Inventory
                 }
                 TargetCell = null;
                 DraggedCell.Clear();
-                OnCellDrop?.Invoke(this);
             }
+            OnCellDrop?.Invoke(this);
         }
 
         public void OnPointerClick(PointerEventData eventData)

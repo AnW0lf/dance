@@ -19,5 +19,16 @@ namespace Assets.Scripts.Inventory
                     cell.Clear();
             }
         }
+
+        public bool BuyDance(int price)
+        {
+            if(Player.Instance.Money >= price)
+            {
+                Player.Instance.Money -= price;
+                _storage.AddCell(Player.Instance.RandomDance, true);
+                return true;
+            }
+            return false;
+        }
     }
 }
