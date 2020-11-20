@@ -44,7 +44,7 @@ namespace Assets.Scripts.Inventory
             cell.localScale = Vector3.zero;
 
             Vector3 startScale = cell.localScale;
-            Vector3 endScale = Vector3.one * 1.05f;
+            Vector3 endScale = Vector3.one * 1.2f;
             float speed = 15f;
             float timer = 0f;
             float duration = Vector3.Distance(startScale, endScale) / speed;
