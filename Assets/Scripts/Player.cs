@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine.Events;
+using System.Linq;
 
 public class Player : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour
     private const string JAZZ_FANS_COUNT_KEY = "jazz_fans_count_key";
     private const string MONEY_COUNT_KEY = "money_count_key";
     private const string PRICE_KEY = "price_key";
+    private const string DANCE_BOUGHT_KEY = "dance_bought_key";
     private const string STORAGE_KEY = "storage_key";
     private const string ASSET_KEY = "asset_key";
     #endregion KEYS
@@ -49,8 +51,8 @@ public class Player : MonoBehaviour
     private int _streetFansCount = 0;
 
     private int _money = 0;
-
     private int _price = 0;
+    private int _danceBought = 0;
 
     #region Options
     public int Money
@@ -72,11 +74,24 @@ public class Player : MonoBehaviour
         get => _price;
         set
         {
-            if(_price != value)
+            if (_price != value)
             {
                 _price = value;
                 PlayerPrefs.SetInt(PRICE_KEY, _price);
                 OnPriceChanged?.Invoke(_price);
+            }
+        }
+    }
+
+    public int DanceBought
+    {
+        get => _danceBought;
+        set
+        {
+            if (_danceBought != value)
+            {
+                _danceBought = value;
+                PlayerPrefs.SetInt(DANCE_BOUGHT_KEY, _danceBought);
             }
         }
     }
@@ -133,9 +148,7 @@ public class Player : MonoBehaviour
 
     public void SetAsset(List<Dance> asset)
     {
-        Asset = new List<Dance>();
-        for (int i = 0; i < MAX_ASSET_LENGTH && i < asset.Count; i++)
-            Asset.Add(asset[i]);
+        Asset = new List<Dance>(asset);
         SaveAsset();
         OnAssetChanged?.Invoke(Asset);
     }
@@ -166,6 +179,7 @@ public class Player : MonoBehaviour
 
         _money = GetIntOrDefault(MONEY_COUNT_KEY, 1000);
         _price = GetIntOrDefault(PRICE_KEY, 10);
+        _danceBought = GetIntOrDefault(DANCE_BOUGHT_KEY, 0);
 
         string asset_string = GetStringOrDefault(ASSET_KEY, string.Empty);
         string storage_string = GetStringOrDefault(STORAGE_KEY, DEFAULT_STORAGE_SET);
@@ -182,6 +196,7 @@ public class Player : MonoBehaviour
 
         PlayerPrefs.SetInt(MONEY_COUNT_KEY, _money);
         PlayerPrefs.SetInt(PRICE_KEY, _price);
+        PlayerPrefs.SetInt(DANCE_BOUGHT_KEY, _danceBought);
 
         SaveAsset();
         SaveStorage();
@@ -244,5 +259,12 @@ public class Player : MonoBehaviour
     private void SaveStorage() => SaveList(STORAGE_KEY, Storage);
     #endregion Save/Load Tools
 
-    public Dance RandomDance => _allDances[Random.Range(0, _allDances.Count)];
+    public Dance RandomDance
+    {
+        get
+        {
+            var dances = _allDances.Where((dance) => dance.Level == 1).ToArray();
+            return dances[Random.Range(0, dances.Length)];
+        }
+    }
 }

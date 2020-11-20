@@ -7,6 +7,7 @@ using UnityEngine;
 public class Dance : ScriptableObject
 {
     [SerializeField] private int _animationId = 0;
+    [SerializeField] private int _level = 0;
     [SerializeField] private string _lableText = string.Empty;
     [SerializeField] private Sprite _iconSprite = null;
     [SerializeField] private Sprite _backgroundSprite = null;
@@ -14,6 +15,7 @@ public class Dance : ScriptableObject
     [SerializeField] private BonusMove[] _bonusMoves = null;
     [SerializeField] private Dance _nextLevel = null;
 
+    public int Level => _level;
     public int AnimationID => _animationId;
     public string LabelText => _lableText;
     public Sprite IconSprite => _iconSprite;
@@ -30,6 +32,7 @@ public class Dance : ScriptableObject
                obj is Dance dance &&
                base.Equals(obj) &&
                _animationId == dance._animationId &&
+               _level == dance._level &&
                _lableText == dance._lableText &&
                EqualityComparer<Sprite>.Default.Equals(_iconSprite, dance._iconSprite) &&
                EqualityComparer<Sprite>.Default.Equals(_backgroundSprite, dance._backgroundSprite) &&
@@ -43,6 +46,7 @@ public class Dance : ScriptableObject
         var hashCode = 749546344;
         hashCode = hashCode * -1521134295 + base.GetHashCode();
         hashCode = hashCode * -1521134295 + _animationId.GetHashCode();
+        hashCode = hashCode * -1521134295 + _level.GetHashCode();
         hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(_lableText);
         hashCode = hashCode * -1521134295 + EqualityComparer<Sprite>.Default.GetHashCode(_iconSprite);
         hashCode = hashCode * -1521134295 + EqualityComparer<Sprite>.Default.GetHashCode(_backgroundSprite);

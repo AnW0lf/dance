@@ -28,7 +28,7 @@ namespace Assets.Scripts.Inventory
 
         private void SaveAsset()
         {
-            List<Dance> dances = _cells.Select((cell) => cell.Dance).ToList();
+            List<Dance> dances = _cells.Where((cell) => !cell.IsEmpty).Select((cell) => cell.Dance).ToList();
             Player.Instance.SetAsset(dances);
         }
 
@@ -40,6 +40,7 @@ namespace Assets.Scripts.Inventory
                 if (cell.IsEmpty)
                 {
                     cell.SetDance(dance);
+                    SaveAsset();
                     return true;
                 }
             }
