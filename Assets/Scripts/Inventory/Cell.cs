@@ -16,6 +16,8 @@ namespace Assets.Scripts.Inventory
         [SerializeField] private Image _fade = null;
         [SerializeField] private Cell _draggedCell = null;
         [SerializeField] private bool _isAsseted = false;
+        [SerializeField] private GameObject[] _stars = null;
+        [SerializeField] private GameObject[] _starsFade = null;
 
         private MinionDancePreview _dancePreview = null;
 
@@ -31,7 +33,12 @@ namespace Assets.Scripts.Inventory
         public bool IsFaded
         {
             get => _fade.gameObject.activeSelf;
-            set => _fade.gameObject.SetActive(value);
+            set
+            {
+                _fade.gameObject.SetActive(value);
+                for (int i = 0; i < _starsFade.Length; i++)
+                    _starsFade[i].SetActive(value && i < Dance.Level);
+            }
         }
         public UnityAction<Cell> OnCellDrop { get; set; } = null;
         public UnityAction<Cell> OnCellEndDrag { get; set; } = null;
@@ -59,6 +66,9 @@ namespace Assets.Scripts.Inventory
                 _background.gameObject.SetActive(true);
                 _icon.gameObject.SetActive(true);
                 _label.gameObject.SetActive(true);
+
+                for (int i = 0; i < _stars.Length; i++)
+                    _stars[i].SetActive(i < Dance.Level);
             }
         }
 
@@ -74,6 +84,12 @@ namespace Assets.Scripts.Inventory
             _background.gameObject.SetActive(false);
             _icon.gameObject.SetActive(false);
             _label.gameObject.SetActive(false);
+
+            for (int i = 0; i < _stars.Length; i++)
+                _stars[i].SetActive(false);
+
+            for (int i = 0; i < _starsFade.Length; i++)
+                _starsFade[i].SetActive(false);
         }
 
         public void OnBeginDrag(PointerEventData eventData)

@@ -13,6 +13,8 @@ public class Card : MonoBehaviour
     [SerializeField] private Button _button = null;
     [SerializeField] private GameObject _glow = null;
     [SerializeField] private GameObject _fade = null;
+    [SerializeField] private GameObject[] _stars = null;
+    [SerializeField] private GameObject[] _starsFade = null;
 
     public int AnimationID { get; private set; }
 
@@ -27,17 +29,17 @@ public class Card : MonoBehaviour
             {
                 case CardState.NORMAL:
                     _glow.SetActive(false);
-                    _fade.SetActive(false);
+                    FadeOut();
                     _button.interactable = true;
                     break;
                 case CardState.GLOWED:
                     _glow.SetActive(true);
-                    _fade.SetActive(false);
+                    FadeOut();
                     _button.interactable = false;
                     break;
                 case CardState.FADED:
                     _glow.SetActive(false);
-                    _fade.SetActive(true);
+                    FadeIn();
                     _button.interactable = false;
                     break;
             }
@@ -50,11 +52,27 @@ public class Card : MonoBehaviour
         _label.text = dance.LabelText;
         _icon.sprite = dance.IconSprite;
         _icon.enabled = _icon.sprite != null;
+        for (int i = 0; i < _stars.Length; i++)
+            _stars[i].SetActive(i < dance.Level);
     }
 
     public void SetAction(UnityAction action)
     {
         _button.onClick.AddListener(action);
+    }
+
+    private void FadeIn()
+    {
+        _fade.SetActive(true);
+        for (int i = 0; i < _starsFade.Length; i++)
+            _starsFade[i].SetActive(_stars[i].activeSelf);
+    }
+
+    private void FadeOut()
+    {
+        _fade.SetActive(false);
+        for (int i = 0; i < _starsFade.Length; i++)
+            _starsFade[i].SetActive(false);
     }
 }
 
