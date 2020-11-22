@@ -10,7 +10,9 @@ namespace Assets.Scripts.Interface.ChestMiniGame
     {
         [Header("Label settings")]
         [SerializeField] private TextMeshProUGUI _label = null;
-        [SerializeField] private string _statement = string.Empty;
+        [SerializeField] private string _zeroKeyStatement = string.Empty;
+        [SerializeField] private string _oneKeyStatemtnt = string.Empty;
+        [SerializeField] private string _manyKeysStatement = string.Empty;
         [SerializeField] private int _keyCount = 3;
         [Space(20)]
         [Header("Reward sequance")]
@@ -33,7 +35,12 @@ namespace Assets.Scripts.Interface.ChestMiniGame
 
         public void UpdateLabel()
         {
-            _label.text = string.Format(_statement, _keyCount);
+            if (KeyCount == 0)
+                _label.text = string.Format(_zeroKeyStatement, _keyCount);
+            else if (KeyCount == 1)
+                _label.text = string.Format(_oneKeyStatemtnt, _keyCount);
+            else
+                _label.text = string.Format(_manyKeysStatement, _keyCount);
         }
 
         public Reward GetReward()
