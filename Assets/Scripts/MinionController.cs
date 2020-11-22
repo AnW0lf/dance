@@ -20,8 +20,8 @@ public class MinionController : MonoBehaviour
     [SerializeField] private MinionEventListener _eventListener = null;
     [SerializeField] private CardSpawner _cardSpawner = null;
     [SerializeField] private BonusButton _bonusButton = null;
-    [SerializeField] private GameObject _perfectEffect, _bonusEffect;
-    [SerializeField] private LevelProgress _levelProgress = null;
+    [SerializeField] private GameObject _perfectEffect = null;
+    [SerializeField] private GameObject _bonusEffect = null;
     [SerializeField] private GameObject[] _winEffects = null;
 
     private bool _hasEnd = false;

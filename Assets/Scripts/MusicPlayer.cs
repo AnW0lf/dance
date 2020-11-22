@@ -4,7 +4,7 @@ using System.Collections;
 public class MusicPlayer : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource = null;
-    [SerializeField] private AudioClip[] _tracks;
+    [SerializeField] private AudioClip[] _tracks = null;
 
     private AudioClip _currentTrack;
     private Coroutine _fadeSound = null;

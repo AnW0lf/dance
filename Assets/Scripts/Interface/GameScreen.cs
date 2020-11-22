@@ -7,10 +7,9 @@ namespace Assets.Scripts.Interface
     public class GameScreen : MonoBehaviour
     {
         [SerializeField] private bool _visible = false;
-        [SerializeField] private MovePanel _levelPanel = null;
-        [SerializeField] private MovePanel _tapToPlayLabel = null;
         [SerializeField] private Image _tapToPlayZone = null;
         [SerializeField] private LevelScript _levelScript = null;
+        [SerializeField] private MovePanel[] _panels = null;
 
         public bool Visible
         {
@@ -18,8 +17,7 @@ namespace Assets.Scripts.Interface
             private set
             {
                 _visible = value;
-                _levelPanel.Visible = _visible;
-                _tapToPlayLabel.Visible = _visible;
+                foreach (var panel in _panels) panel.Visible = _visible;
                 _tapToPlayZone.raycastTarget = _visible;
             }
         }

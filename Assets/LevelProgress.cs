@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class LevelProgress : MonoBehaviour
 {
-    [SerializeField] private InterfaceCounter _likeCounter;
-    [SerializeField] private Slider _slider;
-    [SerializeField] private int _needLikes;
+    [SerializeField] private InterfaceCounter _likeCounter = null;
+    [SerializeField] private Slider _slider = null;
+    [SerializeField] private int _needLikes = 0;
 
     void Start()
     {
         _slider.maxValue = _needLikes;
-        _likeCounter.OnCountChanged += OnCountChanged;
+        _likeCounter.OnCountChanged += SetSlider;
     }
 
-    private void OnCountChanged(int count)
+    private void SetSlider(int count)
     {
         _slider.value = count;
     }
