@@ -41,8 +41,8 @@ public class Player : MonoBehaviour
     private const string ASSET_KEY = "asset_key";
     #endregion KEYS
 
-    public const int MAX_ASSET_LENGTH = 8;
-    public const string DEFAULT_STORAGE_SET = "Chicken Dance|Gang Style|Nonstop Hip Hop|Quick Cancan|Maca- rena|Break Dance|Let's go Swing|Sunny Twist";
+    public const int MAX_ASSET_LENGTH = 12;
+    public const string DEFAULT_STORAGE_SET = "Chicken Dance|Gang Style|Nonstop Hip Hop|Quick Cancan|Maca- rena|Break Dance|Let's go Swing|Sunny Twist|Dance9|Dance10|Dance11|Dance12";
 
     [SerializeField] private List<Dance> _allDances = null;
 
