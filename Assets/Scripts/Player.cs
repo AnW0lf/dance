@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine.Events;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -31,6 +32,8 @@ public class Player : MonoBehaviour
     }
 
     #region KEYS
+    private const string LEVEL_NUMBER_KEY = "level_number_key";
+    private const string LAST_LEVEL_KEY = "last_level_key";
     private const string CLASSIC_FANS_COUNT_KEY = "classic_fans_count_key";
     private const string STREET_FANS_COUNT_KEY = "street_fans_count_key";
     private const string JAZZ_FANS_COUNT_KEY = "jazz_fans_count_key";
@@ -54,7 +57,36 @@ public class Player : MonoBehaviour
     private int _price = 0;
     private int _danceBought = 0;
 
+    private int _levelNumber = 1;
+    private string _lastLevel = "Level1";
+
     #region Options
+    public int LevelNumber
+    {
+        get => _levelNumber;
+        set
+        {
+            if (_levelNumber != value)
+            {
+                _levelNumber = value;
+                PlayerPrefs.SetInt(LEVEL_NUMBER_KEY, _levelNumber);
+            }
+        }
+    }
+
+    public string LastLevel
+    {
+        get => _lastLevel;
+        set
+        {
+            if (_lastLevel != value)
+            {
+                _lastLevel = value;
+                PlayerPrefs.SetString(LAST_LEVEL_KEY, _lastLevel);
+            }
+        }
+    }
+
     public int Money
     {
         get => _money;
@@ -181,6 +213,9 @@ public class Player : MonoBehaviour
         _price = GetIntOrDefault(PRICE_KEY, 10);
         _danceBought = GetIntOrDefault(DANCE_BOUGHT_KEY, 0);
 
+        _levelNumber = GetIntOrDefault(LEVEL_NUMBER_KEY, 1);
+        _lastLevel = GetStringOrDefault(LAST_LEVEL_KEY, "Level1");
+
         string asset_string = GetStringOrDefault(ASSET_KEY, string.Empty);
         string storage_string = GetStringOrDefault(STORAGE_KEY, DEFAULT_STORAGE_SET);
 
@@ -197,6 +232,9 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetInt(MONEY_COUNT_KEY, _money);
         PlayerPrefs.SetInt(PRICE_KEY, _price);
         PlayerPrefs.SetInt(DANCE_BOUGHT_KEY, _danceBought);
+
+        PlayerPrefs.SetInt(LEVEL_NUMBER_KEY, _levelNumber);
+        PlayerPrefs.SetString(LAST_LEVEL_KEY, _lastLevel);
 
         SaveAsset();
         SaveStorage();
