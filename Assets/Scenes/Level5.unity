@@ -11357,7 +11357,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SampleSceneDesign_2
+          m_StringArgument: Level5
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &300518075
@@ -18164,7 +18164,7 @@ PrefabInstance:
     - target: {fileID: 2665004322713005753, guid: 4f2864c313b497840a9e4be7edbb098c,
         type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: SampleSceneDesign_3
+      value: Level6
       objectReference: {fileID: 0}
     - target: {fileID: 6164234385694570493, guid: 4f2864c313b497840a9e4be7edbb098c,
         type: 3}
