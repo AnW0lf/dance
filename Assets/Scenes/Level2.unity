@@ -22870,6 +22870,11 @@ PrefabInstance:
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadInventoryScene
       objectReference: {fileID: 0}
+    - target: {fileID: 4980821616420864636, guid: 5b607cafd9c34b54ebb5ab7084aae623,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 5266654867666623234, guid: 5b607cafd9c34b54ebb5ab7084aae623,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -22889,6 +22894,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5916905601128415210, guid: 5b607cafd9c34b54ebb5ab7084aae623,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6483300117418781626, guid: 5b607cafd9c34b54ebb5ab7084aae623,
         type: 3}

@@ -13,6 +13,11 @@ public class MoveCamera : MonoBehaviour
     [SerializeField] private Transform _minion = null;
     [SerializeField] private float _distance = 2f;
 
+    [Header("Wiggle")]
+    [SerializeField] private Vector3 _wiggleOffset = Vector3.zero;
+    [SerializeField] private float _wigglePeriod = 1f;
+    private Coroutine _wiggle = null;
+
     #region PID Controller
     [Space(20)]
     [Header("PID Controller")]
@@ -34,6 +39,23 @@ public class MoveCamera : MonoBehaviour
     {
         OnBegin?.Invoke();
         StartCoroutine(Moving());
+    }
+
+    private IEnumerator Wiggle()
+    {
+        Vector3 startPosition = transform.position;
+        Vector3 endPosition = startPosition + _wiggleOffset;
+        float timer = 0;
+
+        while (true)
+        {
+            timer += Time.deltaTime;
+
+            float omega = Mathf.PI * 2f / _wigglePeriod;
+            transform.position = Vector3.Lerp(startPosition, endPosition, (Mathf.Sin(omega * timer) + 1f) / 2f);
+
+            yield return null;
+        }
     }
 
     private IEnumerator Moving()
@@ -80,6 +102,8 @@ public class MoveCamera : MonoBehaviour
 
     private void Start()
     {
+        _wiggle = StartCoroutine(Wiggle());
+        OnBegin += () => StopCoroutine(_wiggle);
         OnEnd += BeginFollow;
     }
 

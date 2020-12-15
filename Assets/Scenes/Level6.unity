@@ -33588,6 +33588,8 @@ MonoBehaviour:
   - {fileID: 181632583}
   _minion: {fileID: 1022310277}
   _distance: 1.2
+  _wiggleOffset: {x: 0, y: 1.5, z: 0}
+  _wigglePeriod: 3
   _kProportional: 2
   _kIntegrating: 0.4
   _kDifferentiating: 2
@@ -47280,7 +47282,7 @@ PrefabInstance:
     - target: {fileID: 2665004322713005753, guid: 4f2864c313b497840a9e4be7edbb098c,
         type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level4
+      value: Level3
       objectReference: {fileID: 0}
     - target: {fileID: 6164234385694570493, guid: 4f2864c313b497840a9e4be7edbb098c,
         type: 3}
@@ -57274,6 +57276,11 @@ PrefabInstance:
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadInventoryScene
       objectReference: {fileID: 0}
+    - target: {fileID: 4980821616420864636, guid: 5b607cafd9c34b54ebb5ab7084aae623,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 5266654867666623234, guid: 5b607cafd9c34b54ebb5ab7084aae623,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -57293,6 +57300,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5916905601128415210, guid: 5b607cafd9c34b54ebb5ab7084aae623,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6483300117418781626, guid: 5b607cafd9c34b54ebb5ab7084aae623,
         type: 3}
