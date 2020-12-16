@@ -209,7 +209,7 @@ public class Player : MonoBehaviour
         _jazzFansCount = GetIntOrDefault(JAZZ_FANS_COUNT_KEY, 1);
         _streetFansCount = GetIntOrDefault(STREET_FANS_COUNT_KEY, 1);
 
-        _money = GetIntOrDefault(MONEY_COUNT_KEY, 1000);
+        _money = GetIntOrDefault(MONEY_COUNT_KEY, 0);
         _price = GetIntOrDefault(PRICE_KEY, 10);
         _danceBought = GetIntOrDefault(DANCE_BOUGHT_KEY, 0);
 
