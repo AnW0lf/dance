@@ -18,7 +18,12 @@ namespace Assets.Scripts.Interface.ChestMiniGame
         [SerializeField] private RewardMiniGame _miniGame = null;
         [SerializeField] private List<ChestSkin> _skins = null;
 
+        [Header("Jump effect")]
+        [SerializeField] private Animator _animator = null;
+        [SerializeField] private float _jumpOffset = 0f;
+
         public bool IsOpened { get; private set; } = false;
+        public bool IsDeactive { get; private set; } = false;
 
         public void Reward()
         {
@@ -77,6 +82,7 @@ namespace Assets.Scripts.Interface.ChestMiniGame
 
         public void Deactive()
         {
+            IsDeactive = true;
             StartCoroutine(SwapColor(Color.grey));
         }
 
@@ -91,6 +97,28 @@ namespace Assets.Scripts.Interface.ChestMiniGame
                 _fade.color = Color.Lerp(startColor, color, timer / duration);
                 _chestIcon.color = Color.Lerp(startColor, color, timer / duration);
                 yield return null;
+            }
+        }
+
+        private float _timer = 0f;
+        private float _delay = 4f;
+
+        private void Start()
+        {
+            _timer = _delay + _jumpOffset;
+        }
+
+        private void Update()
+        {
+            if (!IsOpened && !IsDeactive)
+            {
+                _timer -= Time.deltaTime;
+
+                if (_timer <= 0f)
+                {
+                    _animator.SetTrigger("Jump");
+                    _timer = _delay;
+                }
             }
         }
     }
