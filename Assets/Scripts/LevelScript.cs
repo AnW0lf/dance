@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using Assets.Scripts;
 
 public class LevelScript : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class LevelScript : MonoBehaviour
     [SerializeField] private GameObject _defeatScreen = null;
 
     private bool _levelEnded = false;
+
+    private void Start()
+    {
+        Analytics.Instance.LogLevelStartedEvent(Player.Instance.LevelNumber);
+    }
 
     private void LateUpdate()
     {
@@ -67,6 +73,8 @@ public class LevelScript : MonoBehaviour
 
         if (win)
         {
+            Analytics.Instance.LogLevelCompleteEvent(Player.Instance.LevelNumber);
+
             _victoryScreen.SetActive(true);
 
             FanController[] fans = FindObjectsOfType<FanController>();
