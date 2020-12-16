@@ -164,7 +164,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a3c5eb91b0456f4a984bbc3c1cca7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _allDances: []
+  _allDances:
+  - {fileID: 11400000, guid: 0c64d335c47b7c34ba512f507319e699, type: 2}
+  - {fileID: 11400000, guid: 77c6fcda17cbd4d4282dc994cbc0ee6e, type: 2}
+  - {fileID: 11400000, guid: 398b6127981cc5643ab00a3d17920fff, type: 2}
+  - {fileID: 11400000, guid: 7990b170c8d5e2b47a7849f2eed8f2de, type: 2}
+  - {fileID: 11400000, guid: 19c3e33b73b27c64a9878cfbe4e9d656, type: 2}
+  - {fileID: 11400000, guid: 66c1d2f06e552d3428f28478d6901e4f, type: 2}
+  - {fileID: 11400000, guid: be6ba8d3fe0f6f84aacddf7d273b9d74, type: 2}
+  - {fileID: 11400000, guid: cf913ed37ea3592409c0a4aed9b32325, type: 2}
+  - {fileID: 11400000, guid: 43a925f6486374149b6bcd1052cb0155, type: 2}
+  - {fileID: 11400000, guid: d5f4348991bcd7f40bf1780e19595a3f, type: 2}
+  - {fileID: 11400000, guid: 6b554be71121ee348a5ba58ce0bf2765, type: 2}
+  - {fileID: 11400000, guid: 242cfb92275b3ae418176e5209774d46, type: 2}
 --- !u!1 &1811536478
 GameObject:
   m_ObjectHideFlags: 0

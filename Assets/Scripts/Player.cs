@@ -240,6 +240,11 @@ public class Player : MonoBehaviour
         SaveStorage();
     }
 
+    public void CompleteLevel()
+    {
+        LevelNumber++;
+    }
+
     #region Save/Load Tools
     private int GetIntOrDefault(string key, int @default)
     {
