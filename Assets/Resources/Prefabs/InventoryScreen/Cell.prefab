@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Break Dance
+  m_text: Nonstop Hip Hop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 65ea4bbc255bc5d4583f62bdfdb34550, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 318f2d73998919741b83990bbccc60c2, type: 2}
@@ -1111,8 +1111,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 20
@@ -1152,10 +1152,10 @@ MonoBehaviour:
   m_margin: {x: 10, y: 20, z: 10, w: 0}
   m_textInfo:
     textComponent: {fileID: 369711458345736994}
-    characterCount: 11
+    characterCount: 15
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
     lineCount: 2
     pageCount: 1

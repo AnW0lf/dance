@@ -707,6 +707,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2132,6 +2137,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2818,6 +2828,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -3412,6 +3427,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -4012,6 +4032,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -4612,6 +4637,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -5206,6 +5236,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -5806,6 +5841,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -6683,6 +6723,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -7322,6 +7367,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -7959,6 +8009,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -8838,6 +8893,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -9522,6 +9582,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -10116,6 +10181,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -15733,6 +15803,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -16492,6 +16567,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -17143,6 +17223,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -17737,6 +17822,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -18382,6 +18472,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -18976,6 +19071,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -19570,6 +19670,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -20480,6 +20585,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -21466,6 +21576,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -22162,6 +22277,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -22830,6 +22950,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -23492,6 +23617,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -24086,6 +24216,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -24251,7 +24386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _likeCounter: {fileID: 1066746338}
   _slider: {fileID: 756470171}
-  _needLikes: 400
+  _needLikes: 1000
 --- !u!114 &730221889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24914,6 +25049,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -25802,6 +25942,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -26029,6 +26174,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f07c80b2780ca4e8638106fdd13f16, type: 3}
 --- !u!4 &815340900 stripped
@@ -26817,6 +26967,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -27757,6 +27912,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -28351,6 +28511,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -33588,8 +33753,8 @@ MonoBehaviour:
   - {fileID: 181632583}
   _minion: {fileID: 1022310277}
   _distance: 1.2
-  _wiggleOffset: {x: 0, y: 1.5, z: 0}
-  _wigglePeriod: 3
+  _wiggleOffset: {x: 0, y: 1, z: 0}
+  _wigglePeriod: 5
   _kProportional: 2
   _kIntegrating: 0.4
   _kDifferentiating: 2
@@ -33680,6 +33845,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f07c80b2780ca4e8638106fdd13f16, type: 3}
 --- !u!1001 &968586100
@@ -34254,6 +34424,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -34854,6 +35029,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -35774,6 +35954,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -36368,6 +36553,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -37130,6 +37320,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -38102,6 +38297,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -38177,9 +38377,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1066746336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f1d2b71386e2604c9adc55519d333d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 88da2f838c7f2774289aaf5c7dd7b79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _count: 0
+  _counter: {fileID: 2057533413}
+  _icon: {fileID: 798143945}
+  _iconPulseScale: 1.25
+  _iconPulseDuration: 0.3
+  _ltt: 1
 --- !u!114 &1066746339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39024,6 +39230,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -39713,6 +39924,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -40779,6 +40995,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -41517,6 +41738,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -42111,6 +42337,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -42705,6 +42936,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -43412,6 +43648,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -44006,6 +44247,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -44746,6 +44992,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -45873,6 +46124,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -46518,6 +46774,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -46790,7 +47051,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 65ea4bbc255bc5d4583f62bdfdb34550, type: 2}
   m_sharedMaterial: {fileID: -2302849935552043634, guid: 65ea4bbc255bc5d4583f62bdfdb34550,
@@ -47073,6 +47334,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f07c80b2780ca4e8638106fdd13f16, type: 3}
 --- !u!4 &1405252774 stripped
@@ -48124,6 +48390,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -48718,6 +48989,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -49312,6 +49588,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -50017,6 +50298,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -50662,6 +50948,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -51262,6 +51553,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -51997,6 +52293,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -52636,6 +52937,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -53230,6 +53536,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -54013,6 +54324,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -54652,6 +54968,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -55303,6 +55624,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -56148,6 +56474,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -56838,6 +57169,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -57401,7 +57737,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2
+  m_text: 7
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 65ea4bbc255bc5d4583f62bdfdb34550, type: 2}
   m_sharedMaterial: {fileID: -2302849935552043634, guid: 65ea4bbc255bc5d4583f62bdfdb34550,
@@ -58080,6 +58416,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -58799,6 +59140,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -59485,6 +59831,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -60289,6 +60640,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -60883,6 +61239,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -61483,6 +61844,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -62224,6 +62590,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -63179,6 +63550,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -63773,6 +64149,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -64586,6 +64967,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -65360,6 +65746,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -66479,6 +66870,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -67362,6 +67758,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x

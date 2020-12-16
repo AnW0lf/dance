@@ -701,6 +701,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -1791,6 +1796,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2391,6 +2401,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2985,6 +3000,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -3579,6 +3599,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -4072,7 +4097,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4717,6 +4741,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -5311,6 +5340,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -10220,7 +10254,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10382,7 +10415,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.79607844, g: 1, b: 0, a: 0.7176471}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11072,6 +11104,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -11666,6 +11703,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -11915,7 +11957,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -12765,6 +12806,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -12840,7 +12886,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.2784314, g: 0.96470594, b: 0.5058824, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -13434,6 +13479,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -13609,9 +13659,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba4ea00e5f91928428e67adffe3a3451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _likeCounter: {fileID: 1066746338}
+  _likeCounter: {fileID: 0}
   _slider: {fileID: 756470171}
-  _needLikes: 2500
+  _needLikes: 75
 --- !u!114 &730221889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13681,7 +13731,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -13755,7 +13804,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0.7438345, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -14026,7 +14074,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -14135,6 +14182,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f07c80b2780ca4e8638106fdd13f16, type: 3}
 --- !u!1 &827575438
@@ -14190,7 +14242,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -14280,7 +14331,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -14874,6 +14924,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -14948,7 +15003,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -15022,7 +15076,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -15102,7 +15155,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -15316,7 +15368,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -15910,6 +15961,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -15984,7 +16040,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21101,8 +21156,8 @@ MonoBehaviour:
   - {fileID: 1214590300}
   _minion: {fileID: 1022310277}
   _distance: 1.2
-  _wiggleOffset: {x: 0, y: 0, z: 0}
-  _wigglePeriod: 1
+  _wiggleOffset: {x: 0, y: 1, z: 0}
+  _wigglePeriod: 5
   _kProportional: 2
   _kIntegrating: 0.4
   _kDifferentiating: 2
@@ -21193,6 +21248,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f07c80b2780ca4e8638106fdd13f16, type: 3}
 --- !u!1 &980061868
@@ -21860,7 +21920,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22550,6 +22609,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -22624,7 +22688,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22763,7 +22826,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22832,9 +22894,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1066746336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 88da2f838c7f2774289aaf5c7dd7b79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _count: 0
+  _counter: {fileID: 2057533413}
+  _icon: {fileID: 798143945}
+  _iconPulseScale: 1.25
+  _iconPulseDuration: 0.3
+  _ltt: 1
 --- !u!114 &1066746339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22904,7 +22972,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -23030,7 +23097,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -23126,7 +23192,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -23720,6 +23785,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -23795,7 +23865,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -23973,7 +24042,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -24048,7 +24116,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -24259,7 +24326,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -24853,6 +24919,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -24955,7 +25026,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.4}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -25256,7 +25326,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -26061,6 +26130,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -26180,7 +26254,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -26422,6 +26495,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f07c80b2780ca4e8638106fdd13f16, type: 3}
 --- !u!4 &1405252774 stripped
@@ -27148,6 +27226,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -27847,6 +27930,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -28441,6 +28529,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -28579,7 +28672,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.25098038, b: 0.66959876, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -28751,7 +28843,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.95686275, g: 0.16318414, b: 0.09803921, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -28966,7 +29057,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -29643,6 +29733,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -29717,7 +29812,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -30017,7 +30111,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.25490198, b: 0.5058824, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -30127,7 +30220,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.5882353, g: 0.29411766, b: 0, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -30458,7 +30550,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.25490198, b: 0.5058824, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -30577,7 +30668,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.34901962, g: 1, b: 0, a: 0.7176471}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -30661,7 +30751,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -30798,7 +30887,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.098039225, g: 0.9568628, b: 0.3803922, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -31241,7 +31329,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.25490198, b: 0.5058824, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -31315,7 +31402,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -31402,7 +31488,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -32274,6 +32359,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 762195554}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _likeTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 1873804622}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -32364,7 +32454,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -32438,7 +32527,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -35472,7 +35560,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -37234,7 +37322,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
