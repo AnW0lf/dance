@@ -49,6 +49,13 @@ namespace Assets.Scripts.Interface.ChestMiniGame
             Reward reward = _sequance[_index];
             _index++;
             UpdateLabel();
+
+            if (KeyCount == 0)
+            {
+                foreach (var chest in FindObjectsOfType<Chest>())
+                    if (!chest.IsOpened) chest.Deactive();
+            }
+
             return reward;
         }
     }

@@ -18,6 +18,8 @@ namespace Assets.Scripts.Interface.ChestMiniGame
         [SerializeField] private RewardMiniGame _miniGame = null;
         [SerializeField] private List<ChestSkin> _skins = null;
 
+        public bool IsOpened { get; private set; } = false;
+
         public void Reward()
         {
             if (_miniGame.KeyCount <= 0) return;
@@ -48,6 +50,8 @@ namespace Assets.Scripts.Interface.ChestMiniGame
 
             _fade.raycastTarget = false;
             StartCoroutine(Fading(0f));
+
+            IsOpened = true;
         }
 
         private IEnumerator Fading(float alpha)
@@ -67,6 +71,25 @@ namespace Assets.Scripts.Interface.ChestMiniGame
                 color.a = Mathf.Lerp(startAlpha, alpha, timer / duration);
                 _chestIcon.color = color;
 
+                yield return null;
+            }
+        }
+
+        public void Deactive()
+        {
+            StartCoroutine(SwapColor(Color.grey));
+        }
+
+        private IEnumerator SwapColor(Color color)
+        {
+            Color startColor = _fade.color;
+            float timer = 0f;
+            float duration = 1f;
+            while (timer <= duration)
+            {
+                timer += Time.deltaTime;
+                _fade.color = Color.Lerp(startColor, color, timer / duration);
+                _chestIcon.color = Color.Lerp(startColor, color, timer / duration);
                 yield return null;
             }
         }
