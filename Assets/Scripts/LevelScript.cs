@@ -78,6 +78,7 @@ public class LevelScript : MonoBehaviour
         {
             Analytics.Instance.LogLevelCompleteEvent(Player.Instance.LevelNumber);
             Player.Instance.LastLevel = _nextLevelName;
+            Player.Instance.CompleteLevel();
 
             _victoryScreen.SetActive(true);
 
