@@ -13,8 +13,24 @@ namespace Assets.Scripts.Interface
         {
             _image = GetComponent<Image>();
             CanSpend = Player.Instance.Price <= Player.Instance.Money;
-            Player.Instance.OnMoneyChanged += (money) => CanSpend = Player.Instance.Price <= money;
-            Player.Instance.OnPriceChanged += (price) => CanSpend = price <= Player.Instance.Money;
+            Player.Instance.OnMoneyChanged += OnMoneyChanged;
+            Player.Instance.OnPriceChanged += OnPriceChanged;
+        }
+
+        private void OnDestroy()
+        {
+            Player.Instance.OnMoneyChanged -= OnMoneyChanged;
+            Player.Instance.OnPriceChanged -= OnPriceChanged;
+        }
+
+        private void OnMoneyChanged(int money)
+        {
+            CanSpend = money >= Player.Instance.Price;
+        }
+
+        private void OnPriceChanged(int price)
+        {
+            CanSpend = Player.Instance.Money >= price;
         }
 
         private bool _canSpend = false;
