@@ -21,13 +21,10 @@ namespace Assets.Scripts.Interface
         public bool CanSpend
         {
             get => _canSpend;
-            set 
+            set
             {
-                if (_canSpend != value)
-                {
-                    _canSpend = value;
-                    _image.enabled = _canSpend;
-                }
+                _canSpend = value;
+                _image.enabled = _canSpend;
             }
         }
     }

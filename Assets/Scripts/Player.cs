@@ -44,8 +44,8 @@ public class Player : MonoBehaviour
     private const string ASSET_KEY = "asset_key";
     #endregion KEYS
 
-    public const int MAX_ASSET_LENGTH = 12;
-    public const string DEFAULT_STORAGE_SET = "Chicken Dance|Gang Style|Nonstop Hip Hop|Quick Cancan|Maca- rena|Break Dance|Let's go Swing|Sunny Twist|Dance9|Dance10|Dance11|Dance12";
+    public const int MAX_ASSET_LENGTH = 8;
+    public const string DEFAULT_ASSET_SET = "Chicken Dance|Gang Style|Nonstop Hip Hop|Quick Cancan|Maca- rena|Break Dance|Let's go Swing|Sunny Twist";
 
     [SerializeField] private List<Dance> _allDances = null;
 
@@ -216,8 +216,8 @@ public class Player : MonoBehaviour
         _levelNumber = GetIntOrDefault(LEVEL_NUMBER_KEY, 1);
         _lastLevel = GetStringOrDefault(LAST_LEVEL_KEY, "Level1");
 
-        string asset_string = GetStringOrDefault(ASSET_KEY, string.Empty);
-        string storage_string = GetStringOrDefault(STORAGE_KEY, DEFAULT_STORAGE_SET);
+        string asset_string = GetStringOrDefault(ASSET_KEY, DEFAULT_ASSET_SET);
+        string storage_string = GetStringOrDefault(STORAGE_KEY, string.Empty);
 
         Asset = StringToDanceList(asset_string);
         Storage = StringToDanceList(storage_string);
