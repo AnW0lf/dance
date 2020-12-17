@@ -6,12 +6,14 @@ using Assets.Scripts;
 public class LevelScript : MonoBehaviour
 {
     [Header("Start level")]
+    [SerializeField] private string _currentLevelName = string.Empty;
     [SerializeField] private MoveCamera _moveCamera = null;
     [SerializeField] private LevelName _levelName = null;
     [SerializeField] private MovePanel[] _panels = null;
 
     [Space(20)]
     [Header("End level")]
+    [SerializeField] private string _nextLevelName = string.Empty;
     [SerializeField] private MinionController _minion = null;
     [SerializeField] private Timer _timer = null;
     [SerializeField] private MovePanel _bottomPanel = null;
@@ -24,6 +26,7 @@ public class LevelScript : MonoBehaviour
     private void Start()
     {
         Analytics.Instance.LogLevelStartedEvent(Player.Instance.LevelNumber);
+        Player.Instance.LastLevel = _currentLevelName;
     }
 
     private void LateUpdate()
@@ -74,6 +77,7 @@ public class LevelScript : MonoBehaviour
         if (win)
         {
             Analytics.Instance.LogLevelCompleteEvent(Player.Instance.LevelNumber);
+            Player.Instance.LastLevel = _nextLevelName;
 
             _victoryScreen.SetActive(true);
 

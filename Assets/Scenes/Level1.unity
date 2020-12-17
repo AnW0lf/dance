@@ -4239,6 +4239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219cd4f15321cf04db6b161acb204203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentLevelName: Level1
   _moveCamera: {fileID: 963194233}
   _levelName: {fileID: 1603095707}
   _panels:
@@ -4246,6 +4247,7 @@ MonoBehaviour:
   - {fileID: 762195555}
   - {fileID: 1066746339}
   - {fileID: 730221889}
+  _nextLevelName: Level2
   _minion: {fileID: 8888981335394995998}
   _timer: {fileID: 762195554}
   _bottomPanel: {fileID: 63831235}
@@ -10823,7 +10825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 191.435, y: 0}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2057533413
