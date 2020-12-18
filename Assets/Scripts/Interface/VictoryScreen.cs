@@ -25,14 +25,14 @@ public class VictoryScreen : MonoBehaviour
     {
         _smile.Visible = true;
         _label.Visible = true;
-        LeanTween.delayedCall(1.2f, ShowMiniGame);
+        LeanTween.delayedCall(0.9f, ShowMiniGame);
     }
 
     public void ShowMiniGame()
     {
         _miniGame.transform.localScale = Vector3.zero;
         _miniGame.gameObject.SetActive(true);
-        _miniGame.gameObject.LeanScale(Vector3.one * 1f, 0.5f);
+        _miniGame.gameObject.LeanScale(Vector3.one * 1f, 0.25f);
     }
 
     private void Update()
