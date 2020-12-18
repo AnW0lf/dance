@@ -1665,7 +1665,7 @@ PrefabInstance:
     - target: {fileID: 1513567855304053971, guid: 5628724f857308b4ea31a3f9159ae4cd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 191.435
       objectReference: {fileID: 0}
     - target: {fileID: 1513567855304053971, guid: 5628724f857308b4ea31a3f9159ae4cd,
         type: 3}
@@ -48725,6 +48725,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6164234386287905457, guid: 4f2864c313b497840a9e4be7edbb098c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6164234386287905459, guid: 4f2864c313b497840a9e4be7edbb098c,
         type: 3}
       propertyPath: _sequance.Array.data[1]._type
@@ -67678,7 +67683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 191.435, y: 0}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2057533413

@@ -28978,6 +28978,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6164234386287905457, guid: 4f2864c313b497840a9e4be7edbb098c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6164234386287905459, guid: 4f2864c313b497840a9e4be7edbb098c,
         type: 3}
       propertyPath: _sequance.Array.data[1]._type
