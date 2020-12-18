@@ -712,6 +712,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -1469,6 +1490,231 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b395d5d6eb4b4b846acc021ee036b744, type: 3}
+--- !u!1001 &92096717
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 753076325}
+    m_Modifications:
+    - target: {fileID: 1513567853610282652, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567853610282652, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567853610282652, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567853610282652, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854325428202, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567854997028405, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_Name
+      value: MoneyCounter
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567855304053969, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567855304053969, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567855304053969, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567855304053969, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567855304053971, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567855304053971, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567855304053971, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 191.435
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567855304053971, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513567855304053971, guid: 5628724f857308b4ea31a3f9159ae4cd,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5628724f857308b4ea31a3f9159ae4cd, type: 3}
+--- !u!114 &92096718 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1513567854997028392, guid: 5628724f857308b4ea31a3f9159ae4cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 92096717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1779a494ed3794a9a23462978cabf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!224 &92096719 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1513567854997028394, guid: 5628724f857308b4ea31a3f9159ae4cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 92096717}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &92096720 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1513567854997028395, guid: 5628724f857308b4ea31a3f9159ae4cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 92096717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b490c47b5b405d4f83b702d8e5291af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!224 &92096721 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1513567853610282652, guid: 5628724f857308b4ea31a3f9159ae4cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 92096717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &99406991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,6 +2388,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2833,6 +3100,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -3432,6 +3720,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -4031,6 +4340,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -4636,6 +4966,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -5235,6 +5586,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -5840,6 +6212,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -6026,7 +6419,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.7963095, g: 1, b: 0, a: 0.7176471}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6631,6 +7023,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -7275,6 +7688,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -7917,6 +8351,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -8197,7 +8652,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8802,6 +9256,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -9491,6 +9966,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -10090,6 +10586,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -14951,7 +15468,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -15683,6 +16199,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -16447,6 +16984,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -17103,6 +17661,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -17702,6 +18281,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -18352,6 +18952,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -18951,6 +19572,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -19550,6 +20192,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -20465,6 +21128,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -20551,7 +21235,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21457,6 +22140,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -22158,6 +22862,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -22233,7 +22958,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.2784314, g: 0.96470594, b: 0.5058824, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22832,6 +23556,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -23499,6 +24244,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -24098,6 +24864,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -24242,7 +25029,7 @@ RectTransform:
   - {fileID: 1381856119}
   - {fileID: 643667282}
   m_Father: {fileID: 753076325}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -24333,7 +25120,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -24932,6 +25718,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -25012,7 +25819,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0.7438345, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -25069,6 +25875,7 @@ RectTransform:
   m_Children:
   - {fileID: 762195553}
   - {fileID: 1066746337}
+  - {fileID: 92096719}
   - {fileID: 730221887}
   m_Father: {fileID: 289394728}
   m_RootOrder: 0
@@ -25826,6 +26633,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -25945,7 +26773,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -26059,6 +26886,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f07c80b2780ca4e8638106fdd13f16, type: 3}
 --- !u!4 &815340900 stripped
@@ -26165,7 +27013,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -26255,7 +27102,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -26854,6 +27700,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -26934,7 +27801,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -27008,7 +27874,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -27203,7 +28068,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -27802,6 +28666,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -28401,6 +29286,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -28520,7 +29426,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -33614,6 +34519,7 @@ MonoBehaviour:
   - {fileID: 63831235}
   - {fileID: 762195555}
   - {fileID: 1066746339}
+  - {fileID: 92096720}
   - {fileID: 730221889}
   _nextLevelName: Level1
   _minion: {fileID: 8888981335394995998}
@@ -33738,6 +34644,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f07c80b2780ca4e8638106fdd13f16, type: 3}
 --- !u!1001 &968586100
@@ -34317,6 +35244,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -34922,6 +35870,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -35053,7 +36022,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -35844,6 +36812,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -36443,6 +37432,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -36568,7 +37578,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -37211,6 +38220,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -37301,7 +38331,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.34901962, g: 1, b: 0, a: 0.7176471}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -37447,7 +38476,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -38190,6 +39218,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -38388,7 +39437,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -38520,7 +39568,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -39119,6 +40166,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -39215,7 +40283,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -39814,6 +40881,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -39889,7 +40977,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -40073,7 +41160,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -40148,7 +41234,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -40888,6 +41973,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -41033,7 +42139,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -41632,6 +42737,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -42231,6 +43357,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -42830,6 +43977,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -42932,7 +44100,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.4}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -43543,6 +44710,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -44142,6 +45330,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -44887,6 +46096,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -45153,7 +46383,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -45876,6 +47105,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -46526,6 +47776,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -46795,7 +48066,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -47087,6 +48357,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33f07c80b2780ca4e8638106fdd13f16, type: 3}
 --- !u!4 &1405252774 stripped
@@ -48113,6 +49404,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -48712,6 +50024,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -49311,6 +50644,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -50021,6 +51375,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -50671,6 +52046,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -51276,6 +52672,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -52010,6 +53427,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -52654,6 +54092,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -53253,6 +54712,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -53392,7 +54872,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.95686275, g: 0.16318414, b: 0.09803921, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -54042,6 +55521,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -54686,6 +56186,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -55342,6 +56863,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -55416,7 +56958,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -55595,7 +57136,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -56194,6 +57734,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -56889,6 +58450,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -57449,7 +59031,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -58137,6 +59718,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -58861,6 +60463,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -59552,6 +61175,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -59648,7 +61292,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.25490198, b: 0.5058824, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -59764,7 +61407,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.5882353, g: 0.29411766, b: 0, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -60363,6 +62005,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -60962,6 +62625,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -61567,6 +63251,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -62313,6 +64018,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -62579,7 +64305,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.25490198, b: 0.5058824, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -63274,6 +64999,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -63873,6 +65619,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -63957,7 +65724,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -64061,7 +65827,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.098039225, g: 0.9568628, b: 0.3803922, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -64660,6 +66425,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -65439,6 +67225,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -65529,7 +67336,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.25490198, b: 0.5058824, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -65654,7 +67460,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -65852,7 +67657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 191.435, y: 0}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2057533413
@@ -65870,7 +67675,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -66566,6 +68370,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -67273,6 +69098,27 @@ PrefabInstance:
       propertyPath: _likeTargetInterfacePoint
       value: 
       objectReference: {fileID: 1873804622}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCounter
+      value: 
+      objectReference: {fileID: 92096718}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyTargetInterfacePoint
+      value: 
+      objectReference: {fileID: 92096721}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyPrefab
+      value: 
+      objectReference: {fileID: 5824420752364449341, guid: 3b263ee776064d942b52b0c6d70e7f39,
+        type: 3}
+    - target: {fileID: 7323128000485658989, guid: 33f07c80b2780ca4e8638106fdd13f16,
+        type: 3}
+      propertyPath: _moneyCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7323128000613248963, guid: 33f07c80b2780ca4e8638106fdd13f16,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -67398,7 +69244,6 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -68903,7 +70748,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -69986,7 +71831,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
