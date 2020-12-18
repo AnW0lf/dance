@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 620104d604ebb7740b3c16410dc815fd, type: 3}
-  m_Name: Dance12_3
+  m_Name: Floor Spin 1
   m_EditorClassIdentifier: 
-  _animationId: 12
-  _level: 3
-  _lableText: Dance12
+  _animationId: 10
+  _level: 2
+  _lableText: Floor Spin
   _iconSprite: {fileID: 21300000, guid: 01ff9cfdffe329c49b7378533b6be726, type: 3}
   _backgroundSprite: {fileID: 21300000, guid: ab584de0445b7244ca138add9bce7b4d, type: 3}
-  _style: 1
+  _style: 3
   _bonusMoves:
-  - _start: 0.15
-    _length: 0.1
+  - _start: 0.2
+    _length: 0.05
   - _start: 0.4
     _length: 0.05
-  _nextLevel: {fileID: 0}
+  _nextLevel: {fileID: 11400000, guid: 849ddda8bacc09548aab8b60f6ee502b, type: 2}

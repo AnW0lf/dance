@@ -82,6 +82,7 @@ namespace Assets.Scripts.Interface.ChestMiniGame
 
         public void Deactive()
         {
+            if (IsOpened) return;
             IsDeactive = true;
             StartCoroutine(SwapColor(Color.grey));
         }

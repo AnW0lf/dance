@@ -377,33 +377,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &-1078034864664209530
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Dance 12 0
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 163bbe3b502cc29489763875eb5b60f9,
-    type: 3}
-  m_Tag: Dance
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &-1052034994625277530
 AnimatorState:
   serializedVersion: 5
@@ -615,33 +588,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &305215964884649029
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Dance 12
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 163bbe3b502cc29489763875eb5b60f9,
-    type: 3}
-  m_Tag: Dance
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &1381968080764624860
 AnimatorState:
   serializedVersion: 5
@@ -832,9 +778,6 @@ AnimatorStateMachine:
     m_State: {fileID: -1238759536927045475}
     m_Position: {x: -210, y: 760, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 305215964884649029}
-    m_Position: {x: -210, y: 810, z: 0}
-  - serializedVersion: 1
     m_State: {fileID: -778872241512874463}
     m_Position: {x: -420, y: 660, z: 0}
   - serializedVersion: 1
@@ -843,9 +786,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -640392450069125786}
     m_Position: {x: -420, y: 760, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -1078034864664209530}
-    m_Position: {x: -420, y: 810, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
