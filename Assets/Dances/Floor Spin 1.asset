@@ -15,8 +15,8 @@ MonoBehaviour:
   _animationId: 10
   _level: 2
   _lableText: Floor Spin
-  _iconSprite: {fileID: 21300000, guid: 01ff9cfdffe329c49b7378533b6be726, type: 3}
-  _backgroundSprite: {fileID: 21300000, guid: ab584de0445b7244ca138add9bce7b4d, type: 3}
+  _iconSprite: {fileID: 21300000, guid: 21f73fd0dcbff2c47a18f18df1da065c, type: 3}
+  _backgroundSprite: {fileID: 21300000, guid: 448da1362e1336540b9e48db487816ee, type: 3}
   _style: 3
   _bonusMoves:
   - _start: 0.2

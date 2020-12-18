@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     #endregion KEYS
 
     public const int MAX_ASSET_LENGTH = 8;
-    public const string DEFAULT_ASSET_SET = "Chicken Dance|Gang Style|Nonstop Hip Hop|Quick Cancan|Maca- rena|Break Dance|Let's go Swing|Sunny Twist";
+    public const string DEFAULT_ASSET_SET = "Chicken Dance|Street Runner|Nonstop Hip Hop|Quick Cancan|Maca- rena|Break Dance|Let's go Swing|Sunny Twist";
 
     [SerializeField] private List<Dance> _allDances = null;
 
