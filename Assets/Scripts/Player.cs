@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     #endregion KEYS
 
     public const int MAX_ASSET_LENGTH = 8;
-    public const string DEFAULT_ASSET_SET = "Chicken Dance|Street Runner|Nonstop Hip Hop|Quick Cancan|Maca- rena|Break Dance|Let's go Swing|Sunny Twist";
+    public const string DEFAULT_ASSET_SET = "11|21|31|41|51|61|71|81";
 
     [SerializeField] private List<Dance> _allDances = null;
 
@@ -269,10 +269,10 @@ public class Player : MonoBehaviour
     {
         if (string.IsNullOrEmpty(input)) return new List<Dance>();
         List<Dance> dances = new List<Dance>();
-        string[] labels = input.Split('|');
-        foreach (var label in labels)
+        string[] identifiers = input.Split('|');
+        foreach (var identifier in identifiers)
         {
-            Dance dance = _allDances.Find((d) => d.LabelText == label);
+            Dance dance = _allDances.Find((d) => d.Identifier == identifier);
             if (dance != null) dances.Add(dance);
         }
         return dances;
@@ -285,7 +285,7 @@ public class Player : MonoBehaviour
         foreach (var dance in dances)
         {
             if (dance == null) continue;
-            sb.Append(dance.LabelText);
+            sb.Append(dance.Identifier);
             sb.Append("|");
         }
         return sb.ToString().TrimEnd('|');

@@ -24,6 +24,7 @@ public class Dance : ScriptableObject
     public Dance NextLevel => _nextLevel;
     public bool HasNextLevel => _nextLevel != null;
     public ReadOnlyCollection<BonusMove> BonusMoves => new ReadOnlyCollection<BonusMove>(_bonusMoves);
+    public string Identifier => $"{AnimationID}{Level}";
 
     public override bool Equals(object obj)
     {
