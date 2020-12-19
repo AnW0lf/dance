@@ -29,6 +29,8 @@ namespace Assets.Scripts.Interface.ChestMiniGame
         {
             if (_miniGame.KeyCount <= 0) return;
 
+            IsOpened = true;
+
             Reward reward = _miniGame.GetReward();
             ChestSkin skin = _skins.Find((s) => s.Type == reward.Type);
             _rewardIcon.sprite = skin.Skin;
@@ -55,8 +57,6 @@ namespace Assets.Scripts.Interface.ChestMiniGame
 
             _fade.raycastTarget = false;
             StartCoroutine(Fading(0f));
-
-            IsOpened = true;
         }
 
         private IEnumerator Fading(float alpha)
@@ -91,7 +91,7 @@ namespace Assets.Scripts.Interface.ChestMiniGame
         {
             Color startColor = _fade.color;
             float timer = 0f;
-            float duration = 1f;
+            float duration = 0.3f;
             while (timer <= duration)
             {
                 timer += Time.deltaTime;
