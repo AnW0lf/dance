@@ -27,10 +27,24 @@ namespace Assets.Scripts.Inventory
         private void Start()
         {
             SetPrice(Price);
-            SetButtonState(Money, Price);
-            Player.Instance.OnPriceChanged += (price) => SetPrice(price);
-            Player.Instance.OnPriceChanged += (price) => SetButtonState(Money, price);
-            Player.Instance.OnMoneyChanged += (money) => SetButtonState(money, Price);
+            UpdateButtonState(0);
+            Player.Instance.OnPriceChanged += SetPrice;
+            Player.Instance.OnPriceChanged += UpdateButtonState;
+            Player.Instance.OnMoneyChanged += UpdateButtonState;
+        }
+
+        private void OnDisable()
+        {
+            Player.Instance.OnPriceChanged -= SetPrice;
+            Player.Instance.OnPriceChanged -= UpdateButtonState;
+            Player.Instance.OnMoneyChanged -= UpdateButtonState;
+        }
+
+        private void OnDestroy()
+        {
+            Player.Instance.OnPriceChanged -= SetPrice;
+            Player.Instance.OnPriceChanged -= UpdateButtonState;
+            Player.Instance.OnMoneyChanged -= UpdateButtonState;
         }
 
         public void SetPrice(int price)
@@ -38,9 +52,9 @@ namespace Assets.Scripts.Inventory
             _price.text = price.ToString();
         }
 
-        public void SetButtonState(int money, int price)
+        public void UpdateButtonState(int useless)
         {
-            Interactable = money >= price;
+            Interactable = Money >= Price;
             _fade.SetActive(!Interactable);
         }
 
