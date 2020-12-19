@@ -47,6 +47,13 @@ namespace Assets.Scripts.Inventory
             Player.Instance.OnMoneyChanged -= UpdateButtonState;
         }
 
+        private void OnDestroy()
+        {
+            Player.Instance.OnPriceChanged -= (price) => SetPrice(price);
+            Player.Instance.OnPriceChanged -= (price) => SetButtonState(Money, price);
+            Player.Instance.OnMoneyChanged -= (money) => SetButtonState(money, Price);
+        }
+
         public void SetPrice(int price)
         {
             _price.text = price.ToString();

@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     #endregion KEYS
 
     public const int MAX_ASSET_LENGTH = 8;
-    public const string DEFAULT_ASSET_SET = "11|21|31|41|51|61|71|81";
+    public const string DEFAULT_ASSET_SET = "11|21|31|41|51|61|71|91";
 
     [SerializeField] private List<Dance> _allDances = null;
 
