@@ -205,16 +205,16 @@ public class Player : MonoBehaviour
 
     private void Load()
     {
-        _classicFansCount = GetIntOrDefault(CLASSIC_FANS_COUNT_KEY, 1);
-        _jazzFansCount = GetIntOrDefault(JAZZ_FANS_COUNT_KEY, 1);
-        _streetFansCount = GetIntOrDefault(STREET_FANS_COUNT_KEY, 1);
+        ClassicFansCount = GetIntOrDefault(CLASSIC_FANS_COUNT_KEY, 1);
+        JazzFansCount = GetIntOrDefault(JAZZ_FANS_COUNT_KEY, 1);
+        StreetFansCount = GetIntOrDefault(STREET_FANS_COUNT_KEY, 1);
 
-        _money = GetIntOrDefault(MONEY_COUNT_KEY, 0);
-        _price = GetIntOrDefault(PRICE_KEY, 10);
-        _danceBought = GetIntOrDefault(DANCE_BOUGHT_KEY, 0);
+        Money = GetIntOrDefault(MONEY_COUNT_KEY, 1000);
+        Price = GetIntOrDefault(PRICE_KEY, 10);
+        DanceBought = GetIntOrDefault(DANCE_BOUGHT_KEY, 0);
 
-        _levelNumber = GetIntOrDefault(LEVEL_NUMBER_KEY, 1);
-        _lastLevel = GetStringOrDefault(LAST_LEVEL_KEY, "Level1");
+        LevelNumber = GetIntOrDefault(LEVEL_NUMBER_KEY, 1);
+        LastLevel = GetStringOrDefault(LAST_LEVEL_KEY, "Level1");
 
         string asset_string = GetStringOrDefault(ASSET_KEY, DEFAULT_ASSET_SET);
         string storage_string = GetStringOrDefault(STORAGE_KEY, string.Empty);
@@ -225,16 +225,16 @@ public class Player : MonoBehaviour
 
     private void Save()
     {
-        PlayerPrefs.SetInt(CLASSIC_FANS_COUNT_KEY, _classicFansCount);
-        PlayerPrefs.SetInt(JAZZ_FANS_COUNT_KEY, _jazzFansCount);
-        PlayerPrefs.SetInt(STREET_FANS_COUNT_KEY, _streetFansCount);
+        PlayerPrefs.SetInt(CLASSIC_FANS_COUNT_KEY, ClassicFansCount);
+        PlayerPrefs.SetInt(JAZZ_FANS_COUNT_KEY, JazzFansCount);
+        PlayerPrefs.SetInt(STREET_FANS_COUNT_KEY, StreetFansCount);
 
-        PlayerPrefs.SetInt(MONEY_COUNT_KEY, _money);
-        PlayerPrefs.SetInt(PRICE_KEY, _price);
-        PlayerPrefs.SetInt(DANCE_BOUGHT_KEY, _danceBought);
+        PlayerPrefs.SetInt(MONEY_COUNT_KEY, Money);
+        PlayerPrefs.SetInt(PRICE_KEY, Price);
+        PlayerPrefs.SetInt(DANCE_BOUGHT_KEY, DanceBought);
 
-        PlayerPrefs.SetInt(LEVEL_NUMBER_KEY, _levelNumber);
-        PlayerPrefs.SetString(LAST_LEVEL_KEY, _lastLevel);
+        PlayerPrefs.SetInt(LEVEL_NUMBER_KEY, LevelNumber);
+        PlayerPrefs.SetString(LAST_LEVEL_KEY, LastLevel);
 
         SaveAsset();
         SaveStorage();
