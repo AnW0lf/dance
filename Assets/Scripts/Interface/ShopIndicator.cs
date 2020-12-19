@@ -9,6 +9,9 @@ namespace Assets.Scripts.Interface
     {
         private Image _image = null;
 
+        [SerializeField]
+        private Text _text = null;
+
         private void Start()
         {
             _image = GetComponent<Image>();
@@ -41,6 +44,7 @@ namespace Assets.Scripts.Interface
             {
                 _canSpend = value;
                 _image.enabled = _canSpend;
+                _text.enabled = _canSpend;
             }
         }
     }
